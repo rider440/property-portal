@@ -1,0 +1,51 @@
+{
+  "version": 2,
+  "builds": [
+    {
+      "src": "Backend/server.js",
+      "use": "@vercel/node"
+    },
+    {
+      "src": "Frontend/**",
+      "use": "@vercel/static"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/api/(.*)",
+      "dest": "/Backend/server.js"
+    },
+    {
+      "src": "/RiderAdmin",
+      "dest": "/Frontend/RiderAdmin.html"
+    },
+    {
+      "src": "/RiderAdmin.html",
+      "dest": "/Frontend/RiderAdmin.html"
+    },
+    {
+      "src": "/admin.html",
+      "dest": "/Frontend/admin.html"
+    },
+    {
+      "src": "/admin",
+      "dest": "/Frontend/RiderAdmin.html"
+    },
+    {
+      "src": "/css/(.*)",
+      "dest": "/Frontend/css/$1"
+    },
+    {
+      "src": "/js/(.*)",
+      "dest": "/Frontend/js/$1"
+    },
+    {
+      "src": "/images/(.*)",
+      "dest": "/Frontend/images/$1"
+    },
+    {
+      "src": "/(.*)",
+      "dest": "/Frontend/index.html"
+    }
+  ]
+}

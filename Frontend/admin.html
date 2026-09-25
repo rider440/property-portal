@@ -1,0 +1,820 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>प्रशासक नियंत्रण कक्ष (RiderAdmin Control Panel) | Rural Property Portal</title>
+  <link rel="stylesheet" href="css/styles.css?v=2.1">
+  <style>
+    .stat-card-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1.25rem;
+      margin-bottom: 1.75rem;
+    }
+    .stat-card {
+      background: #ffffff;
+      padding: 1.25rem;
+      border-radius: var(--radius-md);
+      border: 1px solid var(--border);
+      box-shadow: var(--shadow-sm);
+    }
+    .stat-card-title {
+      font-size: 0.8rem;
+      color: var(--text-muted);
+      text-transform: uppercase;
+      font-weight: 600;
+    }
+    .stat-card-val {
+      font-size: 1.75rem;
+      font-weight: 800;
+      margin-top: 0.35rem;
+    }
+    .password-field-wrap {
+      position: relative;
+      display: flex;
+      align-items: center;
+    }
+    .password-toggle-btn {
+      position: absolute;
+      right: 10px;
+      background: none;
+      border: none;
+      cursor: pointer;
+      font-size: 1rem;
+      color: #64748b;
+      padding: 4px;
+    }
+    
+    /* Professional Data Table & Grid Layouts */
+    .table-container {
+      width: 100%;
+      overflow-x: auto;
+      background: #ffffff;
+      border-radius: 12px;
+      border: 1px solid #e2e8f0;
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+      margin-bottom: 1.5rem;
+    }
+    .data-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.88rem;
+      text-align: left;
+    }
+    .data-table th {
+      background: #f8fafc;
+      color: #475569;
+      font-weight: 700;
+      font-size: 0.78rem;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      padding: 0.9rem 1.15rem;
+      border-bottom: 2px solid #e2e8f0;
+      white-space: nowrap;
+    }
+    .data-table td {
+      padding: 0.9rem 1.15rem;
+      border-bottom: 1px solid #f1f5f9;
+      color: #1e293b;
+      vertical-align: middle;
+      font-size: 0.88rem;
+      line-height: 1.45;
+    }
+    .data-table tbody tr:hover {
+      background-color: #f8fafc;
+    }
+    .data-table tbody tr:last-child td {
+      border-bottom: none;
+    }
+    .order-badge-pending {
+      background: #fef3c7;
+      color: #b45309;
+      padding: 0.25rem 0.6rem;
+      border-radius: 6px;
+      font-weight: 700;
+      font-size: 0.78rem;
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+    }
+    .order-badge-verified {
+      background: #dcfce7;
+      color: #15803d;
+      padding: 0.25rem 0.6rem;
+      border-radius: 6px;
+      font-weight: 700;
+      font-size: 0.78rem;
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+    }
+    .order-badge-rejected {
+      background: #fee2e2;
+      color: #b91c1c;
+      padding: 0.25rem 0.6rem;
+      border-radius: 6px;
+      font-weight: 700;
+      font-size: 0.78rem;
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+    }
+    .ref-code-chip {
+      background: #f1f5f9;
+      border: 1px solid #cbd5e1;
+      padding: 0.2rem 0.5rem;
+      border-radius: 4px;
+      font-family: monospace;
+      font-weight: 700;
+      color: #334155;
+      display: inline-block;
+    }
+  </style>
+</head>
+<body style="background-color: #f8fafc;">
+
+  <!-- Dedicated Full-Screen Login Page -->
+  <div id="adminLoginScreen" class="admin-login-screen">
+    <div class="admin-login-card">
+      <div style="text-align: center; margin-bottom: 1.75rem;">
+        <div style="width: 60px; height: 60px; background: #eff6ff; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 0.85rem; font-size: 2rem; border: 2px solid #bfdbfe; box-shadow: 0 4px 12px rgba(37, 99, 235, 0.15);">
+          🛡️
+        </div>
+        <h2 style="font-size: 1.45rem; color: #0f172a; margin: 0; font-weight: 800; letter-spacing: -0.02em;">प्रशासक सुरक्षित प्रवेश</h2>
+        <p style="font-size: 0.85rem; color: #64748b; margin-top: 0.35rem; font-weight: 500;">RiderAdmin Zero-Trust Control Panel</p>
+      </div>
+
+      <form onsubmit="handleAdminLogin(event)">
+        <div class="form-group" style="margin-bottom: 1.15rem;">
+          <label for="adminUsernameInput" style="font-weight: 700; font-size: 0.85rem; color: #334155;">उपयोगकर्ता नाम (Username)</label>
+          <input type="text" id="adminUsernameInput" class="form-control" value="admin" required autocomplete="username" style="font-size: 0.95rem; padding: 0.7rem 0.85rem;">
+        </div>
+
+        <div class="form-group" style="margin-bottom: 1.25rem;">
+          <label for="adminPasswordInput" style="font-weight: 700; font-size: 0.85rem; color: #334155;">पासवर्ड / सुरक्षा पिन (Password / PIN)</label>
+          <div class="password-field-wrap">
+            <input type="password" id="adminPasswordInput" class="form-control" placeholder="••••••••" maxlength="50" required autocomplete="current-password" style="font-size: 1.05rem; padding: 0.7rem 2.5rem 0.7rem 0.85rem;">
+            <button type="button" class="password-toggle-btn" onclick="togglePasswordVisibility('adminPasswordInput', this)" title="पासवर्ड दिखाएं / छुपाएं">👁️</button>
+          </div>
+        </div>
+
+        <div id="loginErrorMsg" style="color: #b91c1c; background: #fef2f2; border: 1px solid #fecaca; padding: 0.7rem 0.85rem; border-radius: 8px; font-size: 0.82rem; margin-bottom: 1.15rem; display: none; text-align: center; font-weight: 600;"></div>
+
+        <button type="submit" id="adminLoginSubmitBtn" class="btn btn-primary" style="width: 100%; padding: 0.85rem; font-weight: 700; font-size: 1rem; border-radius: 8px; box-shadow: 0 4px 14px rgba(37, 99, 235, 0.4);">
+          सुरक्षित लॉगिन करें (Enter Dashboard)
+        </button>
+
+        <div style="text-align: center; margin-top: 1.5rem; font-size: 0.8rem; color: #64748b; border-top: 1px solid #f1f5f9; padding-top: 1rem;">
+          🔒 SHA-256 / scrypt इन्क्रिप्टेड सुरक्षित सत्र
+          <br>
+          <a href="/" style="color: var(--primary); text-decoration: none; font-weight: 700; display: inline-block; margin-top: 0.6rem;">← मुख्य पोर्टल पर वापस जाएं</a>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- Sidebar Backdrop for Mobile -->
+  <div id="sidebarBackdrop" class="sidebar-backdrop" onclick="toggleAdminSidebar(false)"></div>
+
+  <!-- Admin Dashboard Container with Sidebar Layout -->
+  <div id="adminDashboardContainer" class="admin-layout hidden" style="display: none;">
+    
+    <!-- Left Sidebar -->
+    <aside id="adminSidebar" class="admin-sidebar">
+      <div class="admin-sidebar-brand">
+        <div class="emblem-icon">⚙️</div>
+        <div>
+          <h2>RiderAdmin</h2>
+          <p>प्रशासक नियंत्रण कक्ष</p>
+        </div>
+      </div>
+
+      <nav class="admin-sidebar-nav">
+        <div class="sidebar-heading">मुख्य प्रबंधन (Management)</div>
+        
+        <button class="sidebar-item tab-btn active" data-tab="pending" onclick="switchTab('pending'); toggleAdminSidebar(false);">
+          <div class="sidebar-item-content">
+            <span class="sidebar-item-icon">⏳</span>
+            <span>लंबित सत्यापन</span>
+          </div>
+          <span id="pendingCountBadge" class="sidebar-badge" style="display:none;">0</span>
+        </button>
+
+        <button class="sidebar-item tab-btn" data-tab="propertyRequests" onclick="switchTab('propertyRequests'); toggleAdminSidebar(false);">
+          <div class="sidebar-item-content">
+            <span class="sidebar-item-icon">📑</span>
+            <span>प्रॉपर्टी अनुरोध (Property Requests)</span>
+          </div>
+          <span id="propReqSidebarBadge" class="sidebar-badge" style="display:none;">0</span>
+        </button>
+
+        <button class="sidebar-item tab-btn" data-tab="all" onclick="switchTab('all'); toggleAdminSidebar(false);">
+          <div class="sidebar-item-content">
+            <span class="sidebar-item-icon">📋</span>
+            <span>सभी ऑर्डर इतिहास</span>
+          </div>
+        </button>
+
+        <button class="sidebar-item tab-btn" data-tab="requests" onclick="switchTab('requests'); toggleAdminSidebar(false);">
+          <div class="sidebar-item-content">
+            <span class="sidebar-item-icon">📬</span>
+            <span>ग्राम डेटा अनुरोध</span>
+          </div>
+        </button>
+
+        <div class="sidebar-heading" style="margin-top: 0.85rem;">डेटा एवं सेटिंग्स (Operations)</div>
+
+        <button class="sidebar-item tab-btn" data-tab="uploadData" onclick="switchTab('uploadData'); toggleAdminSidebar(false);">
+          <div class="sidebar-item-content">
+            <span class="sidebar-item-icon">📤</span>
+            <span>नया ग्राम डेटा अपलोड</span>
+          </div>
+        </button>
+
+        <button class="sidebar-item tab-btn" data-tab="settings" onclick="switchTab('settings'); toggleAdminSidebar(false);">
+          <div class="sidebar-item-content">
+            <span class="sidebar-item-icon">⚙️</span>
+            <span>UPI एवं सेटिंग्स</span>
+          </div>
+        </button>
+
+        <button class="sidebar-item tab-btn" data-tab="security" onclick="switchTab('security'); toggleAdminSidebar(false);">
+          <div class="sidebar-item-content">
+            <span class="sidebar-item-icon">🛡️</span>
+            <span>सुरक्षा एवं पासवर्ड</span>
+          </div>
+        </button>
+      </nav>
+
+      <div class="admin-sidebar-footer">
+        <div class="status-pill">
+          <span style="width: 7px; height: 7px; background: #10b981; border-radius: 50%; display: inline-block;"></span>
+          व्यवस्थापक: <strong id="currentAdminUserBadge" style="color: #ffffff; margin-left: 4px;">admin</strong>
+        </div>
+        
+        <a href="/" target="_blank" class="sidebar-item" style="padding: 0.5rem 0.75rem; font-size: 0.82rem; color: #cbd5e1;">
+          <div class="sidebar-item-content">
+            <span>🌐</span>
+            <span>मुख्य पोर्टल देखें</span>
+          </div>
+          <span style="font-size: 0.75rem;">↗</span>
+        </a>
+
+        <button onclick="adminLogout()" class="sidebar-item" style="padding: 0.5rem 0.75rem; font-size: 0.82rem; color: #f87171;">
+          <div class="sidebar-item-content">
+            <span>🚪</span>
+            <span>सुरक्षित लॉगआउट</span>
+          </div>
+        </button>
+      </div>
+    </aside>
+
+    <!-- Main Content Area with Topbar -->
+    <div class="admin-main-wrap">
+      
+      <!-- Topbar Header -->
+      <header class="admin-topbar">
+        <div class="admin-topbar-left">
+          <button class="admin-hamburger" onclick="toggleAdminSidebar()" aria-label="Toggle Menu">
+            ☰
+          </button>
+          <div class="admin-current-view-title" id="currentViewTitle">
+            ⏳ लंबित सत्यापन कतार (Pending UTR Queue)
+          </div>
+        </div>
+
+        <div class="admin-topbar-right">
+          <button class="topbar-action-btn" onclick="downloadLiveDatabaseBackup()" style="color:#15803d; border-color:#86efac;" title="लाइव डेटाबेस बैकअप JSON डाउनलोड करें">
+            💾 लाइव डेटा डाउनलोड
+          </button>
+          <button class="topbar-action-btn" onclick="refreshCurrentTab()" title="रिफ्रेश करें">
+            🔄 रिफ्रेश
+          </button>
+          <a href="/" target="_blank" class="topbar-action-btn" style="text-decoration:none;" title="लाइव पोर्टल देखें">
+            🌐 मुख्य पोर्टल
+          </a>
+        </div>
+      </header>
+
+      <!-- Dashboard Scrollable Body -->
+      <div class="admin-content-body">
+
+        <!-- Stat Cards Bar -->
+        <div class="stat-card-grid">
+          <div class="stat-card" style="border-left: 4px solid #f59e0b;">
+            <div class="stat-card-title">लंबित सत्यापन (Pending)</div>
+            <div class="stat-card-val" style="color: #d97706;" id="statPendingOrders">0</div>
+          </div>
+          <div class="stat-card" style="border-left: 4px solid #10b981;">
+            <div class="stat-card-title">सत्यापित भुगतान (Verified)</div>
+            <div class="stat-card-val" style="color: #059669;" id="statVerifiedOrders">0</div>
+          </div>
+          <div class="stat-card" style="border-left: 4px solid #3b82f6;">
+            <div class="stat-card-title">कुल ऑर्डर अनुरोध</div>
+            <div class="stat-card-val" style="color: #2563eb;" id="statTotalOrders">0</div>
+          </div>
+          <div class="stat-card" style="border-left: 4px solid #8b5cf6;">
+            <div class="stat-card-title">कुल राजस्व (Revenue)</div>
+            <div class="stat-card-val" style="color: #7c3aed;" id="statTotalRevenue">₹0</div>
+          </div>
+        </div>
+
+        <!-- TAB 1: PENDING ORDERS -->
+        <div id="pendingOrdersTab">
+          <div class="table-container">
+            <table class="data-table">
+              <thead>
+                <tr>
+                  <th>ऑर्डर आईडी</th>
+                  <th>नागरिक / भूस्वामी</th>
+                  <th>ग्राम एवं जनपद</th>
+                  <th>मोबाइल नंबर</th>
+                  <th>UPI UTR / Ref No.</th>
+                  <th>दिनांक व समय</th>
+                  <th>त्वरित कार्रवाई</th>
+                </tr>
+              </thead>
+              <tbody id="pendingTableBody">
+                <tr><td colspan="7" style="text-align:center; padding:2rem; color:#64748b;">ऑर्डर लोड हो रहे हैं...</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <!-- TAB: PROPERTY REQUESTS MANAGEMENT -->
+        <div id="propertyRequestsTab" style="display: none;">
+          <div style="margin-bottom: 1.25rem; background: #ffffff; border: 1px solid #e2e8f0; border-radius: 12px; padding: 1rem; box-shadow: 0 1px 3px rgba(0,0,0,0.05);">
+            <!-- Top sub-tabs & Excel Export -->
+            <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 0.75rem; margin-bottom: 1rem;">
+              <!-- Filter Sub-Tabs -->
+              <div style="display: flex; gap: 0.5rem; flex-wrap: wrap;" id="propReqSubTabGroup">
+                <button class="btn btn-emerald btn-sm prop-subtab-btn" data-subtab="pending" onclick="switchPropReqSubTab('pending')" style="font-weight: 700; border-radius: 6px; padding: 0.45rem 0.85rem;">
+                  ⏳ लंबित अनुरोध (Pending) <span id="badgeSubPending" style="background:#ffffff; color:#065f46; padding: 0.1rem 0.45rem; border-radius: 9999px; font-size: 0.75rem; margin-left: 4px; font-weight:800;">0</span>
+                </button>
+                <button class="btn btn-secondary btn-sm prop-subtab-btn" data-subtab="verified" onclick="switchPropReqSubTab('verified')" style="font-weight: 700; border-radius: 6px; padding: 0.45rem 0.85rem;">
+                  ✅ पूर्ण / सत्यापित (Complete) <span id="badgeSubVerified" style="background:#10b981; color:#fff; padding: 0.1rem 0.45rem; border-radius: 9999px; font-size: 0.75rem; margin-left: 4px;">0</span>
+                </button>
+                <button class="btn btn-secondary btn-sm prop-subtab-btn" data-subtab="all" onclick="switchPropReqSubTab('all')" style="font-weight: 700; border-radius: 6px; padding: 0.45rem 0.85rem;">
+                  📋 सभी अनुरोध (All) <span id="badgeSubAll" style="background:#64748b; color:#fff; padding: 0.1rem 0.45rem; border-radius: 9999px; font-size: 0.75rem; margin-left: 4px;">0</span>
+                </button>
+              </div>
+
+              <!-- Export Excel Button -->
+              <div style="display: flex; gap: 0.5rem; align-items: center;">
+                <button class="btn btn-emerald" onclick="exportPropRequestsToExcel()" style="display: inline-flex; align-items: center; gap: 0.4rem; padding: 0.55rem 1.1rem; font-weight: 700; border-radius: 8px;">
+                  📊 Excel एक्सपोर्ट (.xlsx)
+                </button>
+              </div>
+            </div>
+
+            <!-- Search Bar -->
+            <div style="display: flex; gap: 0.75rem; flex-wrap: wrap; align-items: center; justify-content: space-between;">
+              <input type="text" id="propReqSearchInput" class="form-control" style="max-width: 380px;" placeholder="नाम, मोबाइल, UTR, ग्राम या जनपद से खोजें..." onkeyup="filterPropRequests()">
+              <div style="font-size: 0.85rem; color: #64748b; font-weight: 600;">
+                प्रदर्शित अनुरोध: <strong id="propReqFilteredCount" style="color: #0f172a;">0</strong>
+              </div>
+            </div>
+          </div>
+
+          <div class="table-container">
+            <table class="data-table">
+              <thead>
+                <tr>
+                  <th>ऑर्डर आईडी</th>
+                  <th>नागरिक / भूस्वामी</th>
+                  <th>ग्राम एवं जनपद</th>
+                  <th>मोबाइल नंबर</th>
+                  <th>UPI UTR / Ref No.</th>
+                  <th>शुल्क</th>
+                  <th>अनुरोध दिनांक</th>
+                  <th>स्थिति</th>
+                  <th>त्वरित कार्रवाई</th>
+                </tr>
+              </thead>
+              <tbody id="propRequestsTableBody">
+                <tr><td colspan="9" style="text-align:center; padding:2rem; color:#64748b;">लोड हो रहा है...</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <!-- TAB 2: ALL ORDERS -->
+        <div id="allOrdersTab" style="display: none;">
+          <div style="margin-bottom: 1rem; display: flex; gap: 0.75rem; flex-wrap: wrap; align-items: center; justify-content: space-between;">
+            <div style="display: flex; gap: 0.75rem; flex-wrap: wrap; flex: 1;">
+              <input type="text" id="allOrdersSearchInput" class="form-control" style="max-width: 300px;" placeholder="नाम, मोबाइल या UTR से खोजें..." onkeyup="renderAllOrders(allOrders)">
+              <select id="allOrdersStatusFilter" class="form-control" style="max-width: 180px;" onchange="renderAllOrders(allOrders)">
+                <option value="all">सभी स्थितियां (All)</option>
+                <option value="pending">लंबित (Pending)</option>
+                <option value="verified">सत्यापित (Verified)</option>
+                <option value="rejected">अस्वीकृत (Rejected)</option>
+              </select>
+            </div>
+            <div style="display: flex; gap: 0.5rem; align-items: center;">
+              <button class="btn btn-emerald" onclick="exportOrdersToExcel()" style="display: inline-flex; align-items: center; gap: 0.4rem; padding: 0.55rem 1rem; font-weight: 700;" title="चयनित स्थिति (Status) के अनुसार Excel (.xlsx) रिपोर्ट डाउनलोड करें">
+                📊 Excel एक्सपोर्ट (.xlsx)
+              </button>
+            </div>
+          </div>
+
+          <div class="table-container">
+            <table class="data-table">
+              <thead>
+                <tr>
+                  <th>ऑर्डर आईडी</th>
+                  <th>नागरिक नाम</th>
+                  <th>मोबाइल</th>
+                  <th>शुल्क</th>
+                  <th>UTR / Ref</th>
+                  <th>स्थिति</th>
+                  <th>दिनांक</th>
+                </tr>
+              </thead>
+              <tbody id="allOrdersTableBody">
+                <tr><td colspan="7" style="text-align:center; padding:2rem; color:#64748b;">लोड हो रहा है...</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <!-- TAB 3: MISSING DATA REQUESTS -->
+        <div id="dataRequestsTab" style="display: none;">
+          <div style="margin-bottom: 1rem; display: flex; gap: 0.75rem; flex-wrap: wrap; align-items: center; justify-content: space-between;">
+            <div style="display: flex; gap: 0.75rem; flex-wrap: wrap; flex: 1;">
+              <input type="text" id="dataRequestsSearchInput" class="form-control" style="max-width: 280px;" placeholder="ग्राम, जनपद या मोबाइल से खोजें..." onkeyup="filterDataRequests()">
+              <select id="dataRequestsStatusFilter" class="form-control" style="max-width: 230px;" onchange="filterDataRequests()">
+                <option value="all">सभी स्थितियां (All Requests)</option>
+                <option value="pending">⏳ लंबित अनुरोध (Pending Only)</option>
+                <option value="uploaded">✓ डेटा अपलोडेड (Data Uploaded)</option>
+                <option value="rejected">✕ अस्वीकृत अनुरोध (Rejected)</option>
+              </select>
+            </div>
+            <div style="display: flex; gap: 0.5rem; align-items: center;">
+              <button class="btn btn-emerald" onclick="exportDataRequestsToExcel()" style="display: inline-flex; align-items: center; gap: 0.4rem; padding: 0.55rem 1rem; font-weight: 700;" title="ग्राम अनुरोध Excel (.xlsx) डाउनलोड करें">
+                📊 Excel एक्सपोर्ट (.xlsx)
+              </button>
+              <div style="font-size: 0.85rem; color: #64748b; font-weight: 600; margin-left: 0.25rem;">
+                कुल अनुरोध: <strong id="totalRequestsCountBadge" style="color: #0f172a;">0</strong>
+              </div>
+            </div>
+          </div>
+
+          <div class="table-container">
+            <table class="data-table">
+              <thead>
+                <tr>
+                  <th>#</th>
+                  <th>अनुरोधित ग्राम</th>
+                  <th>जनपद (राज्य)</th>
+                  <th>तहसील</th>
+                  <th>नागरिक नाम</th>
+                  <th>मोबाइल</th>
+                  <th>अनुरोध दिनांक</th>
+                  <th>स्थिति</th>
+                  <th>त्वरित कार्रवाई</th>
+                </tr>
+              </thead>
+              <tbody id="dataRequestsTableBody">
+                <tr><td colspan="9" style="text-align:center; padding:2rem; color:#64748b;">अनुरोध लोड हो रहे हैं...</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <!-- TAB 4: UPLOAD VILLAGE DATA -->
+        <div id="uploadDataTab" style="display: none;">
+          <div class="settings-card" style="margin-bottom: 1.5rem;">
+            <h3>📤 नया ग्राम डेटा अपलोड (Upload Village Excel)</h3>
+            <p style="color: var(--text-muted); font-size: 0.9rem; margin-bottom: 1.25rem;">
+              सीधे Excel (.xlsx, .xls) या टेक्स्ट फाइल अपलोड करें।
+            </p>
+
+            <form id="villageUploadForm" onsubmit="handleVillageDataUpload(event)">
+              <div class="form-group" style="margin-bottom: 1.25rem;">
+                <label>डेटा फ़ाइल चुनें (.xlsx, .xls, .txt)</label>
+                <div id="uploadDropZone" style="border: 2px dashed #cbd5e1; border-radius: 8px; padding: 2rem; text-align: center; background: #f8fafc; cursor: pointer;" onclick="document.getElementById('villageDataFileInput').click()">
+                  <div style="font-size: 2.5rem; margin-bottom: 0.5rem;">📁</div>
+                  <div style="font-weight: 700; color: #1e293b;">फ़ाइल चुनने के लिए क्लिक करें या यहाँ ड्रैग करें</div>
+                  <div style="font-size: 0.8rem; color: #64748b; margin-top: 0.25rem;">Excel (.xlsx, .xls) अथवा डिकोडेड टेक्स्ट फ़ाइल</div>
+                  <input type="file" id="villageDataFileInput" accept=".xlsx,.xls,.txt,.csv" style="display: none;" onchange="onVillageFileSelected(event)">
+                </div>
+                <div id="selectedFileInfo" style="display: none; margin-top: 0.5rem; font-size: 0.85rem; color: #166534; font-weight: 600;">
+                  चयनित: <span id="selectedFileName">--</span> (<span id="selectedFileSize">--</span>)
+                </div>
+              </div>
+
+              <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 1rem; margin-bottom: 1.25rem;">
+                <div class="form-group">
+                  <label for="uploadStateSelect">राज्य (State) <span class="req-star" style="color:#ef4444;">*</span></label>
+                  <select id="uploadStateSelect" class="form-control" onchange="onUploadStateChange()">
+                    <option value="Uttar Pradesh" selected>Uttar Pradesh (उत्तर प्रदेश)</option>
+                    <option value="Andaman and Nicobar Islands">Andaman and Nicobar Islands</option>
+                    <option value="Andhra Pradesh">Andhra Pradesh</option>
+                    <option value="Arunachal Pradesh">Arunachal Pradesh</option>
+                    <option value="Assam">Assam</option>
+                    <option value="Bihar">Bihar (बिहार)</option>
+                    <option value="Chandigarh">Chandigarh</option>
+                    <option value="Chhattisgarh">Chhattisgarh</option>
+                    <option value="Dadra and Nagar Haveli and Daman and Diu">Dadra and Nagar Haveli and Daman and Diu</option>
+                    <option value="Delhi">Delhi (दिल्ली)</option>
+                    <option value="Goa">Goa</option>
+                    <option value="Gujarat">Gujarat (गुजरात)</option>
+                    <option value="Haryana">Haryana (हरियाणा)</option>
+                    <option value="Himachal Pradesh">Himachal Pradesh (हिमाचल प्रदेश)</option>
+                    <option value="Jammu & Kashmir">Jammu & Kashmir</option>
+                    <option value="Jharkhand">Jharkhand (झारखंड)</option>
+                    <option value="Karnataka">Karnataka</option>
+                    <option value="Kerala">Kerala</option>
+                    <option value="Ladakh">Ladakh</option>
+                    <option value="Lakshadweep">Lakshadweep</option>
+                    <option value="Madhya Pradesh">Madhya Pradesh (मध्य प्रदेश)</option>
+                    <option value="Maharashtra">Maharashtra (महाराष्ट्र)</option>
+                    <option value="Manipur">Manipur</option>
+                    <option value="Meghalaya">Meghalaya</option>
+                    <option value="Mizoram">Mizoram</option>
+                    <option value="Nagaland">Nagaland</option>
+                    <option value="Odisha">Odisha (ओडिशा)</option>
+                    <option value="Puducherry">Puducherry</option>
+                    <option value="Punjab">Punjab (पंजाब)</option>
+                    <option value="Rajasthan">Rajasthan (राजस्थान)</option>
+                    <option value="Sikkim">Sikkim</option>
+                    <option value="Tamil Nadu">Tamil Nadu</option>
+                    <option value="Telangana">Telangana</option>
+                    <option value="Tripura">Tripura</option>
+                    <option value="Uttarakhand">Uttarakhand (उत्तराखंड)</option>
+                    <option value="West Bengal">West Bengal (पश्चिम बंगाल)</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label for="uploadDistrictSelect">जनपद (District) <span class="req-star" style="color:#ef4444;">*</span></label>
+                  <select id="uploadDistrictSelect" class="form-control">
+                    <option value="">-- जनपद चुनें (Select District) --</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label for="uploadVillageNameInput">ग्राम का नाम (Village Name)</label>
+                  <input type="text" id="uploadVillageNameInput" class="form-control" placeholder="उदा. रामपुर / चक्र">
+                </div>
+                <div class="form-group">
+                  <label for="uploadVillageCodeInput">ग्राम कोड (Village Code)</label>
+                  <input type="text" id="uploadVillageCodeInput" class="form-control" placeholder="उदा. 203339">
+                </div>
+              </div>
+
+              <button type="submit" id="startUploadBtn" class="btn btn-emerald" style="width: 100%; padding: 0.85rem; font-size: 1rem; font-weight: 700;">
+                🚀 ग्राम डेटा अपलोड व तुरंत लाइव करें (Upload & Live Activate)
+              </button>
+            </form>
+
+            <div id="uploadResultCard" style="display: none; margin-top: 1.5rem; background: #ffffff; border: 2px solid #10b981; border-radius: 12px; padding: 1.25rem;">
+              <h4 style="font-size: 1.05rem; color: #065f46; font-weight: 800; margin-bottom: 0.35rem;" id="uploadResultTitle">डेटा सफलतापूर्वक अपलोड हो गया!</h4>
+              <p style="font-size: 0.85rem; color: #047857; margin-bottom: 1rem;" id="uploadResultSubtitle">--</p>
+              
+              <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(130px, 1fr)); gap: 0.75rem;">
+                <div style="background: #f0fdf4; border: 1px solid #bbf7d0; border-radius: 8px; padding: 0.75rem; text-align: center;">
+                  <div style="font-size: 0.75rem; color: #166534; font-weight: 600;">सक्रिय संपत्ति रिकॉर्ड्स</div>
+                  <div style="font-size: 1.35rem; font-weight: 800; color: #15803d;" id="resCitizenCount">0</div>
+                </div>
+                <div style="background: #fffbeb; border: 1px solid #fef3c7; border-radius: 8px; padding: 0.75rem; text-align: center;">
+                  <div style="font-size: 0.75rem; color: #92400e; font-weight: 600;">हटाए गए सार्वजनिक/रास्ते</div>
+                  <div style="font-size: 1.35rem; font-weight: 800; color: #b45309;" id="resExcludedCount">0</div>
+                </div>
+                <div style="background: #eff6ff; border: 1px solid #bfdbfe; border-radius: 8px; padding: 0.75rem; text-align: center;">
+                  <div style="font-size: 0.75rem; color: #1e40af; font-weight: 600;">ग्राम कोड (Village Code)</div>
+                  <div style="font-size: 1.15rem; font-weight: 800; color: #1d4ed8; font-family: monospace;" id="resVillageCode">--</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- TAB 5: SETTINGS -->
+        <div id="settingsTab" style="display: none;">
+          
+          <!-- Database Backup & Restore Card -->
+          <div class="settings-card" style="margin-bottom: 1.5rem; border: 2px solid #bfdbfe;">
+            <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 1rem;">
+              <div>
+                <h3 style="margin: 0; color: #1e3a8a;">💾 डेटाबेस बैकअप एवं रीस्टोर सिस्टम (Backup & Restore System)</h3>
+                <p style="color: var(--text-muted); font-size: 0.85rem; margin: 0.25rem 0 0;">
+                  संपूर्ण डेटाबेस (प्रॉपर्टीज, ग्राम, ऑर्डर्स, अनुरोध एवं सेटिंग्स) का सुरक्षित JSON बैकअप लें अथवा रीस्टोर करें।
+                </p>
+              </div>
+            </div>
+
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.25rem;">
+              <!-- Download Backup Box -->
+              <div style="background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 8px; padding: 1.25rem; display: flex; flex-direction: column; justify-content: space-between;">
+                <div>
+                  <h4 style="margin: 0 0 0.5rem 0; font-size: 1rem; color: #0f172a; display: flex; align-items: center; gap: 0.5rem;">
+                    📥 डेटाबेस बैकअप डाउनलोड (JSON)
+                  </h4>
+                  <p style="font-size: 0.82rem; color: #64748b; line-height: 1.4; margin-bottom: 1rem;">
+                    सर्वर पर मौजूद सभी प्रॉपर्टी रिकॉर्ड्स, ग्राम सूची, सभी ऑर्डर्स और सेटिंग्स की संपूर्ण JSON बैकअप फ़ाइल डाउनलोड करें।
+                  </p>
+                </div>
+                <button type="button" class="btn btn-primary" onclick="downloadLiveDatabaseBackup()" style="width: 100%; font-weight: 700; display: inline-flex; align-items: center; justify-content: center; gap: 0.5rem;">
+                  💾 संपूर्ण JSON बैकअप डाउनलोड करें
+                </button>
+              </div>
+
+              <!-- Restore Backup Box -->
+              <div style="background: #fefce8; border: 1px solid #fef08a; border-radius: 8px; padding: 1.25rem; display: flex; flex-direction: column; justify-content: space-between;">
+                <div>
+                  <h4 style="margin: 0 0 0.5rem 0; font-size: 1rem; color: #854d0e; display: flex; align-items: center; gap: 0.5rem;">
+                    🔄 बैकअप से डेटाबेस रीस्टोर करें (Restore)
+                  </h4>
+                  <p style="font-size: 0.82rem; color: #713f12; line-height: 1.4; margin-bottom: 0.75rem;">
+                    पूर्व में डाउनलोड की गई JSON बैकअप फ़ाइल चुनें। रीस्टोर करने से पहले सिस्टम स्वचालित रोलबैक स्नैपशॉट भी सुरक्षित रखेगा।
+                  </p>
+                  <input type="file" id="dbRestoreFileInput" accept=".json" class="form-control" style="font-size: 0.82rem; padding: 0.4rem 0.6rem; background: #ffffff; margin-bottom: 0.75rem;">
+                </div>
+                <button type="button" class="btn btn-secondary" onclick="handleRestoreDatabaseFromFile()" style="width: 100%; font-weight: 700; color: #9a3412; border-color: #fdba74; display: inline-flex; align-items: center; justify-content: center; gap: 0.5rem;">
+                  ⚠️ बैकअप फ़ाइल रीस्टोर करें
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="settings-card" style="margin-bottom: 1.5rem;">
+            <h3>⚙️ UPI एवं पेमेंट सेटिंग्स</h3>
+            <form onsubmit="saveAdminSettings(event)">
+              <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1rem; margin-top: 1rem;">
+                <div class="form-group">
+                  <label for="setUpiId">UPI VPA आईडी</label>
+                  <input type="text" id="setUpiId" class="form-control" required>
+                </div>
+                <div class="form-group">
+                  <label for="setMerchantName">मर्चेंट नाम</label>
+                  <input type="text" id="setMerchantName" class="form-control" required>
+                </div>
+                <div class="form-group">
+                  <label for="setPrice">अनलॉक शुल्क (₹)</label>
+                  <input type="number" id="setPrice" class="form-control" step="1" required>
+                </div>
+              </div>
+
+              <div style="margin-top: 1.5rem; padding-top: 1rem; border-top: 1px solid #e2e8f0;">
+                <h4 style="font-size: 0.95rem; color: #1e293b; margin-bottom: 0.75rem;">📧 SMTP ईमेल नोटिफिकेशन सेटिंग्स</h4>
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1rem;">
+                  <div class="form-group">
+                    <label for="setSmtpHost">SMTP Host</label>
+                    <input type="text" id="setSmtpHost" class="form-control" placeholder="smtp.gmail.com">
+                  </div>
+                  <div class="form-group">
+                    <label for="setSmtpPort">SMTP Port</label>
+                    <input type="text" id="setSmtpPort" class="form-control" placeholder="587">
+                  </div>
+                  <div class="form-group">
+                    <label for="setSmtpUser">SMTP Email</label>
+                    <input type="email" id="setSmtpUser" class="form-control" placeholder="your-email@gmail.com">
+                  </div>
+                  <div class="form-group">
+                    <label for="setSmtpPass">SMTP App Password</label>
+                    <input type="password" id="setSmtpPass" class="form-control" placeholder="बदलने के लिए नया दर्ज करें">
+                  </div>
+                  <div class="form-group">
+                    <label for="setNotifyEmail">Admin Notification Recipient</label>
+                    <input type="email" id="setNotifyEmail" class="form-control" placeholder="admin@example.com">
+                  </div>
+                </div>
+              </div>
+
+              <div class="form-group" style="margin-top: 1rem;">
+                <label style="display: flex; align-items: center; gap: 0.5rem; cursor: pointer;">
+                  <input type="checkbox" id="setAutoVerify">
+                  <span style="font-size: 0.9rem; font-weight: 600;">ऑटो-वेरिफाई डेमो मोड सक्रिय करें</span>
+                </label>
+              </div>
+
+              <button type="submit" class="btn btn-primary" style="margin-top: 1rem;">
+                💾 सेटिंग्स सहेजें (Save Settings)
+              </button>
+            </form>
+          </div>
+
+          <!-- QR Upload Card -->
+          <div class="settings-card">
+            <h3>🖼️ UPI QR कोड छवि अपलोड करें</h3>
+            <div style="margin-top: 1rem; display: flex; gap: 1.5rem; align-items: center; flex-wrap: wrap;">
+              <div style="border: 2px solid #e2e8f0; border-radius: 8px; padding: 0.5rem; background: #ffffff;">
+                <img id="adminQrPreview" src="images/payment_qr.png" alt="QR Preview" style="width: 140px; height: 140px; object-fit: contain;">
+              </div>
+              <div>
+                <input type="file" id="qrFileInput" accept="image/png,image/jpeg,image/webp" style="margin-bottom: 0.75rem;" onchange="previewSelectedQr(event)">
+                <br>
+                <button type="button" id="uploadQrBtn" class="btn btn-emerald btn-sm" onclick="uploadQrImage()" style="display: none;">
+                  📤 नया QR अपलोड करें
+                </button>
+                <div id="qrUploadMsg" style="margin-top: 0.5rem; font-size: 0.85rem;"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- TAB 6: SECURITY & AUDIT LOGS -->
+        <div id="securityTab" style="display: none;">
+          
+          <!-- Change Password Card -->
+          <div class="settings-card" style="margin-bottom: 1.5rem;">
+            <h3>🔐 व्यवस्थापक पासवर्ड व उपयोगकर्ता नाम बदलें (Change Password)</h3>
+            <p style="color: var(--text-muted); font-size: 0.85rem; margin-bottom: 1.25rem;">
+              सुरक्षा के लिए पासवर्ड में अक्षर, संख्या एवं विशेष चिह्नों का प्रयोग करें।
+            </p>
+
+            <form onsubmit="handleChangePassword(event)">
+              <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1rem;">
+                <div class="form-group">
+                  <label for="newUsernameInput">उपयोगकर्ता नाम (Username)</label>
+                  <input type="text" id="newUsernameInput" class="form-control" value="admin" required>
+                </div>
+                <div class="form-group">
+                  <label for="currentPasswordInput">वर्तमान पासवर्ड (Current Password)</label>
+                  <div class="password-field-wrap">
+                    <input type="password" id="currentPasswordInput" class="form-control" required style="padding-right: 2.5rem;">
+                    <button type="button" class="password-toggle-btn" onclick="togglePasswordVisibility('currentPasswordInput', this)">👁️</button>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label for="newPasswordInput">नया पासवर्ड (New Password - Min 6 chars)</label>
+                  <div class="password-field-wrap">
+                    <input type="password" id="newPasswordInput" class="form-control" minlength="6" required style="padding-right: 2.5rem;">
+                    <button type="button" class="password-toggle-btn" onclick="togglePasswordVisibility('newPasswordInput', this)">👁️</button>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label for="confirmPasswordInput">नए पासवर्ड की पुष्टि (Confirm New Password)</label>
+                  <div class="password-field-wrap">
+                    <input type="password" id="confirmPasswordInput" class="form-control" minlength="6" required style="padding-right: 2.5rem;">
+                    <button type="button" class="password-toggle-btn" onclick="togglePasswordVisibility('confirmPasswordInput', this)">👁️</button>
+                  </div>
+                </div>
+              </div>
+
+              <div id="passwordChangeStatus" style="margin-top: 0.75rem; font-size: 0.85rem;"></div>
+
+              <button type="submit" class="btn btn-primary" style="margin-top: 1rem;">
+                🔒 पासवर्ड अपडेट करें (Update Password)
+              </button>
+            </form>
+          </div>
+
+          <!-- Security Audit Logs Card -->
+          <div class="settings-card">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem;">
+              <div>
+                <h3 style="margin: 0;">🛡️ सुरक्षा ऑडिट लॉग (Security Audit Trail)</h3>
+                <p style="color: var(--text-muted); font-size: 0.85rem; margin: 0.25rem 0 0;">
+                  व्यवस्थापक लॉगिन, पासवर्ड परिवर्तन एवं संवेदनशील गतिविधियों का रिकॉर्ड।
+                </p>
+              </div>
+              <div style="display: flex; gap: 0.5rem; align-items: center;">
+                <select id="securityLogsPageSize" class="form-control" style="width: auto; padding: 0.35rem 0.6rem; font-size: 0.82rem; cursor: pointer;" onchange="changeSecurityLogsPageSize(this.value)">
+                  <option value="10">10 प्रति पृष्ठ</option>
+                  <option value="25">25 प्रति पृष्ठ</option>
+                  <option value="50">50 प्रति पृष्ठ</option>
+                  <option value="100">100 प्रति पृष्ठ</option>
+                </select>
+                <button class="btn btn-secondary btn-sm" onclick="loadSecurityLogs()">
+                  🔄 लॉग रिफ्रेश करें
+                </button>
+              </div>
+            </div>
+
+            <div class="table-container">
+              <table class="data-table">
+                <thead>
+                  <tr>
+                    <th># आईडी</th>
+                    <th>घटना प्रकार (Event)</th>
+                    <th>स्थिति (Status)</th>
+                    <th>विवरण (Details)</th>
+                    <th>समय (Timestamp)</th>
+                  </tr>
+                </thead>
+                <tbody id="securityLogsTableBody">
+                  <tr><td colspan="5" style="text-align:center; padding:2rem; color:#64748b;">सुरक्षा लॉग लोड हो रहे हैं...</td></tr>
+                </tbody>
+              </table>
+            </div>
+
+            <!-- Security Logs Pagination -->
+            <div id="securityLogsPagination" class="pagination" style="display: none; padding: 0.85rem 0.25rem; border-top: 1px solid #e2e8f0; margin-top: 0.75rem;">
+              <div id="securityLogsPaginationInfo" style="font-weight: 600; color: #475569; font-size: 0.85rem;">
+                पृष्ठ 1 / 1
+              </div>
+              <div class="pagination-buttons" id="securityLogsPaginationButtons" style="display: flex; gap: 0.4rem; align-items: center;">
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div> <!-- end .admin-content-body -->
+    </div> <!-- end .admin-main-wrap -->
+  </div> <!-- end #adminDashboardContainer -->
+
+  <script src="js/admin.js?v=3.0"></script>
+</body>
+</html>

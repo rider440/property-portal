@@ -1,0 +1,3092 @@
+[
+  {
+    "village_code": "201233",
+    "village_name": "Aadepur",
+    "district_name": "Jaunpur",
+    "tehsil": "Machhlishahr"
+  },
+  {
+    "village_code": "201117",
+    "village_name": "Abhaipur",
+    "district_name": "Jaunpur",
+    "tehsil": "Machhlishahr"
+  },
+  {
+    "village_code": "200996",
+    "village_name": "Achakari",
+    "district_name": "Jaunpur",
+    "tehsil": "Machhlishahr"
+  },
+  {
+    "village_code": "201427",
+    "village_name": "Adari",
+    "district_name": "Jaunpur",
+    "tehsil": "Machhlishahr"
+  },
+  {
+    "village_code": "201331",
+    "village_name": "Addopur",
+    "district_name": "Jaunpur",
+    "tehsil": "Machhlishahr"
+  },
+  {
+    "village_code": "201108",
+    "village_name": "Adhakacha",
+    "district_name": "Jaunpur",
+    "tehsil": "Machhlishahr"
+  },
+  {
+    "village_code": "201449",
+    "village_name": "Agahuwa",
+    "district_name": "Jaunpur",
+    "tehsil": "Machhlishahr"
+  },
+  {
+    "village_code": "201363",
+    "village_name": "Ahamadpur",
+    "district_name": "Jaunpur",
+    "tehsil": "Machhlishahr"
+  },
+  {
+    "village_code": "201280",
+    "village_name": "Ahamadpur Gariyaon",
+    "district_name": "Jaunpur",
+    "tehsil": "Machhlishahr"
+  },
+  {
+    "village_code": "201239",
+    "village_name": "Ahamadpur Kaithauli",
+    "district_name": "Jaunpur",
+    "tehsil": "Machhlishahr"
+  },
+  {
+    "village_code": "201063",
+    "village_name": "Ahiladpur",
+    "district_name": "Jaunpur",
+    "tehsil": "Machhlishahr"
+  },
+  {
+    "village_code": "201290",
+    "village_name": "Ahirauli",
+    "district_name": "Jaunpur",
+    "tehsil": "Machhlishahr"
+  },
+  {
+    "village_code": "201392",
+    "village_name": "Ahiyapur",
+    "district_name": "Jaunpur",
+    "tehsil": "Machhlishahr"
+  },
+  {
+    "village_code": "201122",
+    "village_name": "Air",
+    "district_name": "Jaunpur",
+    "tehsil": "Machhlishahr"
+  },
+  {
+    "village_code": "201168",
+    "village_name": "Ajoh",
+    "district_name": "Jaunpur",
+    "tehsil": "Machhlishahr"
+  },
+  {
+    "village_code": "201060",
+    "village_name": "Akaula",
+    "district_name": "Jaunpur",
+    "tehsil": "Machhlishahr"
+  },
+  {
+    "village_code": "201128",
+    "village_name": "Akora",
+    "district_name": "Jaunpur",
+    "tehsil": "Machhlishahr"
+  },
+  {
+    "village_code": "201071",
+    "village_name": "Alaiya",
+    "district_name": "Jaunpur",
+    "tehsil": "Machhlishahr"
+  },
+  {
+    "village_code": "201086",
+    "village_name": "Alampur",
+    "district_name": "Jaunpur",
+    "tehsil": "Machhlishahr"
+  },
+  {
+    "village_code": "201462",
+    "village_name": "Alapur Godhana",
+    "district_name": "Jaunpur",
+    "tehsil": "Machhlishahr"
+  },
+  {
+    "village_code": "201409",
+    "village_name": "Alapur Krishnarpan",
+    "district_name": "Jaunpur",
+    "tehsil": "Machhlishahr"
+  },
+  {
+    "village_code": "201463",
+    "village_name": "Amaien",
+    "district_name": "Jaunpur",
+    "tehsil": "Machhlishahr"
+  },
+  {
+    "village_code": "201401",
+    "village_name": "Amara",
+    "district_name": "Jaunpur",
+    "tehsil": "Machhlishahr"
+  },
+  {
+    "village_code": "201173",
+    "village_name": "Amawan",
+    "district_name": "Jaunpur",
+    "tehsil": "Machhlishahr"
+  },
+  {
+    "village_code": "201119",
+    "village_name": "Amepur",
+    "district_name": "Jaunpur",
+    "tehsil": "Machhlishahr"
+  },
+  {
+    "village_code": "201232",
+    "village_name": "Amodh",
+    "district_name": "Jaunpur",
+    "tehsil": "Machhlishahr"
+  },
+  {
+    "village_code": "201479",
+    "village_name": "Anapur",
+    "district_name": "Jaunpur",
+    "tehsil": "Machhlishahr"
+  },
+  {
+    "village_code": "201123",
+    "village_name": "Arhonpur",
+    "district_name": "Jaunpur",
+    "tehsil": "Machhlishahr"
+  },
+  {
+    "village_code": "201157",
+    "village_name": "Arowan",
+    "district_name": "Jaunpur",
+    "tehsil": "Machhlishahr"
+  },
+  {
+    "village_code": "201494",
+    "village_name": "Aruawan",
+    "district_name": "Jaunpur",
+    "tehsil": "Machhlishahr"
+  },
+  {
+    "village_code": "201292",
+    "village_name": "Asawan",
+    "district_name": "Jaunpur",
+    "tehsil": "Machhlishahr"
+  },
+  {
+    "village_code": "201228",
+    "village_name": "Ashapur",
+    "district_name": "Jaunpur",
+    "tehsil": "Machhlishahr"
+  },
+  {
+    "village_code": "201295",
+    "village_name": "Babhaniyawan",
+    "district_name": "Jaunpur",
+    "tehsil": "Machhlishahr"
+  },
+  {
+    "village_code": "201262",
+    "village_name": "Babhanpur",
+    "district_name": "Jaunpur",
+    "tehsil": "Machhlishahr"
+  },
+  {
+    "village_code": "201338",
+    "village_name": "Babhanpur",
+    "district_name": "Jaunpur",
+    "tehsil": "Machhlishahr"
+  },
+  {
+    "village_code": "201019",
+    "village_name": "Babupur",
+    "district_name": "Jaunpur",
+    "tehsil": "Machhlishahr"
+  },
+  {
+    "village_code": "201156",
+    "village_name": "Baharpur",
+    "district_name": "Jaunpur",
+    "tehsil": "Machhlishahr"
+  },
+  {
+    "village_code": "201134",
+    "village_name": "Bahauddinpur",
+    "district_name": "Jaunpur",
+    "tehsil": "Machhlishahr"
+  },
+  {
+    "village_code": "201240",
+    "village_name": "Bahorikpur",
+    "district_name": "Jaunpur",
+    "tehsil": "Machhlishahr"
+  },
+  {
+    "village_code": "201070",
+    "village_name": "Bakhopur",
+    "district_name": "Jaunpur",
+    "tehsil": "Machhlishahr"
+  },
+  {
+    "village_code": "200993",
+    "village_name": "Balhamau",
+    "district_name": "Jaunpur",
+    "tehsil": "Machhlishahr"
+  },
+  {
+    "village_code": "201190",
+    "village_name": "Banbeerpur",
+    "district_name": "Jaunpur",
+    "tehsil": "Machhlishahr"
+  },
+  {
+    "village_code": "201112",
+    "village_name": "Bangalipur",
+    "district_name": "Jaunpur",
+    "tehsil": "Machhlishahr"
+  },
+  {
+    "village_code": "201217",
+    "village_name": "Bankat",
+    "district_name": "Jaunpur",
+    "tehsil": "Machhlishahr"
+  },
+  {
+    "village_code": "201160",
+    "village_name": "Bara",
+    "district_name": "Jaunpur",
+    "tehsil": "Machhlishahr"
+  },
+  {
+    "village_code": "201272",
+    "village_name": "Bara Gaon",
+    "district_name": "Jaunpur",
+    "tehsil": "Machhlishahr"
+  },
+  {
+    "village_code": "201389",
+    "village_name": "Barahata",
+    "district_name": "Jaunpur",
+    "tehsil": "Machhlishahr"
+  },
+  {
+    "village_code": "201130",
+    "village_name": "Barahata",
+    "district_name": "Jaunpur",
+    "tehsil": "Machhlishahr"
+  },
+  {
+    "village_code": "201158",
+    "village_name": "Baraih",
+    "district_name": "Jaunpur",
+    "tehsil": "Machhlishahr"
+  },
+  {
+    "village_code": "201301",
+    "village_name": "Baraipar",
+    "district_name": "Jaunpur",
+    "tehsil": "Machhlishahr"
+  },
+  {
+    "village_code": "201417",
+    "village_name": "Barawan",
+    "district_name": "Jaunpur",
+    "tehsil": "Machhlishahr"
+  },
+  {
+    "village_code": "201358",
+    "village_name": "Barethi",
+    "district_name": "Jaunpur",
+    "tehsil": "Machhlishahr"
+  },
+  {
+    "village_code": "201084",
+    "village_name": "Barpur",
+    "district_name": "Jaunpur",
+    "tehsil": "Machhlishahr"
+  },
+  {
+    "village_code": "201397",
+    "village_name": "Baruwa",
+    "district_name": "Jaunpur",
+    "tehsil": "Machhlishahr"
+  },
+  {
+    "village_code": "201398",
+    "village_name": "Basahata",
+    "district_name": "Jaunpur",
+    "tehsil": "Machhlishahr"
+  },
+  {
+    "village_code": "201082",
+    "village_name": "Basarahi",
+    "district_name": "Jaunpur",
+    "tehsil": "Machhlishahr"
+  },
+  {
+    "village_code": "201349",
+    "village_name": "Batanhit",
+    "district_name": "Jaunpur",
+    "tehsil": "Machhlishahr"
+  },
+  {
+    "village_code": "201011",
+    "village_name": "Bazaha",
+    "district_name": "Jaunpur",
+    "tehsil": "Machhlishahr"
+  },
+  {
+    "village_code": "201396",
+    "village_name": "Belasin",
+    "district_name": "Jaunpur",
+    "tehsil": "Machhlishahr"
+  },
+  {
+    "village_code": "201499",
+    "village_name": "Belauna Khurd",
+    "district_name": "Jaunpur",
+    "tehsil": "Machhlishahr"
+  },
+  {
+    "village_code": "201144",
+    "village_name": "Belawan",
+    "district_name": "Jaunpur",
+    "tehsil": "Machhlishahr"
+  },
+  {
+    "village_code": "201013",
+    "village_name": "Belwar",
+    "district_name": "Jaunpur",
+    "tehsil": "Machhlishahr"
+  },
+  {
+    "village_code": "201031",
+    "village_name": "Bermanwa",
+    "district_name": "Jaunpur",
+    "tehsil": "Machhlishahr"
+  },
+  {
+    "village_code": "201049",
+    "village_name": "Berra",
+    "district_name": "Jaunpur",
+    "tehsil": "Machhlishahr"
+  },
+  {
+    "village_code": "201037",
+    "village_name": "Bhainsaha Rampur",
+    "district_name": "Jaunpur",
+    "tehsil": "Machhlishahr"
+  },
+  {
+    "village_code": "201242",
+    "village_name": "Bhairopur",
+    "district_name": "Jaunpur",
+    "tehsil": "Machhlishahr"
+  },
+  {
+    "village_code": "201075",
+    "village_name": "Bhaisahi",
+    "district_name": "Jaunpur",
+    "tehsil": "Machhlishahr"
+  },
+  {
+    "village_code": "201177",
+    "village_name": "Bhanipur Urf Karanpur",
+    "district_name": "Jaunpur",
+    "tehsil": "Machhlishahr"
+  },
+  {
+    "village_code": "201387",
+    "village_name": "Bhatadih",
+    "district_name": "Jaunpur",
+    "tehsil": "Machhlishahr"
+  },
+  {
+    "village_code": "201450",
+    "village_name": "Bhatahar",
+    "district_name": "Jaunpur",
+    "tehsil": "Machhlishahr"
+  },
+  {
+    "village_code": "201079",
+    "village_name": "Bhatauli Duban",
+    "district_name": "Jaunpur",
+    "tehsil": "Machhlishahr"
+  },
+  {
+    "village_code": "201424",
+    "village_name": "Bhatewara",
+    "district_name": "Jaunpur",
+    "tehsil": "Machhlishahr"
+  },
+  {
+    "village_code": "201113",
+    "village_name": "Bhaupur",
+    "district_name": "Jaunpur",
+    "tehsil": "Machhlishahr"
+  },
+  {
+    "village_code": "201477",
+    "village_name": "Bhawanipur",
+    "district_name": "Jaunpur",
+    "tehsil": "Machhlishahr"
+  },
+  {
+    "village_code": "201454",
+    "village_name": "Bhedpur",
+    "district_name": "Jaunpur",
+    "tehsil": "Machhlishahr"
+  },
+  {
+    "village_code": "201445",
+    "village_name": "Bhiduna",
+    "district_name": "Jaunpur",
+    "tehsil": "Machhlishahr"
+  },
+  {
+    "village_code": "201255",
+    "village_name": "Bhikhapur",
+    "district_name": "Jaunpur",
+    "tehsil": "Machhlishahr"
+  },
+  {
+    "village_code": "201121",
+    "village_name": "Bhikhari Pur Khas",
+    "district_name": "Jaunpur",
+    "tehsil": "Machhlishahr"
+  },
+  {
+    "village_code": "201151",
+    "village_name": "Bhikharipur Kalan",
+    "district_name": "Jaunpur",
+    "tehsil": "Machhlishahr"
+  },
+  {
+    "village_code": "201388",
+    "village_name": "Bhikharipur Ta. Bisunpur",
+    "district_name": "Jaunpur",
+    "tehsil": "Machhlishahr"
+  },
+  {
+    "village_code": "201009",
+    "village_name": "Bhilampur",
+    "district_name": "Jaunpur",
+    "tehsil": "Machhlishahr"
+  },
+  {
+    "village_code": "201036",
+    "village_name": "Bhuiendhara",
+    "district_name": "Jaunpur",
+    "tehsil": "Machhlishahr"
+  },
+  {
+    "village_code": "201475",
+    "village_name": "Bibipur",
+    "district_name": "Jaunpur",
+    "tehsil": "Machhlishahr"
+  },
+  {
+    "village_code": "201229",
+    "village_name": "Bijadhar Mau",
+    "district_name": "Jaunpur",
+    "tehsil": "Machhlishahr"
+  },
+  {
+    "village_code": "201172",
+    "village_name": "Biloie",
+    "district_name": "Jaunpur",
+    "tehsil": "Machhlishahr"
+  },
+  {
+    "village_code": "201204",
+    "village_name": "Birdhaulpur",
+    "district_name": "Jaunpur",
+    "tehsil": "Machhlishahr"
+  },
+  {
+    "village_code": "201116",
+    "village_name": "Bisawan",
+    "district_name": "Jaunpur",
+    "tehsil": "Machhlishahr"
+  },
+  {
+    "village_code": "201068",
+    "village_name": "Boirai",
+    "district_name": "Jaunpur",
+    "tehsil": "Machhlishahr"
+  },
+  {
+    "village_code": "201343",
+    "village_name": "Borepur",
+    "district_name": "Jaunpur",
+    "tehsil": "Machhlishahr"
+  },
+  {
+    "village_code": "201406",
+    "village_name": "Bosaula",
+    "district_name": "Jaunpur",
+    "tehsil": "Machhlishahr"
+  },
+  {
+    "village_code": "201265",
+    "village_name": "Buranpur",
+    "district_name": "Jaunpur",
+    "tehsil": "Machhlishahr"
+  },
+  {
+    "village_code": "201285",
+    "village_name": "Burhansapur",
+    "district_name": "Jaunpur",
+    "tehsil": "Machhlishahr"
+  },
+  {
+    "village_code": "201135",
+    "village_name": "Chaimalpur",
+    "district_name": "Jaunpur",
+    "tehsil": "Machhlishahr"
+  },
+  {
+    "village_code": "201057",
+    "village_name": "Chainpur",
+    "district_name": "Jaunpur",
+    "tehsil": "Machhlishahr"
+  },
+  {
+    "village_code": "201444",
+    "village_name": "Chak Binayak",
+    "district_name": "Jaunpur",
+    "tehsil": "Machhlishahr"
+  },
+  {
+    "village_code": "201443",
+    "village_name": "Chak Dost",
+    "district_name": "Jaunpur",
+    "tehsil": "Machhlishahr"
+  },
+  {
+    "village_code": "201347",
+    "village_name": "Chak English Chak Chain Singh",
+    "district_name": "Jaunpur",
+    "tehsil": "Machhlishahr"
+  },
+  {
+    "village_code": "201311",
+    "village_name": "Chak English Jorawar Khan",
+    "district_name": "Jaunpur",
+    "tehsil": "Machhlishahr"
+  },
+  {
+    "village_code": "201302",
+    "village_name": "Chak Ghasita",
+    "district_name": "Jaunpur",
+    "tehsil": "Machhlishahr"
+  },
+  {
+    "village_code": "201203",
+    "village_name": "Chak Malahatha",
+    "district_name": "Jaunpur",
+    "tehsil": "Machhlishahr"
+  },
+  {
+    "village_code": "201254",
+    "village_name": "Chak Mathiya",
+    "district_name": "Jaunpur",
+    "tehsil": "Machhlishahr"
+  },
+  {
+    "village_code": "201327",
+    "village_name": "Chak Mubarak",
+    "district_name": "Jaunpur",
+    "tehsil": "Machhlishahr"
+  },
+  {
+    "village_code": "201129",
+    "village_name": "Chak Nawabad",
+    "district_name": "Jaunpur",
+    "tehsil": "Machhlishahr"
+  },
+  {
+    "village_code": "201365",
+    "village_name": "Chak Rahaman",
+    "district_name": "Jaunpur",
+    "tehsil": "Machhlishahr"
+  },
+  {
+    "village_code": "201000",
+    "village_name": "Chaknaharmau",
+    "district_name": "Jaunpur",
+    "tehsil": "Machhlishahr"
+  },
+  {
+    "village_code": "201193",
+    "village_name": "Chandauli",
+    "district_name": "Jaunpur",
+    "tehsil": "Machhlishahr"
+  },
+  {
+    "village_code": "201137",
+    "village_name": "Chandpur",
+    "district_name": "Jaunpur",
+    "tehsil": "Machhlishahr"
+  },
+  {
+    "village_code": "201100",
+    "village_name": "Chandpur",
+    "district_name": "Jaunpur",
+    "tehsil": "Machhlishahr"
+  },
+  {
+    "village_code": "201120",
+    "village_name": "Chaobepur",
+    "district_name": "Jaunpur",
+    "tehsil": "Machhlishahr"
+  },
+  {
+    "village_code": "201083",
+    "village_name": "Chaujeetpur",
+    "district_name": "Jaunpur",
+    "tehsil": "Machhlishahr"
+  },
+  {
+    "village_code": "201447",
+    "village_name": "Chauki Kala",
+    "district_name": "Jaunpur",
+    "tehsil": "Machhlishahr"
+  },
+  {
+    "village_code": "201432",
+    "village_name": "Chauki Khurd",
+    "district_name": "Jaunpur",
+    "tehsil": "Machhlishahr"
+  },
+  {
+    "village_code": "201458",
+    "village_name": "Chauthar",
+    "district_name": "Jaunpur",
+    "tehsil": "Machhlishahr"
+  },
+  {
+    "village_code": "201328",
+    "village_name": "Chhachho",
+    "district_name": "Jaunpur",
+    "tehsil": "Machhlishahr"
+  },
+  {
+    "village_code": "201330",
+    "village_name": "Chhadan",
+    "district_name": "Jaunpur",
+    "tehsil": "Machhlishahr"
+  },
+  {
+    "village_code": "201259",
+    "village_name": "Chhanehata",
+    "district_name": "Jaunpur",
+    "tehsil": "Machhlishahr"
+  },
+  {
+    "village_code": "201153",
+    "village_name": "Chhangapur",
+    "district_name": "Jaunpur",
+    "tehsil": "Machhlishahr"
+  },
+  {
+    "village_code": "201097",
+    "village_name": "Chhimiyah",
+    "district_name": "Jaunpur",
+    "tehsil": "Machhlishahr"
+  },
+  {
+    "village_code": "201286",
+    "village_name": "Chitapur",
+    "district_name": "Jaunpur",
+    "tehsil": "Machhlishahr"
+  },
+  {
+    "village_code": "201429",
+    "village_name": "Chitawan",
+    "district_name": "Jaunpur",
+    "tehsil": "Machhlishahr"
+  },
+  {
+    "village_code": "201296",
+    "village_name": "Choraha",
+    "district_name": "Jaunpur",
+    "tehsil": "Machhlishahr"
+  },
+  {
+    "village_code": "201426",
+    "village_name": "Dabhiya",
+    "district_name": "Jaunpur",
+    "tehsil": "Machhlishahr"
+  },
+  {
+    "village_code": "201468",
+    "village_name": "Dagriaon",
+    "district_name": "Jaunpur",
+    "tehsil": "Machhlishahr"
+  },
+  {
+    "village_code": "201096",
+    "village_name": "Dahewa",
+    "district_name": "Jaunpur",
+    "tehsil": "Machhlishahr"
+  },
+  {
+    "village_code": "201021",
+    "village_name": "Dan",
+    "district_name": "Jaunpur",
+    "tehsil": "Machhlishahr"
+  },
+  {
+    "village_code": "201336",
+    "village_name": "Darabpur",
+    "district_name": "Jaunpur",
+    "tehsil": "Machhlishahr"
+  },
+  {
+    "village_code": "201216",
+    "village_name": "Darapur",
+    "district_name": "Jaunpur",
+    "tehsil": "Machhlishahr"
+  },
+  {
+    "village_code": "201105",
+    "village_name": "Darunpur",
+    "district_name": "Jaunpur",
+    "tehsil": "Machhlishahr"
+  },
+  {
+    "village_code": "201480",
+    "village_name": "Dashrathpur",
+    "district_name": "Jaunpur",
+    "tehsil": "Machhlishahr"
+  },
+  {
+    "village_code": "201064",
+    "village_name": "Daudpur",
+    "district_name": "Jaunpur",
+    "tehsil": "Machhlishahr"
+  },
+  {
+    "village_code": "201325",
+    "village_name": "Daudpur",
+    "district_name": "Jaunpur",
+    "tehsil": "Machhlishahr"
+  },
+  {
+    "village_code": "201183",
+    "village_name": "Deenapur",
+    "district_name": "Jaunpur",
+    "tehsil": "Machhlishahr"
+  },
+  {
+    "village_code": "201058",
+    "village_name": "Deepakpur",
+    "district_name": "Jaunpur",
+    "tehsil": "Machhlishahr"
+  },
+  {
+    "village_code": "201362",
+    "village_name": "Delhupur",
+    "district_name": "Jaunpur",
+    "tehsil": "Machhlishahr"
+  },
+  {
+    "village_code": "201073",
+    "village_name": "Deokali",
+    "district_name": "Jaunpur",
+    "tehsil": "Machhlishahr"
+  },
+  {
+    "village_code": "201384",
+    "village_name": "Deoriya",
+    "district_name": "Jaunpur",
+    "tehsil": "Machhlishahr"
+  },
+  {
+    "village_code": "201221",
+    "village_name": "Devipur",
+    "district_name": "Jaunpur",
+    "tehsil": "Machhlishahr"
+  },
+  {
+    "village_code": "201422",
+    "village_name": "Dewakipur",
+    "district_name": "Jaunpur",
+    "tehsil": "Machhlishahr"
+  },
+  {
+    "village_code": "201440",
+    "village_name": "Dewapur",
+    "district_name": "Jaunpur",
+    "tehsil": "Machhlishahr"
+  },
+  {
+    "village_code": "201042",
+    "village_name": "Dewapur",
+    "district_name": "Jaunpur",
+    "tehsil": "Machhlishahr"
+  },
+  {
+    "village_code": "201124",
+    "village_name": "Dewariya Ta Ghanghariya",
+    "district_name": "Jaunpur",
+    "tehsil": "Machhlishahr"
+  },
+  {
+    "village_code": "201125",
+    "village_name": "Dewariya Ta Ramnagar",
+    "district_name": "Jaunpur",
+    "tehsil": "Machhlishahr"
+  },
+  {
+    "village_code": "201298",
+    "village_name": "Dhanauwa",
+    "district_name": "Jaunpur",
+    "tehsil": "Machhlishahr"
+  },
+  {
+    "village_code": "201334",
+    "village_name": "Dhanipur",
+    "district_name": "Jaunpur",
+    "tehsil": "Machhlishahr"
+  },
+  {
+    "village_code": "201181",
+    "village_name": "Dharampur",
+    "district_name": "Jaunpur",
+    "tehsil": "Machhlishahr"
+  },
+  {
+    "village_code": "201300",
+    "village_name": "Dharamupur",
+    "district_name": "Jaunpur",
+    "tehsil": "Machhlishahr"
+  },
+  {
+    "village_code": "201040",
+    "village_name": "Dharikpur",
+    "district_name": "Jaunpur",
+    "tehsil": "Machhlishahr"
+  },
+  {
+    "village_code": "201225",
+    "village_name": "Dhaurahara",
+    "district_name": "Jaunpur",
+    "tehsil": "Machhlishahr"
+  },
+  {
+    "village_code": "201504",
+    "village_name": "Diawan",
+    "district_name": "Jaunpur",
+    "tehsil": "Machhlishahr"
+  },
+  {
+    "village_code": "201048",
+    "village_name": "Dih Garawar",
+    "district_name": "Jaunpur",
+    "tehsil": "Machhlishahr"
+  },
+  {
+    "village_code": "201402",
+    "village_name": "Dihia Ta. Vami",
+    "district_name": "Jaunpur",
+    "tehsil": "Machhlishahr"
+  },
+  {
+    "village_code": "201024",
+    "village_name": "Dompur Khas",
+    "district_name": "Jaunpur",
+    "tehsil": "Machhlishahr"
+  },
+  {
+    "village_code": "201056",
+    "village_name": "Faridabad",
+    "district_name": "Jaunpur",
+    "tehsil": "Machhlishahr"
+  },
+  {
+    "village_code": "201185",
+    "village_name": "Fattupur Kalan",
+    "district_name": "Jaunpur",
+    "tehsil": "Machhlishahr"
+  },
+  {
+    "village_code": "201263",
+    "village_name": "Fattupur Nisfi",
+    "district_name": "Jaunpur",
+    "tehsil": "Machhlishahr"
+  },
+  {
+    "village_code": "201171",
+    "village_name": "Firozpur",
+    "district_name": "Jaunpur",
+    "tehsil": "Machhlishahr"
+  },
+  {
+    "village_code": "201178",
+    "village_name": "Gaddopur",
+    "district_name": "Jaunpur",
+    "tehsil": "Machhlishahr"
+  },
+  {
+    "village_code": "201045",
+    "village_name": "Gaharpara",
+    "district_name": "Jaunpur",
+    "tehsil": "Machhlishahr"
+  },
+  {
+    "village_code": "201490",
+    "village_name": "Gahni",
+    "district_name": "Jaunpur",
+    "tehsil": "Machhlishahr"
+  },
+  {
+    "village_code": "201269",
+    "village_name": "Gajadharpur",
+    "district_name": "Jaunpur",
+    "tehsil": "Machhlishahr"
+  },
+  {
+    "village_code": "201106",
+    "village_name": "Ganeshpur",
+    "district_name": "Jaunpur",
+    "tehsil": "Machhlishahr"
+  },
+  {
+    "village_code": "201053",
+    "village_name": "Garawa",
+    "district_name": "Jaunpur",
+    "tehsil": "Machhlishahr"
+  },
+  {
+    "village_code": "201195",
+    "village_name": "Gariya",
+    "district_name": "Jaunpur",
+    "tehsil": "Machhlishahr"
+  },
+  {
+    "village_code": "201283",
+    "village_name": "Gariyawan",
+    "district_name": "Jaunpur",
+    "tehsil": "Machhlishahr"
+  },
+  {
+    "village_code": "201162",
+    "village_name": "Gauhani",
+    "district_name": "Jaunpur",
+    "tehsil": "Machhlishahr"
+  },
+  {
+    "village_code": "201176",
+    "village_name": "Gaushalapur",
+    "district_name": "Jaunpur",
+    "tehsil": "Machhlishahr"
+  },
+  {
+    "village_code": "201139",
+    "village_name": "Ghanghariya",
+    "district_name": "Jaunpur",
+    "tehsil": "Machhlishahr"
+  },
+  {
+    "village_code": "201007",
+    "village_name": "Ghatampur",
+    "district_name": "Jaunpur",
+    "tehsil": "Machhlishahr"
+  },
+  {
+    "village_code": "201367",
+    "village_name": "Ghisuwa Khurd",
+    "district_name": "Jaunpur",
+    "tehsil": "Machhlishahr"
+  },
+  {
+    "village_code": "201047",
+    "village_name": "Ghuripur",
+    "district_name": "Jaunpur",
+    "tehsil": "Machhlishahr"
+  },
+  {
+    "village_code": "201061",
+    "village_name": "Girahuli",
+    "district_name": "Jaunpur",
+    "tehsil": "Machhlishahr"
+  },
+  {
+    "village_code": "201430",
+    "village_name": "Godhana",
+    "district_name": "Jaunpur",
+    "tehsil": "Machhlishahr"
+  },
+  {
+    "village_code": "201273",
+    "village_name": "Godhowa",
+    "district_name": "Jaunpur",
+    "tehsil": "Machhlishahr"
+  },
+  {
+    "village_code": "201371",
+    "village_name": "Godhupur",
+    "district_name": "Jaunpur",
+    "tehsil": "Machhlishahr"
+  },
+  {
+    "village_code": "201501",
+    "village_name": "Gohka",
+    "district_name": "Jaunpur",
+    "tehsil": "Machhlishahr"
+  },
+  {
+    "village_code": "201002",
+    "village_name": "Golhanamau",
+    "district_name": "Jaunpur",
+    "tehsil": "Machhlishahr"
+  },
+  {
+    "village_code": "201378",
+    "village_name": "Gondalpur",
+    "district_name": "Jaunpur",
+    "tehsil": "Machhlishahr"
+  },
+  {
+    "village_code": "201482",
+    "village_name": "Gopal Patti",
+    "district_name": "Jaunpur",
+    "tehsil": "Machhlishahr"
+  },
+  {
+    "village_code": "201503",
+    "village_name": "Gopalpur",
+    "district_name": "Jaunpur",
+    "tehsil": "Machhlishahr"
+  },
+  {
+    "village_code": "201289",
+    "village_name": "Gopalpur",
+    "district_name": "Jaunpur",
+    "tehsil": "Machhlishahr"
+  },
+  {
+    "village_code": "201147",
+    "village_name": "Gopalpur",
+    "district_name": "Jaunpur",
+    "tehsil": "Machhlishahr"
+  },
+  {
+    "village_code": "201451",
+    "village_name": "Goppur",
+    "district_name": "Jaunpur",
+    "tehsil": "Machhlishahr"
+  },
+  {
+    "village_code": "201244",
+    "village_name": "Goraiyadih",
+    "district_name": "Jaunpur",
+    "tehsil": "Machhlishahr"
+  },
+  {
+    "village_code": "201187",
+    "village_name": "Govardhanpur",
+    "district_name": "Jaunpur",
+    "tehsil": "Machhlishahr"
+  },
+  {
+    "village_code": "201238",
+    "village_name": "Govindas Pur",
+    "district_name": "Jaunpur",
+    "tehsil": "Machhlishahr"
+  },
+  {
+    "village_code": "201006",
+    "village_name": "Guaawan",
+    "district_name": "Jaunpur",
+    "tehsil": "Machhlishahr"
+  },
+  {
+    "village_code": "201465",
+    "village_name": "Gurguji",
+    "district_name": "Jaunpur",
+    "tehsil": "Machhlishahr"
+  },
+  {
+    "village_code": "201274",
+    "village_name": "Haidarepur",
+    "district_name": "Jaunpur",
+    "tehsil": "Machhlishahr"
+  },
+  {
+    "village_code": "201022",
+    "village_name": "Handawar",
+    "district_name": "Jaunpur",
+    "tehsil": "Machhlishahr"
+  },
+  {
+    "village_code": "201470",
+    "village_name": "Harhuwa",
+    "district_name": "Jaunpur",
+    "tehsil": "Machhlishahr"
+  },
+  {
+    "village_code": "201078",
+    "village_name": "Haripur Ta.Alaiya",
+    "district_name": "Jaunpur",
+    "tehsil": "Machhlishahr"
+  },
+  {
+    "village_code": "201502",
+    "village_name": "Hariya",
+    "district_name": "Jaunpur",
+    "tehsil": "Machhlishahr"
+  },
+  {
+    "village_code": "201257",
+    "village_name": "Hasanpur",
+    "district_name": "Jaunpur",
+    "tehsil": "Machhlishahr"
+  },
+  {
+    "village_code": "201461",
+    "village_name": "Haweli",
+    "district_name": "Jaunpur",
+    "tehsil": "Machhlishahr"
+  },
+  {
+    "village_code": "201340",
+    "village_name": "Heeramanpur",
+    "district_name": "Jaunpur",
+    "tehsil": "Machhlishahr"
+  },
+  {
+    "village_code": "201039",
+    "village_name": "Himmat Nagar",
+    "district_name": "Jaunpur",
+    "tehsil": "Machhlishahr"
+  },
+  {
+    "village_code": "201220",
+    "village_name": "Himmatpur",
+    "district_name": "Jaunpur",
+    "tehsil": "Machhlishahr"
+  },
+  {
+    "village_code": "201346",
+    "village_name": "Hiqamuddinpur",
+    "district_name": "Jaunpur",
+    "tehsil": "Machhlishahr"
+  },
+  {
+    "village_code": "201091",
+    "village_name": "Hisamuddinpur",
+    "district_name": "Jaunpur",
+    "tehsil": "Machhlishahr"
+  },
+  {
+    "village_code": "201201",
+    "village_name": "Holpur",
+    "district_name": "Jaunpur",
+    "tehsil": "Machhlishahr"
+  },
+  {
+    "village_code": "201437",
+    "village_name": "Imiliya",
+    "district_name": "Jaunpur",
+    "tehsil": "Machhlishahr"
+  },
+  {
+    "village_code": "201310",
+    "village_name": "Ismalela",
+    "district_name": "Jaunpur",
+    "tehsil": "Machhlishahr"
+  },
+  {
+    "village_code": "201115",
+    "village_name": "Itaha",
+    "district_name": "Jaunpur",
+    "tehsil": "Machhlishahr"
+  },
+  {
+    "village_code": "201236",
+    "village_name": "Itahara",
+    "district_name": "Jaunpur",
+    "tehsil": "Machhlishahr"
+  },
+  {
+    "village_code": "201435",
+    "village_name": "Jagadishpur Khas",
+    "district_name": "Jaunpur",
+    "tehsil": "Machhlishahr"
+  },
+  {
+    "village_code": "201335",
+    "village_name": "Jagadishpur Ta.Kunwarpur",
+    "district_name": "Jaunpur",
+    "tehsil": "Machhlishahr"
+  },
+  {
+    "village_code": "201459",
+    "village_name": "Jagarnathpur",
+    "district_name": "Jaunpur",
+    "tehsil": "Machhlishahr"
+  },
+  {
+    "village_code": "201345",
+    "village_name": "Jagarnathpur",
+    "district_name": "Jaunpur",
+    "tehsil": "Machhlishahr"
+  },
+  {
+    "village_code": "201361",
+    "village_name": "Jahansapur",
+    "district_name": "Jaunpur",
+    "tehsil": "Machhlishahr"
+  },
+  {
+    "village_code": "201196",
+    "village_name": "Jai Pal Pur",
+    "district_name": "Jaunpur",
+    "tehsil": "Machhlishahr"
+  },
+  {
+    "village_code": "201199",
+    "village_name": "Jakhaniyan",
+    "district_name": "Jaunpur",
+    "tehsil": "Machhlishahr"
+  },
+  {
+    "village_code": "201320",
+    "village_name": "Jalalabad",
+    "district_name": "Jaunpur",
+    "tehsil": "Machhlishahr"
+  },
+  {
+    "village_code": "201332",
+    "village_name": "Jalalpur",
+    "district_name": "Jaunpur",
+    "tehsil": "Machhlishahr"
+  },
+  {
+    "village_code": "201014",
+    "village_name": "Jamal Patti",
+    "district_name": "Jaunpur",
+    "tehsil": "Machhlishahr"
+  },
+  {
+    "village_code": "201382",
+    "village_name": "Jamalpur",
+    "district_name": "Jaunpur",
+    "tehsil": "Machhlishahr"
+  },
+  {
+    "village_code": "201235",
+    "village_name": "Jamalpur",
+    "district_name": "Jaunpur",
+    "tehsil": "Machhlishahr"
+  },
+  {
+    "village_code": "201386",
+    "village_name": "Jamuhar",
+    "district_name": "Jaunpur",
+    "tehsil": "Machhlishahr"
+  },
+  {
+    "village_code": "201455",
+    "village_name": "Jarauna",
+    "district_name": "Jaunpur",
+    "tehsil": "Machhlishahr"
+  },
+  {
+    "village_code": "201297",
+    "village_name": "Jiriqpur",
+    "district_name": "Jaunpur",
+    "tehsil": "Machhlishahr"
+  },
+  {
+    "village_code": "201026",
+    "village_name": "Jogipur Khas",
+    "district_name": "Jaunpur",
+    "tehsil": "Machhlishahr"
+  },
+  {
+    "village_code": "201027",
+    "village_name": "Jogipur Matiyahi",
+    "district_name": "Jaunpur",
+    "tehsil": "Machhlishahr"
+  },
+  {
+    "village_code": "201351",
+    "village_name": "Juraupur",
+    "district_name": "Jaunpur",
+    "tehsil": "Machhlishahr"
+  },
+  {
+    "village_code": "201276",
+    "village_name": "Kabeerpur",
+    "district_name": "Jaunpur",
+    "tehsil": "Machhlishahr"
+  },
+  {
+    "village_code": "201277",
+    "village_name": "Kachhidih",
+    "district_name": "Jaunpur",
+    "tehsil": "Machhlishahr"
+  },
+  {
+    "village_code": "201375",
+    "village_name": "Kadanpur",
+    "district_name": "Jaunpur",
+    "tehsil": "Machhlishahr"
+  },
+  {
+    "village_code": "201307",
+    "village_name": "Kaithauli",
+    "district_name": "Jaunpur",
+    "tehsil": "Machhlishahr"
+  },
+  {
+    "village_code": "201413",
+    "village_name": "Kalyanpur",
+    "district_name": "Jaunpur",
+    "tehsil": "Machhlishahr"
+  },
+  {
+    "village_code": "201250",
+    "village_name": "Kamalpur",
+    "district_name": "Jaunpur",
+    "tehsil": "Machhlishahr"
+  },
+  {
+    "village_code": "201464",
+    "village_name": "Kamasin",
+    "district_name": "Jaunpur",
+    "tehsil": "Machhlishahr"
+  },
+  {
+    "village_code": "201154",
+    "village_name": "Kanchanpur",
+    "district_name": "Jaunpur",
+    "tehsil": "Machhlishahr"
+  },
+  {
+    "village_code": "201114",
+    "village_name": "Kandhapur",
+    "district_name": "Jaunpur",
+    "tehsil": "Machhlishahr"
+  },
+  {
+    "village_code": "201111",
+    "village_name": "Kapoorpur",
+    "district_name": "Jaunpur",
+    "tehsil": "Machhlishahr"
+  },
+  {
+    "village_code": "200995",
+    "village_name": "Karatora",
+    "district_name": "Jaunpur",
+    "tehsil": "Machhlishahr"
+  },
+  {
+    "village_code": "201400",
+    "village_name": "Karaudi",
+    "district_name": "Jaunpur",
+    "tehsil": "Machhlishahr"
+  },
+  {
+    "village_code": "201341",
+    "village_name": "Karaunda",
+    "district_name": "Jaunpur",
+    "tehsil": "Machhlishahr"
+  },
+  {
+    "village_code": "201291",
+    "village_name": "Karaur",
+    "district_name": "Jaunpur",
+    "tehsil": "Machhlishahr"
+  },
+  {
+    "village_code": "201103",
+    "village_name": "Karaura",
+    "district_name": "Jaunpur",
+    "tehsil": "Machhlishahr"
+  },
+  {
+    "village_code": "201410",
+    "village_name": "Karaura",
+    "district_name": "Jaunpur",
+    "tehsil": "Machhlishahr"
+  },
+  {
+    "village_code": "201087",
+    "village_name": "Kargail",
+    "district_name": "Jaunpur",
+    "tehsil": "Machhlishahr"
+  },
+  {
+    "village_code": "201446",
+    "village_name": "Kariyanwa",
+    "district_name": "Jaunpur",
+    "tehsil": "Machhlishahr"
+  },
+  {
+    "village_code": "201287",
+    "village_name": "Karkoli",
+    "district_name": "Jaunpur",
+    "tehsil": "Machhlishahr"
+  },
+  {
+    "village_code": "201175",
+    "village_name": "Karnauli",
+    "district_name": "Jaunpur",
+    "tehsil": "Machhlishahr"
+  },
+  {
+    "village_code": "201505",
+    "village_name": "Kasba Dhirua Khas",
+    "district_name": "Jaunpur",
+    "tehsil": "Machhlishahr"
+  },
+  {
+    "village_code": "201466",
+    "village_name": "Kaserawa",
+    "district_name": "Jaunpur",
+    "tehsil": "Machhlishahr"
+  },
+  {
+    "village_code": "201489",
+    "village_name": "Kasnahi",
+    "district_name": "Jaunpur",
+    "tehsil": "Machhlishahr"
+  },
+  {
+    "village_code": "201313",
+    "village_name": "Katahit Khas",
+    "district_name": "Jaunpur",
+    "tehsil": "Machhlishahr"
+  },
+  {
+    "village_code": "201304",
+    "village_name": "Kataka",
+    "district_name": "Jaunpur",
+    "tehsil": "Machhlishahr"
+  },
+  {
+    "village_code": "201425",
+    "village_name": "Kathar",
+    "district_name": "Jaunpur",
+    "tehsil": "Machhlishahr"
+  },
+  {
+    "village_code": "201483",
+    "village_name": "Kathar",
+    "district_name": "Jaunpur",
+    "tehsil": "Machhlishahr"
+  },
+  {
+    "village_code": "201081",
+    "village_name": "Kaulipur",
+    "district_name": "Jaunpur",
+    "tehsil": "Machhlishahr"
+  },
+  {
+    "village_code": "201316",
+    "village_name": "Kauraha",
+    "district_name": "Jaunpur",
+    "tehsil": "Machhlishahr"
+  },
+  {
+    "village_code": "201077",
+    "village_name": "Khagalpur",
+    "district_name": "Jaunpur",
+    "tehsil": "Machhlishahr"
+  },
+  {
+    "village_code": "201352",
+    "village_name": "Khajurahat",
+    "district_name": "Jaunpur",
+    "tehsil": "Machhlishahr"
+  },
+  {
+    "village_code": "201496",
+    "village_name": "Khajuri",
+    "district_name": "Jaunpur",
+    "tehsil": "Machhlishahr"
+  },
+  {
+    "village_code": "201355",
+    "village_name": "Khakhopur",
+    "district_name": "Jaunpur",
+    "tehsil": "Machhlishahr"
+  },
+  {
+    "village_code": "201411",
+    "village_name": "Kharaiya Mau",
+    "district_name": "Jaunpur",
+    "tehsil": "Machhlishahr"
+  },
+  {
+    "village_code": "201161",
+    "village_name": "Kharari",
+    "district_name": "Jaunpur",
+    "tehsil": "Machhlishahr"
+  },
+  {
+    "village_code": "201357",
+    "village_name": "Kharuawan",
+    "district_name": "Jaunpur",
+    "tehsil": "Machhlishahr"
+  },
+  {
+    "village_code": "201069",
+    "village_name": "Khatihara",
+    "district_name": "Jaunpur",
+    "tehsil": "Machhlishahr"
+  },
+  {
+    "village_code": "201366",
+    "village_name": "Khawajapur",
+    "district_name": "Jaunpur",
+    "tehsil": "Machhlishahr"
+  },
+  {
+    "village_code": "201191",
+    "village_name": "Khemaipur",
+    "district_name": "Jaunpur",
+    "tehsil": "Machhlishahr"
+  },
+  {
+    "village_code": "201102",
+    "village_name": "Khempur",
+    "district_name": "Jaunpur",
+    "tehsil": "Machhlishahr"
+  },
+  {
+    "village_code": "201500",
+    "village_name": "Khud Khari",
+    "district_name": "Jaunpur",
+    "tehsil": "Machhlishahr"
+  },
+  {
+    "village_code": "201431",
+    "village_name": "Kisun Daspur Ta. Agahuwa",
+    "district_name": "Jaunpur",
+    "tehsil": "Machhlishahr"
+  },
+  {
+    "village_code": "201404",
+    "village_name": "Kisun Daspur Ta. Batanahita",
+    "district_name": "Jaunpur",
+    "tehsil": "Machhlishahr"
+  },
+  {
+    "village_code": "201303",
+    "village_name": "Kisunipur",
+    "district_name": "Jaunpur",
+    "tehsil": "Machhlishahr"
+  },
+  {
+    "village_code": "201252",
+    "village_name": "Kodahon",
+    "district_name": "Jaunpur",
+    "tehsil": "Machhlishahr"
+  },
+  {
+    "village_code": "201074",
+    "village_name": "Kohila",
+    "district_name": "Jaunpur",
+    "tehsil": "Machhlishahr"
+  },
+  {
+    "village_code": "201360",
+    "village_name": "Kora",
+    "district_name": "Jaunpur",
+    "tehsil": "Machhlishahr"
+  },
+  {
+    "village_code": "201369",
+    "village_name": "Koramalpur",
+    "district_name": "Jaunpur",
+    "tehsil": "Machhlishahr"
+  },
+  {
+    "village_code": "201015",
+    "village_name": "Kotab",
+    "district_name": "Jaunpur",
+    "tehsil": "Machhlishahr"
+  },
+  {
+    "village_code": "201391",
+    "village_name": "Kotawa",
+    "district_name": "Jaunpur",
+    "tehsil": "Machhlishahr"
+  },
+  {
+    "village_code": "201383",
+    "village_name": "Kothari",
+    "district_name": "Jaunpur",
+    "tehsil": "Machhlishahr"
+  },
+  {
+    "village_code": "201032",
+    "village_name": "Kotila Ta. Belwar",
+    "district_name": "Jaunpur",
+    "tehsil": "Machhlishahr"
+  },
+  {
+    "village_code": "201017",
+    "village_name": "Kozidih",
+    "district_name": "Jaunpur",
+    "tehsil": "Machhlishahr"
+  },
+  {
+    "village_code": "201005",
+    "village_name": "Kundaha",
+    "district_name": "Jaunpur",
+    "tehsil": "Machhlishahr"
+  },
+  {
+    "village_code": "201356",
+    "village_name": "Kunwarpur",
+    "district_name": "Jaunpur",
+    "tehsil": "Machhlishahr"
+  },
+  {
+    "village_code": "201143",
+    "village_name": "Kurawan",
+    "district_name": "Jaunpur",
+    "tehsil": "Machhlishahr"
+  },
+  {
+    "village_code": "201486",
+    "village_name": "Kurha",
+    "district_name": "Jaunpur",
+    "tehsil": "Machhlishahr"
+  },
+  {
+    "village_code": "201478",
+    "village_name": "Kurni",
+    "district_name": "Jaunpur",
+    "tehsil": "Machhlishahr"
+  },
+  {
+    "village_code": "201212",
+    "village_name": "Kururiya",
+    "district_name": "Jaunpur",
+    "tehsil": "Machhlishahr"
+  },
+  {
+    "village_code": "200994",
+    "village_name": "Kushmaul",
+    "district_name": "Jaunpur",
+    "tehsil": "Machhlishahr"
+  },
+  {
+    "village_code": "201095",
+    "village_name": "Kutubpur",
+    "district_name": "Jaunpur",
+    "tehsil": "Machhlishahr"
+  },
+  {
+    "village_code": "201035",
+    "village_name": "Lagadharpur",
+    "district_name": "Jaunpur",
+    "tehsil": "Machhlishahr"
+  },
+  {
+    "village_code": "201348",
+    "village_name": "Lalahapur",
+    "district_name": "Jaunpur",
+    "tehsil": "Machhlishahr"
+  },
+  {
+    "village_code": "201428",
+    "village_name": "Lasa",
+    "district_name": "Jaunpur",
+    "tehsil": "Machhlishahr"
+  },
+  {
+    "village_code": "201248",
+    "village_name": "Lauh",
+    "district_name": "Jaunpur",
+    "tehsil": "Machhlishahr"
+  },
+  {
+    "village_code": "200998",
+    "village_name": "Lewa",
+    "district_name": "Jaunpur",
+    "tehsil": "Machhlishahr"
+  },
+  {
+    "village_code": "201131",
+    "village_name": "Loharapur",
+    "district_name": "Jaunpur",
+    "tehsil": "Machhlishahr"
+  },
+  {
+    "village_code": "801214",
+    "village_name": "Machhlishahr (NP)",
+    "district_name": "Jaunpur",
+    "tehsil": "Machhlishahr"
+  },
+  {
+    "village_code": "201202",
+    "village_name": "Madardih",
+    "district_name": "Jaunpur",
+    "tehsil": "Machhlishahr"
+  },
+  {
+    "village_code": "201491",
+    "village_name": "Madhaipur",
+    "district_name": "Jaunpur",
+    "tehsil": "Machhlishahr"
+  },
+  {
+    "village_code": "201436",
+    "village_name": "Madhopur",
+    "district_name": "Jaunpur",
+    "tehsil": "Machhlishahr"
+  },
+  {
+    "village_code": "201184",
+    "village_name": "Madhupur",
+    "district_name": "Jaunpur",
+    "tehsil": "Machhlishahr"
+  },
+  {
+    "village_code": "201368",
+    "village_name": "Mahamoodpur",
+    "district_name": "Jaunpur",
+    "tehsil": "Machhlishahr"
+  },
+  {
+    "village_code": "201407",
+    "village_name": "Mahapur",
+    "district_name": "Jaunpur",
+    "tehsil": "Machhlishahr"
+  },
+  {
+    "village_code": "201282",
+    "village_name": "Mahendru",
+    "district_name": "Jaunpur",
+    "tehsil": "Machhlishahr"
+  },
+  {
+    "village_code": "201186",
+    "village_name": "Majha Gawan",
+    "district_name": "Jaunpur",
+    "tehsil": "Machhlishahr"
+  },
+  {
+    "village_code": "201180",
+    "village_name": "Mallupur",
+    "district_name": "Jaunpur",
+    "tehsil": "Machhlishahr"
+  },
+  {
+    "village_code": "201492",
+    "village_name": "Malsil",
+    "district_name": "Jaunpur",
+    "tehsil": "Machhlishahr"
+  },
+  {
+    "village_code": "201090",
+    "village_name": "Mandaha",
+    "district_name": "Jaunpur",
+    "tehsil": "Machhlishahr"
+  },
+  {
+    "village_code": "201209",
+    "village_name": "Mani Patti",
+    "district_name": "Jaunpur",
+    "tehsil": "Machhlishahr"
+  },
+  {
+    "village_code": "201469",
+    "village_name": "Manikapur",
+    "district_name": "Jaunpur",
+    "tehsil": "Machhlishahr"
+  },
+  {
+    "village_code": "201317",
+    "village_name": "Marahpur",
+    "district_name": "Jaunpur",
+    "tehsil": "Machhlishahr"
+  },
+  {
+    "village_code": "201208",
+    "village_name": "Marawa Dodak",
+    "district_name": "Jaunpur",
+    "tehsil": "Machhlishahr"
+  },
+  {
+    "village_code": "201376",
+    "village_name": "Marufpur",
+    "district_name": "Jaunpur",
+    "tehsil": "Machhlishahr"
+  },
+  {
+    "village_code": "201218",
+    "village_name": "Masot",
+    "district_name": "Jaunpur",
+    "tehsil": "Machhlishahr"
+  },
+  {
+    "village_code": "201141",
+    "village_name": "Mathura",
+    "district_name": "Jaunpur",
+    "tehsil": "Machhlishahr"
+  },
+  {
+    "village_code": "201025",
+    "village_name": "Matiyahi",
+    "district_name": "Jaunpur",
+    "tehsil": "Machhlishahr"
+  },
+  {
+    "village_code": "201182",
+    "village_name": "Meerapur Ta Madhupur",
+    "district_name": "Jaunpur",
+    "tehsil": "Machhlishahr"
+  },
+  {
+    "village_code": "201370",
+    "village_name": "Meerpur Khas",
+    "district_name": "Jaunpur",
+    "tehsil": "Machhlishahr"
+  },
+  {
+    "village_code": "201399",
+    "village_name": "Meerpur Ta. Karaudi",
+    "district_name": "Jaunpur",
+    "tehsil": "Machhlishahr"
+  },
+  {
+    "village_code": "201453",
+    "village_name": "Meerpur Ta. Kariyanwa",
+    "district_name": "Jaunpur",
+    "tehsil": "Machhlishahr"
+  },
+  {
+    "village_code": "201493",
+    "village_name": "Mehandi",
+    "district_name": "Jaunpur",
+    "tehsil": "Machhlishahr"
+  },
+  {
+    "village_code": "201321",
+    "village_name": "Mirzapur",
+    "district_name": "Jaunpur",
+    "tehsil": "Machhlishahr"
+  },
+  {
+    "village_code": "201268",
+    "village_name": "Mirzapur",
+    "district_name": "Jaunpur",
+    "tehsil": "Machhlishahr"
+  },
+  {
+    "village_code": "201051",
+    "village_name": "Misirain Patti",
+    "district_name": "Jaunpur",
+    "tehsil": "Machhlishahr"
+  },
+  {
+    "village_code": "201099",
+    "village_name": "Misirmau",
+    "district_name": "Jaunpur",
+    "tehsil": "Machhlishahr"
+  },
+  {
+    "village_code": "201281",
+    "village_name": "Modawan",
+    "district_name": "Jaunpur",
+    "tehsil": "Machhlishahr"
+  },
+  {
+    "village_code": "801213",
+    "village_name": "Mogra Badshahpur (NPP)",
+    "district_name": "Jaunpur",
+    "tehsil": "Machhlishahr"
+  },
+  {
+    "village_code": "201284",
+    "village_name": "Mohanpur",
+    "district_name": "Jaunpur",
+    "tehsil": "Machhlishahr"
+  },
+  {
+    "village_code": "201150",
+    "village_name": "Mohariyawan",
+    "district_name": "Jaunpur",
+    "tehsil": "Machhlishahr"
+  },
+  {
+    "village_code": "201294",
+    "village_name": "Molanapur",
+    "district_name": "Jaunpur",
+    "tehsil": "Machhlishahr"
+  },
+  {
+    "village_code": "201372",
+    "village_name": "Molanapur",
+    "district_name": "Jaunpur",
+    "tehsil": "Machhlishahr"
+  },
+  {
+    "village_code": "201442",
+    "village_name": "Mubarakpur",
+    "district_name": "Jaunpur",
+    "tehsil": "Machhlishahr"
+  },
+  {
+    "village_code": "201434",
+    "village_name": "Mujahana",
+    "district_name": "Jaunpur",
+    "tehsil": "Machhlishahr"
+  },
+  {
+    "village_code": "201207",
+    "village_name": "Mungardih",
+    "district_name": "Jaunpur",
+    "tehsil": "Machhlishahr"
+  },
+  {
+    "village_code": "201215",
+    "village_name": "Muradpur",
+    "district_name": "Jaunpur",
+    "tehsil": "Machhlishahr"
+  },
+  {
+    "village_code": "201146",
+    "village_name": "Mustafabad",
+    "district_name": "Jaunpur",
+    "tehsil": "Machhlishahr"
+  },
+  {
+    "village_code": "201385",
+    "village_name": "Muzar",
+    "district_name": "Jaunpur",
+    "tehsil": "Machhlishahr"
+  },
+  {
+    "village_code": "201329",
+    "village_name": "Nadan",
+    "district_name": "Jaunpur",
+    "tehsil": "Machhlishahr"
+  },
+  {
+    "village_code": "201279",
+    "village_name": "Nadar",
+    "district_name": "Jaunpur",
+    "tehsil": "Machhlishahr"
+  },
+  {
+    "village_code": "201067",
+    "village_name": "Nagauli",
+    "district_name": "Jaunpur",
+    "tehsil": "Machhlishahr"
+  },
+  {
+    "village_code": "201008",
+    "village_name": "Naharmau",
+    "district_name": "Jaunpur",
+    "tehsil": "Machhlishahr"
+  },
+  {
+    "village_code": "201038",
+    "village_name": "Naharmau Ta.Himmat Nagar",
+    "district_name": "Jaunpur",
+    "tehsil": "Machhlishahr"
+  },
+  {
+    "village_code": "201350",
+    "village_name": "Nakhatpur",
+    "district_name": "Jaunpur",
+    "tehsil": "Machhlishahr"
+  },
+  {
+    "village_code": "201323",
+    "village_name": "Nandpur",
+    "district_name": "Jaunpur",
+    "tehsil": "Machhlishahr"
+  },
+  {
+    "village_code": "201148",
+    "village_name": "Naqbaharipur",
+    "district_name": "Jaunpur",
+    "tehsil": "Machhlishahr"
+  },
+  {
+    "village_code": "201094",
+    "village_name": "Naraharpur",
+    "district_name": "Jaunpur",
+    "tehsil": "Machhlishahr"
+  },
+  {
+    "village_code": "201198",
+    "village_name": "Narain Pur",
+    "district_name": "Jaunpur",
+    "tehsil": "Machhlishahr"
+  },
+  {
+    "village_code": "201251",
+    "village_name": "Naraindih",
+    "district_name": "Jaunpur",
+    "tehsil": "Machhlishahr"
+  },
+  {
+    "village_code": "201052",
+    "village_name": "Naripur",
+    "district_name": "Jaunpur",
+    "tehsil": "Machhlishahr"
+  },
+  {
+    "village_code": "201403",
+    "village_name": "Narsinghpur",
+    "district_name": "Jaunpur",
+    "tehsil": "Machhlishahr"
+  },
+  {
+    "village_code": "201326",
+    "village_name": "Nasaruddinpur",
+    "district_name": "Jaunpur",
+    "tehsil": "Machhlishahr"
+  },
+  {
+    "village_code": "201419",
+    "village_name": "Nathupur",
+    "district_name": "Jaunpur",
+    "tehsil": "Machhlishahr"
+  },
+  {
+    "village_code": "201140",
+    "village_name": "Nathupur",
+    "district_name": "Jaunpur",
+    "tehsil": "Machhlishahr"
+  },
+  {
+    "village_code": "201237",
+    "village_name": "Nauwadadi",
+    "district_name": "Jaunpur",
+    "tehsil": "Machhlishahr"
+  },
+  {
+    "village_code": "201065",
+    "village_name": "Nevaraha",
+    "district_name": "Jaunpur",
+    "tehsil": "Machhlishahr"
+  },
+  {
+    "village_code": "201043",
+    "village_name": "Newada",
+    "district_name": "Jaunpur",
+    "tehsil": "Machhlishahr"
+  },
+  {
+    "village_code": "201271",
+    "village_name": "Nibhapur",
+    "district_name": "Jaunpur",
+    "tehsil": "Machhlishahr"
+  },
+  {
+    "village_code": "201322",
+    "village_name": "Nikamuddinpur",
+    "district_name": "Jaunpur",
+    "tehsil": "Machhlishahr"
+  },
+  {
+    "village_code": "201487",
+    "village_name": "Nizamuddinpur",
+    "district_name": "Jaunpur",
+    "tehsil": "Machhlishahr"
+  },
+  {
+    "village_code": "201395",
+    "village_name": "Nonara Khurd",
+    "district_name": "Jaunpur",
+    "tehsil": "Machhlishahr"
+  },
+  {
+    "village_code": "201138",
+    "village_name": "Noorpur",
+    "district_name": "Jaunpur",
+    "tehsil": "Machhlishahr"
+  },
+  {
+    "village_code": "201393",
+    "village_name": "Norarakala",
+    "district_name": "Jaunpur",
+    "tehsil": "Machhlishahr"
+  },
+  {
+    "village_code": "201159",
+    "village_name": "Padumpur",
+    "district_name": "Jaunpur",
+    "tehsil": "Machhlishahr"
+  },
+  {
+    "village_code": "200999",
+    "village_name": "Paduwa",
+    "district_name": "Jaunpur",
+    "tehsil": "Machhlishahr"
+  },
+  {
+    "village_code": "201319",
+    "village_name": "Paharpur",
+    "district_name": "Jaunpur",
+    "tehsil": "Machhlishahr"
+  },
+  {
+    "village_code": "201488",
+    "village_name": "Pahsana",
+    "district_name": "Jaunpur",
+    "tehsil": "Machhlishahr"
+  },
+  {
+    "village_code": "201380",
+    "village_name": "Pakari",
+    "district_name": "Jaunpur",
+    "tehsil": "Machhlishahr"
+  },
+  {
+    "village_code": "201226",
+    "village_name": "Pakari",
+    "district_name": "Jaunpur",
+    "tehsil": "Machhlishahr"
+  },
+  {
+    "village_code": "201258",
+    "village_name": "Pandepur",
+    "district_name": "Jaunpur",
+    "tehsil": "Machhlishahr"
+  },
+  {
+    "village_code": "201213",
+    "village_name": "Panwara",
+    "district_name": "Jaunpur",
+    "tehsil": "Machhlishahr"
+  },
+  {
+    "village_code": "201136",
+    "village_name": "Parahit",
+    "district_name": "Jaunpur",
+    "tehsil": "Machhlishahr"
+  },
+  {
+    "village_code": "201353",
+    "village_name": "Parasupur",
+    "district_name": "Jaunpur",
+    "tehsil": "Machhlishahr"
+  },
+  {
+    "village_code": "201072",
+    "village_name": "Patahana",
+    "district_name": "Jaunpur",
+    "tehsil": "Machhlishahr"
+  },
+  {
+    "village_code": "201314",
+    "village_name": "Patulki",
+    "district_name": "Jaunpur",
+    "tehsil": "Machhlishahr"
+  },
+  {
+    "village_code": "201495",
+    "village_name": "Pauha",
+    "district_name": "Jaunpur",
+    "tehsil": "Machhlishahr"
+  },
+  {
+    "village_code": "201381",
+    "village_name": "Peerpur",
+    "district_name": "Jaunpur",
+    "tehsil": "Machhlishahr"
+  },
+  {
+    "village_code": "201101",
+    "village_name": "Piyarepur",
+    "district_name": "Jaunpur",
+    "tehsil": "Machhlishahr"
+  },
+  {
+    "village_code": "201001",
+    "village_name": "Pura Chaknarain",
+    "district_name": "Jaunpur",
+    "tehsil": "Machhlishahr"
+  },
+  {
+    "village_code": "201194",
+    "village_name": "Pura Dayal",
+    "district_name": "Jaunpur",
+    "tehsil": "Machhlishahr"
+  },
+  {
+    "village_code": "201243",
+    "village_name": "Pura Harasu",
+    "district_name": "Jaunpur",
+    "tehsil": "Machhlishahr"
+  },
+  {
+    "village_code": "201012",
+    "village_name": "Pura Hari Narain",
+    "district_name": "Jaunpur",
+    "tehsil": "Machhlishahr"
+  },
+  {
+    "village_code": "201270",
+    "village_name": "Pura Jorawar",
+    "district_name": "Jaunpur",
+    "tehsil": "Machhlishahr"
+  },
+  {
+    "village_code": "201246",
+    "village_name": "Pura Madhu",
+    "district_name": "Jaunpur",
+    "tehsil": "Machhlishahr"
+  },
+  {
+    "village_code": "201030",
+    "village_name": "Pura Pratap Shah",
+    "district_name": "Jaunpur",
+    "tehsil": "Machhlishahr"
+  },
+  {
+    "village_code": "201033",
+    "village_name": "Pura Ram Sahai",
+    "district_name": "Jaunpur",
+    "tehsil": "Machhlishahr"
+  },
+  {
+    "village_code": "201085",
+    "village_name": "Purabeni",
+    "district_name": "Jaunpur",
+    "tehsil": "Machhlishahr"
+  },
+  {
+    "village_code": "201253",
+    "village_name": "Purau Pur",
+    "district_name": "Jaunpur",
+    "tehsil": "Machhlishahr"
+  },
+  {
+    "village_code": "201275",
+    "village_name": "Pure Lal",
+    "district_name": "Jaunpur",
+    "tehsil": "Machhlishahr"
+  },
+  {
+    "village_code": "201476",
+    "village_name": "Purwa",
+    "district_name": "Jaunpur",
+    "tehsil": "Machhlishahr"
+  },
+  {
+    "village_code": "201166",
+    "village_name": "Raddipur",
+    "district_name": "Jaunpur",
+    "tehsil": "Machhlishahr"
+  },
+  {
+    "village_code": "201474",
+    "village_name": "Raiya",
+    "district_name": "Jaunpur",
+    "tehsil": "Machhlishahr"
+  },
+  {
+    "village_code": "201145",
+    "village_name": "Rajapur",
+    "district_name": "Jaunpur",
+    "tehsil": "Machhlishahr"
+  },
+  {
+    "village_code": "201377",
+    "village_name": "Rajapur",
+    "district_name": "Jaunpur",
+    "tehsil": "Machhlishahr"
+  },
+  {
+    "village_code": "201405",
+    "village_name": "Rajapur Ta. Wami",
+    "district_name": "Jaunpur",
+    "tehsil": "Machhlishahr"
+  },
+  {
+    "village_code": "201299",
+    "village_name": "Rajepur Ta. Baraipar",
+    "district_name": "Jaunpur",
+    "tehsil": "Machhlishahr"
+  },
+  {
+    "village_code": "201132",
+    "village_name": "Rajgarh",
+    "district_name": "Jaunpur",
+    "tehsil": "Machhlishahr"
+  },
+  {
+    "village_code": "201333",
+    "village_name": "Rajjupur",
+    "district_name": "Jaunpur",
+    "tehsil": "Machhlishahr"
+  },
+  {
+    "village_code": "201256",
+    "village_name": "Rakhauli",
+    "district_name": "Jaunpur",
+    "tehsil": "Machhlishahr"
+  },
+  {
+    "village_code": "201127",
+    "village_name": "Ram Nagar",
+    "district_name": "Jaunpur",
+    "tehsil": "Machhlishahr"
+  },
+  {
+    "village_code": "201192",
+    "village_name": "Ram Nagar",
+    "district_name": "Jaunpur",
+    "tehsil": "Machhlishahr"
+  },
+  {
+    "village_code": "201245",
+    "village_name": "Ramchauki",
+    "district_name": "Jaunpur",
+    "tehsil": "Machhlishahr"
+  },
+  {
+    "village_code": "201041",
+    "village_name": "Ramdeiya",
+    "district_name": "Jaunpur",
+    "tehsil": "Machhlishahr"
+  },
+  {
+    "village_code": "201457",
+    "village_name": "Ramdih",
+    "district_name": "Jaunpur",
+    "tehsil": "Machhlishahr"
+  },
+  {
+    "village_code": "201179",
+    "village_name": "Ramgara Taluka Madhupur",
+    "district_name": "Jaunpur",
+    "tehsil": "Machhlishahr"
+  },
+  {
+    "village_code": "201416",
+    "village_name": "Ramgrah Khas",
+    "district_name": "Jaunpur",
+    "tehsil": "Machhlishahr"
+  },
+  {
+    "village_code": "201059",
+    "village_name": "Ramnagara",
+    "district_name": "Jaunpur",
+    "tehsil": "Machhlishahr"
+  },
+  {
+    "village_code": "201266",
+    "village_name": "Ramnathpur",
+    "district_name": "Jaunpur",
+    "tehsil": "Machhlishahr"
+  },
+  {
+    "village_code": "201110",
+    "village_name": "Rampur",
+    "district_name": "Jaunpur",
+    "tehsil": "Machhlishahr"
+  },
+  {
+    "village_code": "201004",
+    "village_name": "Rampur",
+    "district_name": "Jaunpur",
+    "tehsil": "Machhlishahr"
+  },
+  {
+    "village_code": "201189",
+    "village_name": "Rampur",
+    "district_name": "Jaunpur",
+    "tehsil": "Machhlishahr"
+  },
+  {
+    "village_code": "201018",
+    "village_name": "Rampur Dan",
+    "district_name": "Jaunpur",
+    "tehsil": "Machhlishahr"
+  },
+  {
+    "village_code": "201497",
+    "village_name": "Rampur Gohka",
+    "district_name": "Jaunpur",
+    "tehsil": "Machhlishahr"
+  },
+  {
+    "village_code": "201164",
+    "village_name": "Rampur Hargir",
+    "district_name": "Jaunpur",
+    "tehsil": "Machhlishahr"
+  },
+  {
+    "village_code": "201046",
+    "village_name": "Rampur Kalan",
+    "district_name": "Jaunpur",
+    "tehsil": "Machhlishahr"
+  },
+  {
+    "village_code": "201359",
+    "village_name": "Rampur Kalan",
+    "district_name": "Jaunpur",
+    "tehsil": "Machhlishahr"
+  },
+  {
+    "village_code": "201438",
+    "village_name": "Rampur Khurd",
+    "district_name": "Jaunpur",
+    "tehsil": "Machhlishahr"
+  },
+  {
+    "village_code": "201267",
+    "village_name": "Rampur Mori",
+    "district_name": "Jaunpur",
+    "tehsil": "Machhlishahr"
+  },
+  {
+    "village_code": "201337",
+    "village_name": "Rampur Sawai",
+    "district_name": "Jaunpur",
+    "tehsil": "Machhlishahr"
+  },
+  {
+    "village_code": "201227",
+    "village_name": "Rampur Ta Jakhaniyan",
+    "district_name": "Jaunpur",
+    "tehsil": "Machhlishahr"
+  },
+  {
+    "village_code": "201309",
+    "village_name": "Rampur Ta. Katahi",
+    "district_name": "Jaunpur",
+    "tehsil": "Machhlishahr"
+  },
+  {
+    "village_code": "201080",
+    "village_name": "Rampur Ta.Alaiya",
+    "district_name": "Jaunpur",
+    "tehsil": "Machhlishahr"
+  },
+  {
+    "village_code": "201076",
+    "village_name": "Rangawa",
+    "district_name": "Jaunpur",
+    "tehsil": "Machhlishahr"
+  },
+  {
+    "village_code": "201373",
+    "village_name": "Rasulpur",
+    "district_name": "Jaunpur",
+    "tehsil": "Machhlishahr"
+  },
+  {
+    "village_code": "201149",
+    "village_name": "Raya",
+    "district_name": "Jaunpur",
+    "tehsil": "Machhlishahr"
+  },
+  {
+    "village_code": "201174",
+    "village_name": "Rohiyawan",
+    "district_name": "Jaunpur",
+    "tehsil": "Machhlishahr"
+  },
+  {
+    "village_code": "201054",
+    "village_name": "Sabeli",
+    "district_name": "Jaunpur",
+    "tehsil": "Machhlishahr"
+  },
+  {
+    "village_code": "201092",
+    "village_name": "Sadi Kala",
+    "district_name": "Jaunpur",
+    "tehsil": "Machhlishahr"
+  },
+  {
+    "village_code": "201093",
+    "village_name": "Sadi Khurd",
+    "district_name": "Jaunpur",
+    "tehsil": "Machhlishahr"
+  },
+  {
+    "village_code": "201420",
+    "village_name": "Sahani",
+    "district_name": "Jaunpur",
+    "tehsil": "Machhlishahr"
+  },
+  {
+    "village_code": "201312",
+    "village_name": "Sahijadpur",
+    "district_name": "Jaunpur",
+    "tehsil": "Machhlishahr"
+  },
+  {
+    "village_code": "201165",
+    "village_name": "Saidani",
+    "district_name": "Jaunpur",
+    "tehsil": "Machhlishahr"
+  },
+  {
+    "village_code": "201223",
+    "village_name": "Sajai Kalan Khurd",
+    "district_name": "Jaunpur",
+    "tehsil": "Machhlishahr"
+  },
+  {
+    "village_code": "201066",
+    "village_name": "Sakapur",
+    "district_name": "Jaunpur",
+    "tehsil": "Machhlishahr"
+  },
+  {
+    "village_code": "201109",
+    "village_name": "Sakara",
+    "district_name": "Jaunpur",
+    "tehsil": "Machhlishahr"
+  },
+  {
+    "village_code": "201020",
+    "village_name": "Sakara",
+    "district_name": "Jaunpur",
+    "tehsil": "Machhlishahr"
+  },
+  {
+    "village_code": "201044",
+    "village_name": "Sakhavat",
+    "district_name": "Jaunpur",
+    "tehsil": "Machhlishahr"
+  },
+  {
+    "village_code": "201118",
+    "village_name": "Salarpur",
+    "district_name": "Jaunpur",
+    "tehsil": "Machhlishahr"
+  },
+  {
+    "village_code": "201023",
+    "village_name": "Samargunji",
+    "district_name": "Jaunpur",
+    "tehsil": "Machhlishahr"
+  },
+  {
+    "village_code": "201247",
+    "village_name": "Samaspur",
+    "district_name": "Jaunpur",
+    "tehsil": "Machhlishahr"
+  },
+  {
+    "village_code": "201098",
+    "village_name": "Sarai Bhogi",
+    "district_name": "Jaunpur",
+    "tehsil": "Machhlishahr"
+  },
+  {
+    "village_code": "201315",
+    "village_name": "Sarai Chandan",
+    "district_name": "Jaunpur",
+    "tehsil": "Machhlishahr"
+  },
+  {
+    "village_code": "201260",
+    "village_name": "Sarai Chauhan",
+    "district_name": "Jaunpur",
+    "tehsil": "Machhlishahr"
+  },
+  {
+    "village_code": "201441",
+    "village_name": "Sarai Dewa",
+    "district_name": "Jaunpur",
+    "tehsil": "Machhlishahr"
+  },
+  {
+    "village_code": "201206",
+    "village_name": "Sarai Dingur",
+    "district_name": "Jaunpur",
+    "tehsil": "Machhlishahr"
+  },
+  {
+    "village_code": "201010",
+    "village_name": "Sarai Ghatam",
+    "district_name": "Jaunpur",
+    "tehsil": "Machhlishahr"
+  },
+  {
+    "village_code": "201126",
+    "village_name": "Sarai Ismaiel",
+    "district_name": "Jaunpur",
+    "tehsil": "Machhlishahr"
+  },
+  {
+    "village_code": "201188",
+    "village_name": "Sarai Kashi",
+    "district_name": "Jaunpur",
+    "tehsil": "Machhlishahr"
+  },
+  {
+    "village_code": "201016",
+    "village_name": "Sarai Kewat",
+    "district_name": "Jaunpur",
+    "tehsil": "Machhlishahr"
+  },
+  {
+    "village_code": "201167",
+    "village_name": "Sarai Khani",
+    "district_name": "Jaunpur",
+    "tehsil": "Machhlishahr"
+  },
+  {
+    "village_code": "201288",
+    "village_name": "Sarai Khem",
+    "district_name": "Jaunpur",
+    "tehsil": "Machhlishahr"
+  },
+  {
+    "village_code": "201354",
+    "village_name": "Sarai Malik Goddo",
+    "district_name": "Jaunpur",
+    "tehsil": "Machhlishahr"
+  },
+  {
+    "village_code": "201222",
+    "village_name": "Sarai Pawara",
+    "district_name": "Jaunpur",
+    "tehsil": "Machhlishahr"
+  },
+  {
+    "village_code": "201205",
+    "village_name": "Sarai Rai Chanda",
+    "district_name": "Jaunpur",
+    "tehsil": "Machhlishahr"
+  },
+  {
+    "village_code": "201249",
+    "village_name": "Sarai Rustam",
+    "district_name": "Jaunpur",
+    "tehsil": "Machhlishahr"
+  },
+  {
+    "village_code": "201339",
+    "village_name": "Sarai Vika",
+    "district_name": "Jaunpur",
+    "tehsil": "Machhlishahr"
+  },
+  {
+    "village_code": "201324",
+    "village_name": "Sarai Yusuf",
+    "district_name": "Jaunpur",
+    "tehsil": "Machhlishahr"
+  },
+  {
+    "village_code": "201484",
+    "village_name": "Saraiya",
+    "district_name": "Jaunpur",
+    "tehsil": "Machhlishahr"
+  },
+  {
+    "village_code": "201219",
+    "village_name": "Sarawan",
+    "district_name": "Jaunpur",
+    "tehsil": "Machhlishahr"
+  },
+  {
+    "village_code": "201498",
+    "village_name": "Sarawan",
+    "district_name": "Jaunpur",
+    "tehsil": "Machhlishahr"
+  },
+  {
+    "village_code": "201234",
+    "village_name": "Saria Fattu",
+    "district_name": "Jaunpur",
+    "tehsil": "Machhlishahr"
+  },
+  {
+    "village_code": "201224",
+    "village_name": "Sarokhanpur",
+    "district_name": "Jaunpur",
+    "tehsil": "Machhlishahr"
+  },
+  {
+    "village_code": "200997",
+    "village_name": "Sarvemau",
+    "district_name": "Jaunpur",
+    "tehsil": "Machhlishahr"
+  },
+  {
+    "village_code": "201230",
+    "village_name": "Sata Hariya",
+    "district_name": "Jaunpur",
+    "tehsil": "Machhlishahr"
+  },
+  {
+    "village_code": "201439",
+    "village_name": "Sawaiya",
+    "district_name": "Jaunpur",
+    "tehsil": "Machhlishahr"
+  },
+  {
+    "village_code": "201293",
+    "village_name": "Semari",
+    "district_name": "Jaunpur",
+    "tehsil": "Machhlishahr"
+  },
+  {
+    "village_code": "201214",
+    "village_name": "Semariya",
+    "district_name": "Jaunpur",
+    "tehsil": "Machhlishahr"
+  },
+  {
+    "village_code": "201415",
+    "village_name": "Semraho",
+    "district_name": "Jaunpur",
+    "tehsil": "Machhlishahr"
+  },
+  {
+    "village_code": "201485",
+    "village_name": "Seura",
+    "district_name": "Jaunpur",
+    "tehsil": "Machhlishahr"
+  },
+  {
+    "village_code": "201418",
+    "village_name": "Shahpur",
+    "district_name": "Jaunpur",
+    "tehsil": "Machhlishahr"
+  },
+  {
+    "village_code": "201460",
+    "village_name": "Shekha Jain Pur",
+    "district_name": "Jaunpur",
+    "tehsil": "Machhlishahr"
+  },
+  {
+    "village_code": "201062",
+    "village_name": "Shekhapur",
+    "district_name": "Jaunpur",
+    "tehsil": "Machhlishahr"
+  },
+  {
+    "village_code": "201481",
+    "village_name": "Shekhpur",
+    "district_name": "Jaunpur",
+    "tehsil": "Machhlishahr"
+  },
+  {
+    "village_code": "201003",
+    "village_name": "Sheoriha",
+    "district_name": "Jaunpur",
+    "tehsil": "Machhlishahr"
+  },
+  {
+    "village_code": "201433",
+    "village_name": "Sisawan",
+    "district_name": "Jaunpur",
+    "tehsil": "Machhlishahr"
+  },
+  {
+    "village_code": "201261",
+    "village_name": "Sohansa",
+    "district_name": "Jaunpur",
+    "tehsil": "Machhlishahr"
+  },
+  {
+    "village_code": "201107",
+    "village_name": "Sonahita",
+    "district_name": "Jaunpur",
+    "tehsil": "Machhlishahr"
+  },
+  {
+    "village_code": "201210",
+    "village_name": "Songara",
+    "district_name": "Jaunpur",
+    "tehsil": "Machhlishahr"
+  },
+  {
+    "village_code": "201414",
+    "village_name": "Sonhara",
+    "district_name": "Jaunpur",
+    "tehsil": "Machhlishahr"
+  },
+  {
+    "village_code": "201088",
+    "village_name": "Sultanpur",
+    "district_name": "Jaunpur",
+    "tehsil": "Machhlishahr"
+  },
+  {
+    "village_code": "201241",
+    "village_name": "Sultanpur",
+    "district_name": "Jaunpur",
+    "tehsil": "Machhlishahr"
+  },
+  {
+    "village_code": "201089",
+    "village_name": "Sultanpur Patti Pahar",
+    "district_name": "Jaunpur",
+    "tehsil": "Machhlishahr"
+  },
+  {
+    "village_code": "201473",
+    "village_name": "Surtasapur",
+    "district_name": "Jaunpur",
+    "tehsil": "Machhlishahr"
+  },
+  {
+    "village_code": "201364",
+    "village_name": "Tajuddinpur",
+    "district_name": "Jaunpur",
+    "tehsil": "Machhlishahr"
+  },
+  {
+    "village_code": "201034",
+    "village_name": "Tar Patti",
+    "district_name": "Jaunpur",
+    "tehsil": "Machhlishahr"
+  },
+  {
+    "village_code": "201264",
+    "village_name": "Tarahathi",
+    "district_name": "Jaunpur",
+    "tehsil": "Machhlishahr"
+  },
+  {
+    "village_code": "201133",
+    "village_name": "Tarapur",
+    "district_name": "Jaunpur",
+    "tehsil": "Machhlishahr"
+  },
+  {
+    "village_code": "201278",
+    "village_name": "Tardih",
+    "district_name": "Jaunpur",
+    "tehsil": "Machhlishahr"
+  },
+  {
+    "village_code": "201142",
+    "village_name": "Tarsanwa",
+    "district_name": "Jaunpur",
+    "tehsil": "Machhlishahr"
+  },
+  {
+    "village_code": "201170",
+    "village_name": "Taspur",
+    "district_name": "Jaunpur",
+    "tehsil": "Machhlishahr"
+  },
+  {
+    "village_code": "201344",
+    "village_name": "Tateehara",
+    "district_name": "Jaunpur",
+    "tehsil": "Machhlishahr"
+  },
+  {
+    "village_code": "201029",
+    "village_name": "Tazuddinpur Ghaharpara",
+    "district_name": "Jaunpur",
+    "tehsil": "Machhlishahr"
+  },
+  {
+    "village_code": "201028",
+    "village_name": "Tazuddinpur Khas",
+    "district_name": "Jaunpur",
+    "tehsil": "Machhlishahr"
+  },
+  {
+    "village_code": "201379",
+    "village_name": "Tekardih",
+    "district_name": "Jaunpur",
+    "tehsil": "Machhlishahr"
+  },
+  {
+    "village_code": "201472",
+    "village_name": "Tekari",
+    "district_name": "Jaunpur",
+    "tehsil": "Machhlishahr"
+  },
+  {
+    "village_code": "201050",
+    "village_name": "Telhuwa",
+    "district_name": "Jaunpur",
+    "tehsil": "Machhlishahr"
+  },
+  {
+    "village_code": "201152",
+    "village_name": "Thaloie",
+    "district_name": "Jaunpur",
+    "tehsil": "Machhlishahr"
+  },
+  {
+    "village_code": "201306",
+    "village_name": "Thehuniya",
+    "district_name": "Jaunpur",
+    "tehsil": "Machhlishahr"
+  },
+  {
+    "village_code": "201421",
+    "village_name": "Tikara",
+    "district_name": "Jaunpur",
+    "tehsil": "Machhlishahr"
+  },
+  {
+    "village_code": "201055",
+    "village_name": "Tilakhara Urf Suzanganj",
+    "district_name": "Jaunpur",
+    "tehsil": "Machhlishahr"
+  },
+  {
+    "village_code": "201412",
+    "village_name": "Tilara",
+    "district_name": "Jaunpur",
+    "tehsil": "Machhlishahr"
+  },
+  {
+    "village_code": "201471",
+    "village_name": "Tofapur",
+    "district_name": "Jaunpur",
+    "tehsil": "Machhlishahr"
+  },
+  {
+    "village_code": "201394",
+    "village_name": "Tulapur",
+    "district_name": "Jaunpur",
+    "tehsil": "Machhlishahr"
+  },
+  {
+    "village_code": "201231",
+    "village_name": "Uchaura",
+    "district_name": "Jaunpur",
+    "tehsil": "Machhlishahr"
+  },
+  {
+    "village_code": "201197",
+    "village_name": "Ukani",
+    "district_name": "Jaunpur",
+    "tehsil": "Machhlishahr"
+  },
+  {
+    "village_code": "201374",
+    "village_name": "Umapur",
+    "district_name": "Jaunpur",
+    "tehsil": "Machhlishahr"
+  },
+  {
+    "village_code": "201200",
+    "village_name": "Umar Ganj",
+    "district_name": "Jaunpur",
+    "tehsil": "Machhlishahr"
+  },
+  {
+    "village_code": "201452",
+    "village_name": "Umari",
+    "district_name": "Jaunpur",
+    "tehsil": "Machhlishahr"
+  },
+  {
+    "village_code": "201155",
+    "village_name": "Umarpur",
+    "district_name": "Jaunpur",
+    "tehsil": "Machhlishahr"
+  },
+  {
+    "village_code": "201423",
+    "village_name": "Unchadih",
+    "district_name": "Jaunpur",
+    "tehsil": "Machhlishahr"
+  },
+  {
+    "village_code": "201163",
+    "village_name": "Unchgawan",
+    "district_name": "Jaunpur",
+    "tehsil": "Machhlishahr"
+  },
+  {
+    "village_code": "201342",
+    "village_name": "Vangawan",
+    "district_name": "Jaunpur",
+    "tehsil": "Machhlishahr"
+  },
+  {
+    "village_code": "201456",
+    "village_name": "Vankat",
+    "district_name": "Jaunpur",
+    "tehsil": "Machhlishahr"
+  },
+  {
+    "village_code": "201169",
+    "village_name": "Varzi Kalan",
+    "district_name": "Jaunpur",
+    "tehsil": "Machhlishahr"
+  },
+  {
+    "village_code": "201467",
+    "village_name": "Vaserawa",
+    "district_name": "Jaunpur",
+    "tehsil": "Machhlishahr"
+  },
+  {
+    "village_code": "201318",
+    "village_name": "Vashiraha",
+    "district_name": "Jaunpur",
+    "tehsil": "Machhlishahr"
+  },
+  {
+    "village_code": "201211",
+    "village_name": "Veervalpur",
+    "district_name": "Jaunpur",
+    "tehsil": "Machhlishahr"
+  },
+  {
+    "village_code": "201104",
+    "village_name": "Vikayapur",
+    "district_name": "Jaunpur",
+    "tehsil": "Machhlishahr"
+  },
+  {
+    "village_code": "201305",
+    "village_name": "Vishapalpur",
+    "district_name": "Jaunpur",
+    "tehsil": "Machhlishahr"
+  },
+  {
+    "village_code": "201390",
+    "village_name": "Visunpur",
+    "district_name": "Jaunpur",
+    "tehsil": "Machhlishahr"
+  },
+  {
+    "village_code": "201408",
+    "village_name": "Wami",
+    "district_name": "Jaunpur",
+    "tehsil": "Machhlishahr"
+  },
+  {
+    "village_code": "201308",
+    "village_name": "Wari",
+    "district_name": "Jaunpur",
+    "tehsil": "Machhlishahr"
+  },
+  {
+    "village_code": "201448",
+    "village_name": "Yakubpur",
+    "district_name": "Jaunpur",
+    "tehsil": "Machhlishahr"
+  }
+]

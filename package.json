@@ -1,0 +1,21 @@
+{
+  "name": "property-portal-monolith",
+  "version": "1.0.0",
+  "description": "Gram Panchayat Property Portal",
+  "main": "Backend/server.js",
+  "scripts": {
+    "start": "node Backend/server.js",
+    "dev": "node Backend/server.js"
+  },
+  "dependencies": {
+    "better-sqlite3": "^13.0.3",
+    "compression": "^1.7.4",
+    "cors": "^2.8.6",
+    "dotenv": "^17.4.2",
+    "express": "^5.2.1",
+    "multer": "^2.3.0",
+    "nodemailer": "^9.1.1",
+    "pg": "^8.23.0",
+    "xlsx": "^0.18.5"
+  }
+}

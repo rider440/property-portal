@@ -1,0 +1,987 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ग्रामीण भूलेख एवं संपत्ति आईडी पोर्टल | Rural Property ID Portal (Private)</title>
+  <meta name="description" content="ग्रामीण भूलेख व संपत्ति आईडी (Property ID) खोजें, सत्यापित करें एवं प्राप्त करें।">
+  <link rel="stylesheet" href="css/styles.css?v=4.0">
+</head>
+<body>
+
+  <!-- Top Accent & Notification Bar -->
+  <div class="portal-top-bar">
+    <span>⚡ 100% सुरक्षित डिजिटल संपत्ति आईडी खोज एवं सत्यापन</span>
+    <span>🛡️ सत्यापित आधिकारिक रिकॉर्ड्स</span>
+    <a href="mailto:ayts7667@gmail.com" style="color: #fef08a; text-decoration: none; font-weight: 700; display: inline-flex; align-items: center; gap: 0.35rem;">
+      📧 सहायता / Support: ayts7667@gmail.com
+    </a>
+  </div>
+
+  <!-- Header -->
+  <header class="header">
+    <div class="header-container">
+      <a href="/" class="brand">
+        <div class="emblem-icon">🏠</div>
+        <div class="brand-title">
+          <h1>ग्रामीण आवासीय संपत्ति आईडी पोर्टल</h1>
+          <p>Rural Property Information & Search Portal (Private Service)</p>
+        </div>
+      </a>
+
+      <div class="header-actions">
+        <button class="btn btn-emerald-pill btn-sm" onclick="scrollToCoverageDirectory()">
+          🗺️ उपलब्ध ग्राम सूची (Available Villages)
+        </button>
+        <button class="btn btn-indigo-pill btn-sm" onclick="openTrackModal()">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+          ऑर्डर ट्रैक करें (Track Order)
+        </button>
+        <button class="btn btn-saffron-pill btn-sm" onclick="openMissingDataModal()">
+          + ग्राम डेटा अनुरोध (Request Village)
+        </button>
+        <a href="mailto:ayts7667@gmail.com" class="btn btn-gold-pill btn-sm">
+          📧 सहायता (Support)
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-container">
+      <div class="hero-badge">
+        <span>✨ उत्तर प्रदेश डिजिटल संपत्ति डेटाबेस (All 76 Districts State Data Live)</span>
+      </div>
+      <h2>अपने ग्राम की घरौनी एवं संपत्ति आईडी (Property ID) प्राप्त करें</h2>
+      <p>
+        राज्य, जनपद और ग्राम का चयन करें, अपना अथवा परिवार के मुखिया का नाम खोजें, मात्र <strong style="color:#fde047;" class="dynamic-fee">₹80</strong> का शुल्क जमा कर अपनी संपत्ति आईडी तुरंत अनलॉक व डाउनलोड करें।
+      </p>
+
+      <div class="hero-stats">
+        <div class="stat-item stat-card-cyan" style="cursor: pointer;" onclick="scrollToCoverageDirectory()">
+          <span id="heroStatesCount" class="stat-num">1</span>
+          <span class="stat-label">उपलब्ध राज्य (UP State)</span>
+        </div>
+        <div class="stat-item stat-card-emerald" style="cursor: pointer;" onclick="scrollToCoverageDirectory()">
+          <span id="heroDistrictsCount" class="stat-num">76</span>
+          <span class="stat-label">सक्रिय जनपद (Districts)</span>
+        </div>
+        <div class="stat-item stat-card-amber" style="cursor: pointer;" onclick="scrollToCoverageDirectory()">
+          <span id="heroVillagesCount" class="stat-num">54,857</span>
+          <span class="stat-label">सत्यापित ग्राम (Villages)</span>
+        </div>
+        <div class="stat-item stat-card-purple">
+          <span id="heroRecordsCount" class="stat-num">91,33,948+</span>
+          <span class="stat-label">संपत्ति रिकॉर्ड्स (Properties)</span>
+        </div>
+        <div class="stat-item stat-card-gold">
+          <span class="stat-num dynamic-fee-exact">₹80.00</span>
+          <span class="stat-label">सत्यापन शुल्क (Service Fee)</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Main Content Container -->
+  <main class="main-wrapper">
+    
+    <!-- Official SVAMITVA Filter Card -->
+    <div class="card svamitva-filter-card" id="stepLocationCard">
+      <div class="svamitva-filter-grid">
+        <!-- State -->
+        <div class="form-group">
+          <label for="stateSelect">State :</label>
+          <select id="stateSelect" class="form-control" onchange="onStateChange()">
+            <option value="Uttar Pradesh" selected>Uttar Pradesh</option>
+            <option value="Bihar">Bihar</option>
+            <option value="Madhya Pradesh">Madhya Pradesh</option>
+            <option value="Rajasthan">Rajasthan</option>
+            <option value="Haryana">Haryana</option>
+            <option value="Uttarakhand">Uttarakhand</option>
+            <option value="Maharashtra">Maharashtra</option>
+          </select>
+        </div>
+
+        <!-- District -->
+        <div class="form-group">
+          <label for="districtSelect">District :</label>
+          <select id="districtSelect" class="form-control" onchange="onDistrictChange()">
+            <option value="">-- Select District --</option>
+          </select>
+        </div>
+
+        <!-- Village -->
+        <div class="form-group">
+          <label for="villageSelect">Village :</label>
+          <select id="villageSelect" class="form-control" onchange="onVillageChange()" disabled>
+            <option value="">-- Select Village --</option>
+          </select>
+        </div>
+      </div>
+
+      <!-- Search by Village Name or Code Row -->
+      <div class="svamitva-search-row">
+        <label for="quickVillageCodeInput">Search By Village Name Or Village Code :</label>
+        <div class="svamitva-search-input-group">
+          <input 
+            type="text" 
+            id="quickVillageCodeInput" 
+            class="form-control"
+            placeholder="Type Village Name or Village Code (e.g. 195265, Khurrampur)..." 
+            onkeydown="if(event.key === 'Enter') searchByVillageOrCode()"
+          >
+          <button type="button" class="btn btn-svamitva-search" onclick="searchByVillageOrCode()">SEARCH</button>
+        </div>
+      </div>
+
+      <!-- Action Buttons Row (RESET) -->
+      <div class="svamitva-action-row">
+        <button type="button" class="btn btn-svamitva-action" onclick="resetFilters()">RESET</button>
+      </div>
+
+      <!-- Helper link if missing -->
+      <div style="margin-top: 0.85rem; font-size: 0.82rem; color: #64748b;">
+        <a class="helper-link" onclick="openMissingDataModal(currentState, currentDistrict)" style="color: #b8570f; font-weight: 600;">
+          ❓ आपका ग्राम या जिला सूची में नहीं है? यहाँ क्लिक करके अनुरोध दर्ज करें (Request Missing Village)
+        </a>
+      </div>
+
+      <!-- Prominent State/Village Unavailable Request Box -->
+      <div id="unavailableDataBanner" style="display: none; margin-top: 1.25rem; background: #eff6ff; border: 1.5px dashed #3b82f6; padding: 1.25rem; border-radius: var(--radius-md); text-align: center;">
+        <div style="font-size: 1.5rem; margin-bottom: 0.25rem;">📂</div>
+        <h4 id="unavailableBannerTitle" style="color: #1e3a8a; font-size: 1.05rem; font-weight: 700; margin-bottom: 0.35rem;">
+          इस राज्य / ग्राम का डेटा वर्तमान में संकलन प्रक्रिया में है
+        </h4>
+        <p id="unavailableBannerDesc" style="font-size: 0.85rem; color: #475569; max-width: 600px; margin: 0 auto 1rem;">
+          यदि आपका राज्य, जनपद या ग्राम पोर्टल पर अभी उपलब्ध नहीं है, तो कृपया नीचे दिए गए बटन पर क्लिक करके डेटा जोड़ने का अनुरोध करें।
+        </p>
+        <button type="button" class="btn btn-primary" onclick="openMissingDataModal(currentState, currentDistrict)">
+          📩 <span id="unavailableBtnText">इस राज्य / ग्राम के डेटा का अनुरोध करें (Request Data)</span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Step 2: Villagers List & Property Directory -->
+    <div id="villagersSection" class="card" style="display: none;">
+      <div class="results-header">
+        <div>
+          <h3 class="results-title">
+            <span style="background:#059669; color:white; width:26px; height:26px; border-radius:50%; display:inline-flex; align-items:center; justify-content:center; font-size:0.85rem;">✓</span>
+            Property Card Records
+            <span id="recordsCountBadge" class="results-count-badge">0 Records</span>
+          </h3>
+          <div style="display: flex; align-items: center; gap: 0.75rem; flex-wrap: wrap; margin-top: 0.35rem;">
+            <p style="font-size: 0.85rem; color: #475569;">
+              Village: <strong id="selectedVillageDisplay" style="color:#0f172a; background:#e0f2fe; padding:2px 8px; border-radius:4px;">--</strong> 
+              | District: <strong id="selectedDistrictDisplay" style="color:#0f172a;">--</strong>
+            </p>
+            <button type="button" class="btn btn-secondary btn-sm" onclick="changeVillageReset()" style="padding: 0.2rem 0.6rem; font-size: 0.75rem;">
+              🔄 Change Village
+            </button>
+          </div>
+        </div>
+
+        <!-- Live Filter Box with Clear Button -->
+        <div class="filter-search-box" style="position: relative; max-width: 320px; width: 100%;">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+          <input 
+            type="text" 
+            id="villagerSearchInput" 
+            class="form-control" 
+            placeholder="Search within village..." 
+            style="padding-right: 2.2rem;"
+          >
+          <button 
+            type="button" 
+            id="clearVillagerSearchBtn" 
+            onclick="clearVillagerSearch()" 
+            style="position: absolute; right: 8px; top: 50%; transform: translateY(-50%); background: none; border: none; font-size: 1.2rem; color: #94a3b8; cursor: pointer; display: none; line-height: 1; padding: 2px 6px;"
+            title="Clear search"
+          >&times;</button>
+        </div>
+      </div>
+
+      <!-- Villagers Table (Matching SVAMITVA Official Scheme Headers) -->
+      <div class="property-table-container">
+        <table class="property-table">
+          <thead>
+            <tr>
+              <th style="width: 60px; text-align: center;">S.No.</th>
+              <th>State</th>
+              <th>District</th>
+              <th>Village</th>
+              <th>Name Of Owner</th>
+              <th>Father Name</th>
+              <th>Total Area ( SQ. Mtr.)</th>
+              <th style="text-align: center;">Property ID (संपत्ति आईडी)</th>
+              <th style="text-align: center;">Action</th>
+            </tr>
+          </thead>
+          <tbody id="villagersTableBody">
+            <!-- Dynamic Rows -->
+          </tbody>
+        </table>
+      </div>
+
+      <!-- Pagination -->
+      <div class="pagination">
+        <div id="paginationInfo">पृष्ठ 1 / 1</div>
+        <div class="pagination-buttons">
+          <button id="prevPageBtn" class="btn btn-secondary btn-sm" disabled>◀ पिछला</button>
+          <button id="nextPageBtn" class="btn btn-secondary btn-sm" disabled>अगला ▶</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- DigiLocker Official Property Card Guide Main Card -->
+    <div class="card" style="border: 2px solid #6366f1; background: linear-gradient(135deg, #ffffff 0%, #f8fafc 100%); margin-top: 1rem;">
+      <div style="display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 1rem; margin-bottom: 1.25rem;">
+        <div style="display: flex; align-items: center; gap: 0.75rem;">
+          <div style="width: 44px; height: 44px; background: #4f46e5; color: white; border-radius: 12px; display: flex; align-items: center; justify-content: center; font-size: 1.4rem; font-weight: 800;">
+            🏛️
+          </div>
+          <div>
+            <h3 style="font-size: 1.15rem; font-weight: 800; color: #1e1b4b;">
+              डिजीलॉकर (DigiLocker) से मूल सरकारी प्रॉपर्टी कार्ड (घरौनी) कैसे प्राप्त करें?
+            </h3>
+            <p style="font-size: 0.85rem; color: #4b5563;">
+              पोर्टल से प्राप्त 17-अंकों की संपत्ति आईडी (Property ID) द्वारा भारत सरकार के DigiLocker से आधिकारिक डिजिटल प्रमाण पत्र डाउनलोड करें।
+            </p>
+          </div>
+        </div>
+        <a href="https://www.digilocker.gov.in" target="_blank" class="btn btn-primary btn-sm" style="background:#4f46e5; border-color:#4338ca; font-weight:700;">
+          🔗 DigiLocker पोर्टल पर जाएं ➔
+        </a>
+      </div>
+
+      <!-- 4-Step Process Grid -->
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1rem; margin-bottom: 1.25rem;">
+        <div style="background: #ffffff; border: 1.5px solid #e0e7ff; border-radius: 10px; padding: 1rem;">
+          <div style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 0.4rem;">
+            <span style="background: #6366f1; color: white; width: 24px; height: 24px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 0.8rem; font-weight: 800;">1</span>
+            <strong style="color: #1e1b4b; font-size: 0.9rem;">DigiLocker खोलें</strong>
+          </div>
+          <p style="font-size: 0.82rem; color: #475569;">DigiLocker App या वेबसाइट (digilocker.gov.in) पर लॉगिन करें।</p>
+        </div>
+
+        <div style="background: #ffffff; border: 1.5px solid #e0e7ff; border-radius: 10px; padding: 1rem;">
+          <div style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 0.4rem;">
+            <span style="background: #6366f1; color: white; width: 24px; height: 24px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 0.8rem; font-weight: 800;">2</span>
+            <strong style="color: #1e1b4b; font-size: 0.9rem;">राज्य व सेवा चुनें</strong>
+          </div>
+          <p style="font-size: 0.82rem; color: #475569;">Search Documents में राज्य (उदा. Uttar Pradesh) चुनकर 'Property Card / Gharouni' पर क्लिक करें।</p>
+        </div>
+
+        <div style="background: #ffffff; border: 1.5px solid #e0e7ff; border-radius: 10px; padding: 1rem;">
+          <div style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 0.4rem;">
+            <span style="background: #6366f1; color: white; width: 24px; height: 24px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 0.8rem; font-weight: 800;">3</span>
+            <strong style="color: #1e1b4b; font-size: 0.9rem;">Property ID दर्ज करें</strong>
+          </div>
+          <p style="font-size: 0.82rem; color: #475569;">पोर्टल से प्राप्त अपनी 17-अंकों की संपत्ति आईडी (Property ID) प्रविष्ट करें।</p>
+        </div>
+
+        <div style="background: #ffffff; border: 1.5px solid #e0e7ff; border-radius: 10px; padding: 1rem;">
+          <div style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 0.4rem;">
+            <span style="background: #059669; color: white; width: 24px; height: 24px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 0.8rem; font-weight: 800;">4</span>
+            <strong style="color: #065f46; font-size: 0.9rem;">कार्ड डाउनलोड करें</strong>
+          </div>
+          <p style="font-size: 0.82rem; color: #475569;">'Get Document' पर क्लिक करते ही डिजिटल हस्ताक्षरित सरकारी प्रॉपर्टी कार्ड डाउनलोड हो जाएगा।</p>
+        </div>
+      </div>
+
+      <!-- Critical Aadhaar Registration Box -->
+      <div style="background: #fffbeb; border: 1.5px solid #f59e0b; border-radius: 10px; padding: 1rem 1.25rem; display: flex; align-items: flex-start; gap: 0.75rem;">
+        <span style="font-size: 1.5rem; line-height: 1;">⚠️</span>
+        <div>
+          <strong style="color: #92400e; font-size: 0.92rem; display: block; margin-bottom: 0.25rem;">
+            अति आवश्यक नियम: डिजीलॉकर खाता केवल मूल भूस्वामी के आधार कार्ड से लिंक होना अनिवार्य है
+          </strong>
+          <p style="font-size: 0.85rem; color: #78350f; line-height: 1.5;">
+            डिजीलॉकर से सरकारी प्रॉपर्टी कार्ड डाउनलोड करने के लिए डिजीलॉकर में लॉगिन खाता <strong>उसी व्यक्ति के आधार कार्ड</strong> से बना होना चाहिए जिनका नाम इस संपत्ति आईडी पर दर्ज है। यदि आधार कार्ड का नाम और भूस्वामी का नाम अलग होगा, तो डिजीलॉकर सुरक्षा नियमों के तहत कार्ड जारी नहीं करेगा।
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Trust & Key Features Cards -->
+    <div class="trust-features-grid">
+      <div class="trust-feature-card">
+        <div class="trust-feature-icon">⚡</div>
+        <h4>तत्काल डिजिटल खोज</h4>
+        <p>ग्राम कोड या नाम से 1 सेकंड में अपनी संपत्ति आईडी व स्वामित्व विवरण खोजें।</p>
+      </div>
+      <div class="trust-feature-card">
+        <div class="trust-feature-icon">🛡️</div>
+        <h4>100% सुरक्षित भुगतान</h4>
+        <p>PhonePe, Google Pay व Paytm UPI द्वारा सीधा सुरक्षित सत्यापन व रसीद।</p>
+      </div>
+      <div class="trust-feature-card">
+        <div class="trust-feature-icon">📑</div>
+        <h4>सत्यापित घरौनी रिकॉर्ड</h4>
+        <p>डिजिटल प्रारूप में अधिकृत क्षेत्रफल व संपत्ति आईडी का डाउनलोड योग्य प्रमाण पत्र।</p>
+      </div>
+      <div class="trust-feature-card">
+        <div class="trust-feature-icon">📱</div>
+        <h4>सरल मोबाइल उपयोग</h4>
+        <p>बिना किसी तकनीकी जटिलता के मोबाइल पर 3 आसान चरणों में सेवा प्राप्त करें।</p>
+      </div>
+    </div>
+
+    <!-- Available Coverage Directory (States, Districts & Villages with Codes) -->
+    <div id="availableCoverageSection" class="coverage-card">
+      <div class="coverage-header">
+        <div class="coverage-title-area">
+          <h3>
+            <span>📍</span> उपलब्ध राज्य, जनपद एवं ग्राम डायरेक्टरी (Available Coverage)
+          </h3>
+          <p>पोर्टल पर उपलब्ध सभी सत्यापित राज्यों, जनपदों और ग्रामों की पूरी सूची (LGD कोड एवं रिकॉर्ड संख्या सहित)।</p>
+        </div>
+        <div>
+          <button class="btn btn-outline-primary btn-sm" onclick="openMissingDataModal(currentState, currentDistrict)">
+            + अपना ग्राम जुड़वाएं (Request New Village)
+          </button>
+        </div>
+      </div>
+
+      <!-- KPI Summary Cards -->
+      <div class="coverage-kpi-bar">
+        <div class="coverage-kpi-pill">
+          <div class="coverage-kpi-icon">🏛️</div>
+          <div>
+            <div class="val" id="covTotalStates">1</div>
+            <div class="lbl">राज्य (Uttar Pradesh)</div>
+          </div>
+        </div>
+        <div class="coverage-kpi-pill">
+          <div class="coverage-kpi-icon">🏢</div>
+          <div>
+            <div class="val" id="covTotalDistricts">7</div>
+            <div class="lbl">सक्रिय जनपद</div>
+          </div>
+        </div>
+        <div class="coverage-kpi-pill">
+          <div class="coverage-kpi-icon">🏡</div>
+          <div>
+            <div class="val" id="covTotalVillages">35</div>
+            <div class="lbl">उपलब्ध ग्राम (Villages)</div>
+          </div>
+        </div>
+        <div class="coverage-kpi-pill">
+          <div class="coverage-kpi-icon">📑</div>
+          <div>
+            <div class="val" id="covTotalProperties">4,598+</div>
+            <div class="lbl">कुल संपत्तियां</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Search Input for Directory -->
+      <div class="coverage-search-wrap">
+        <span class="search-icon">🔍</span>
+        <input 
+          type="text" 
+          id="coverageSearchInput" 
+          class="form-control" 
+          placeholder="ग्राम का नाम, ग्राम कोड (Code) या जनपद खोजें (Search Village, Code or District)..." 
+          oninput="filterCoverageList()"
+        >
+      </div>
+
+      <!-- District Filter Chips -->
+      <div class="district-filter-row" id="districtFilterRow">
+        <button class="district-chip active" onclick="filterByDistrictChip('ALL', this)">
+          सभी जनपद (All) <span class="badge" id="chipCountAll">35</span>
+        </button>
+        <!-- Populated dynamically -->
+      </div>
+
+      <!-- Compact Village Directory Table -->
+      <div class="coverage-compact-container" id="coverageGridContainer">
+        <div style="text-align: center; padding: 2rem; color: #64748b;">
+          ⏳ उपलब्ध ग्राम सूची लोड हो रही है...
+        </div>
+      </div>
+    </div>
+
+    <!-- FAQ Accordion Section (उपयोगी प्रश्नोत्तर) -->
+    <div class="faq-section">
+      <div class="faq-header">
+        <h3>❓ अक्सर पूछे जाने वाले प्रश्न (Frequently Asked Questions)</h3>
+        <p>पोर्टल उपयोग एवं संपत्ति आईडी प्राप्त करने से जुड़े मुख्य सवाल और उनके जवाब</p>
+      </div>
+
+      <div class="faq-grid">
+        <div class="faq-item">
+          <button class="faq-question" onclick="toggleFaq(this)">
+            <span>1. संपत्ति आईडी (Property ID) क्या है और इसका क्या लाभ है?</span>
+            <span class="faq-icon">▼</span>
+          </button>
+          <div class="faq-answer">
+            संपत्ति आईडी (Property ID) आपके ग्रामीण आवासीय भूखंड (घरौनी) का एक अद्वितीय 17-अंकों का पहचान कोड है। इसके माध्यम से आप बैंक ऋण, सरकारी योजनाओं के लाभ एवं भूमि के स्वामित्व का प्रमाण आसानी से प्राप्त कर सकते हैं।
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" onclick="toggleFaq(this)">
+            <span>2. <span class="dynamic-fee">...</span> शुल्क भुगतान के बाद मुझे क्या प्राप्त होगा?</span>
+            <span class="faq-icon">▼</span>
+          </button>
+          <div class="faq-answer">
+            भुगतान सत्यापित होते ही आपकी स्क्रीन पर आपकी मूल <strong>संपत्ति आईडी (Property ID)</strong> अनलॉक हो जाएगी और आप डिजिटल संपत्ति विवरण प्रपत्र (Property Summary Certificate) को तुरंत प्रिंट या PDF के रूप में डाउनलोड कर सकते हैं।
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" onclick="toggleFaq(this)">
+            <span>3. यदि मेरा ग्राम या नाम सूची में नहीं मिल रहा है तो क्या करें?</span>
+            <span class="faq-icon">▼</span>
+          </button>
+          <div class="faq-answer">
+            यदि आपका ग्राम उपलब्ध सूची में नहीं है, तो आप ऊपर दिए गए <strong>'+ ग्राम डेटा का अनुरोध करें'</strong> बटन पर क्लिक कर अपने ग्राम व जनपद का विवरण भेज सकते हैं। हमारी टीम प्राथमिकता के आधार पर इसे डेटाबेस में जोड़ेगी।
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" onclick="toggleFaq(this)">
+            <span>4. UTR / Transaction ID क्या है और यह कहाँ मिलेगा?</span>
+            <span class="faq-icon">▼</span>
+          </button>
+          <div class="faq-answer">
+            PhonePe, Google Pay या Paytm से <span class="dynamic-fee">...</span> का भुगतान करने के बाद पेमेंट रसीद में 12-अंकों का <strong>UPI Ref No / UTR</strong> लिखा होता है। इस 12-अंकों के नंबर को दर्ज कर आप तुरंत अपनी आईडी प्राप्त कर सकते हैं।
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" onclick="toggleFaq(this)">
+            <span>5. संपत्ति आईडी से DigiLocker द्वारा मूल सरकारी प्रॉपर्टी कार्ड कैसे डाउनलोड करें?</span>
+            <span class="faq-icon">▼</span>
+          </button>
+          <div class="faq-answer">
+            <p style="margin-bottom:0.5rem;"><strong>डिजीलॉकर से डाउनलोड करने के चरण:</strong></p>
+            <ol style="padding-left:1.2rem; line-height:1.6; margin-bottom:0.75rem;">
+              <li><strong>DigiLocker ऐप या वेबसाइट</strong> (digilocker.gov.in) पर लॉगिन करें।</li>
+              <li>'Search Documents' में अपने राज्य का चयन करें और <strong>'Property Card / Gharouni'</strong> विकल्प चुनें।</li>
+              <li>पोर्टल से प्राप्त अपनी <strong>17-अंकों की संपत्ति आईडी (Property ID)</strong> दर्ज करें।</li>
+              <li><strong>'Get Document'</strong> दबाएं और डिजिटल हस्ताक्षरित सरकारी प्रॉपर्टी कार्ड डाउनलोड करें।</li>
+            </ol>
+            <div style="background:#fffbeb; border:1px solid #fde68a; padding:0.6rem 0.85rem; border-radius:6px; color:#92400e; font-size:0.83rem;">
+              ⚠️ <strong>अति आवश्यक:</strong> डिजीलॉकर में लॉगिन केवल <strong>उसी पंजीकृत भूस्वामी के आधार कार्ड</strong> से होना चाहिए जिनका नाम इस संपत्ति में दर्ज है।
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- MODAL 1: Payment & UPI Flow Modal -->
+  <div id="paymentModal" class="modal-overlay">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h3 class="modal-title">संपत्ति आईडी अनब्लॉक करें (Unlock Property ID)</h3>
+        <button class="modal-close-btn" onclick="closeModal('paymentModal')">&times;</button>
+      </div>
+
+      <div class="modal-body">
+        <input type="hidden" id="currentSelectedPropId" value="">
+        
+        <!-- Direct Unified Payment Screen -->
+        <div id="paymentStepMain">
+          
+          <!-- Summary Header -->
+          <div style="background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 8px; padding: 0.75rem 1rem; margin-bottom: 0.85rem; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 0.5rem;">
+            <div>
+              <div style="font-size: 0.95rem; font-weight: 700; color: #0f172a;">
+                <span id="payOwnerDisplay">--</span> 
+                <span style="font-size: 0.8rem; color: #64748b; font-weight: normal;">(पिता/पति: <span id="payFatherDisplay">--</span>)</span>
+              </div>
+              <div style="font-size: 0.8rem; color: #475569;">
+                ग्राम: <span id="payVillageDisplay">--</span> | जनपद: <span id="payDistrictDisplay">--</span>
+              </div>
+            </div>
+            <div>
+              <span style="font-size: 0.85rem; background: #e0f2fe; color: #0369a1; padding: 0.25rem 0.6rem; border-radius: 6px; font-weight: 700; font-family: monospace;">
+                ऑर्डर: <span id="orderIdDisplay">--</span>
+              </span>
+            </div>
+          </div>
+
+          <!-- PhonePe Payment QR Section -->
+          <div class="qr-section" style="border: 2px solid #3b82f6; background: #ffffff; padding: 1rem; border-radius: 12px; margin-bottom: 1rem;">
+            <div class="qr-box" style="padding: 6px; border: 2px solid #e2e8f0; border-radius: 12px; display: inline-block;">
+              <img id="qrCodeImg" src="images/payment_qr.png" alt="PhonePe UPI QR Code" style="width: 210px; height: 210px; display:block; border-radius: 8px;">
+            </div>
+
+            <div style="font-size:1.05rem; font-weight:800; color:#0f172a; margin-top: 0.4rem;">
+              PhonePe / Google Pay / Paytm से <span class="dynamic-fee">₹80</span> का भुगतान करें
+            </div>
+            <div style="font-size:0.85rem; color:#15803d; font-weight: 700; margin-top: 0.1rem;">
+              सत्यापन शुल्क: <span class="dynamic-fee-exact">₹80.00</span> (Official Gharauni Property ID)
+            </div>
+
+            <!-- UPI ID copy -->
+            <div class="upi-id-copy-row" style="margin-top: 0.5rem;">
+              <span id="qrUpiIdText">--</span>
+              <button class="btn btn-secondary btn-sm" onclick="copyUpiId()" style="padding:0.2rem 0.5rem; font-size:0.75rem;">
+                कॉपी करें
+              </button>
+            </div>
+
+            <!-- Direct Mobile UPI App button -->
+            <a id="upiIntentBtn" href="#" class="btn btn-primary btn-sm" style="margin-top:0.6rem; width:100%; max-width:260px;">
+              📱 UPI App से भुगतान करें (Direct Pay)
+            </a>
+          </div>
+
+          <!-- Mobile & UTR Entry Box -->
+          <div style="background:#fffbeb; border:1px solid #fde68a; padding:1.15rem; border-radius:8px; margin-bottom:0.75rem;">
+            
+            <div class="form-group" style="margin-bottom: 0.85rem;">
+              <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.25rem;">
+                <label for="payMobileInput" style="color: #92400e; font-weight: 700; margin-bottom: 0;">
+                  आपका मोबाइल नंबर (Your Mobile Number) <span class="req-star" style="color: #dc2626; font-weight: 800;">*</span>
+                </label>
+                <span id="payMobileCounter" style="font-size: 0.78rem; color: #78350f; font-weight: 700; background: #fef3c7; padding: 0.1rem 0.45rem; border-radius: 4px; border: 1px solid #fde68a;">0/10 अंक</span>
+              </div>
+              <input 
+                type="tel" 
+                id="payMobileInput" 
+                class="form-control" 
+                placeholder="10 अंकों का मोबाइल नंबर दर्ज करें (उदा. 9876543210)" 
+                maxlength="10" 
+                style="background:#ffffff; font-weight: 600; font-size: 1rem; transition: border-color 0.2s, box-shadow 0.2s;"
+                oninput="checkPaymentFormValidity()"
+              >
+              <div id="payMobileError" style="display: none; color: #dc2626; font-size: 0.82rem; font-weight: 700; margin-top: 0.35rem; line-height: 1.3;"></div>
+              <small style="color: #78350f; display: block; margin-top: 0.25rem;">(इस नंबर से केवल आप ही अपनी अधिकृत संपत्ति आईडी देख सकेंगे)</small>
+            </div>
+
+            <div class="form-group" style="margin-bottom: 0.85rem;">
+              <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.25rem;">
+                <label for="utrInput" style="color:#92400e; font-weight:700; margin-bottom: 0;">
+                  UPI Transaction / UTR ID दर्ज करें <span class="req-star" style="color: #dc2626; font-weight: 800;">*</span>:
+                </label>
+                <span id="utrCounter" style="font-size: 0.78rem; color: #78350f; font-weight: 700; background: #fef3c7; padding: 0.1rem 0.45rem; border-radius: 4px; border: 1px solid #fde68a;">0/12 (न्यूनतम 6, अधिकतम 30)</span>
+              </div>
+              <input 
+                type="text" 
+                id="utrInput" 
+                class="form-control" 
+                placeholder="उदा. 423987123456 / UPI Ref No दर्ज करें" 
+                minlength="6"
+                maxlength="30"
+                pattern="[A-Za-z0-9]{6,30}"
+                autocomplete="off"
+                style="background:#ffffff; font-family:monospace; font-weight:700; font-size: 1.05rem; border: 1.5px solid #f59e0b;"
+                oninput="checkPaymentFormValidity()"
+              >
+              <small style="color:#78350f; font-weight: 500; display: block; margin-top: 0.25rem;">
+                📌 भुगतान के बाद PhonePe / GPay / Paytm से 12 अंकों का <strong>UPI Ref No / UTR</strong> दर्ज करें (न्यूनतम: 6, अधिकतम: 30 वर्ण)।
+              </small>
+            </div>
+
+            <div id="utrErrorBox" style="display: none; background: #fee2e2; border: 1.5px solid #ef4444; color: #991b1b; padding: 0.75rem 1rem; border-radius: 8px; font-size: 0.88rem; font-weight: 700; margin-bottom: 0.75rem; text-align: center; line-height: 1.4;">
+            </div>
+
+            <button id="submitUtrBtn" class="btn btn-emerald" style="width: 100%; margin-top:0.25rem; font-size: 1rem; padding: 0.75rem; font-weight: 700; opacity: 0.45; cursor: not-allowed;" onclick="submitUtrTransaction()" disabled>
+              ✅ भुगतान सबमिट करें (Submit Payment & Unlock)
+            </button>
+            <div style="text-align: center; margin-top: 0.65rem; font-size: 0.8rem; color: #64748b;">
+              📧 सहायता या पूछताछ हेतु संपर्क करें: <a href="mailto:ayts7667@gmail.com" style="color: #2563eb; font-weight: 700; text-decoration: underline;">ayts7667@gmail.com</a>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Step 3: Pending Verification / Status -->
+        <div id="paymentStep3" style="display: none; text-align: center; padding: 1rem 0;">
+          <div style="margin-bottom: 1rem;">
+            <div class="pulse-indicator"></div>
+            <span style="font-weight: 700; color: #d97706; font-size: 1.05rem;">
+              सत्यापन की प्रक्रिया जारी है (Verification in Progress)
+            </span>
+          </div>
+
+          <p style="font-size: 0.9rem; color: #475569; margin-bottom: 1rem;">
+            आपका यूटीआर <strong id="statusUtrRef" style="color:#0f172a;">--</strong> सफलतापूर्वक प्राप्त हो गया है।
+          </p>
+
+          <!-- 6-Hour Timeline Notice Box -->
+          <div style="background: #eff6ff; border: 1.5px solid #bfdbfe; border-radius: 10px; padding: 1rem; margin-bottom: 1.25rem; text-align: left;">
+            <div style="display: flex; align-items: center; gap: 0.5rem; color: #1e40af; font-weight: 800; font-size: 0.95rem; margin-bottom: 0.35rem;">
+              <span>⏱️</span>
+              <span>अनुमानित सत्यापन समय: अधिकतम 6 घंटे (Within 6 Hours)</span>
+            </div>
+            <p style="font-size: 0.82rem; color: #334155; margin: 0; line-height: 1.5;">
+              प्रशासक टीम द्वारा आपके भुगतान और UTR का मिलान <strong>6 घंटे के भीतर</strong> पूर्ण कर दिया जाएगा। कृपया <strong>6 घंटे बाद</strong> 'ऑर्डर ट्रैक करें (Track Order)' पर जाकर अपना मोबाइल नंबर अथवा UTR दर्ज करके अपनी <strong>संपत्ति आईडी (Property ID)</strong> डाउनलोड करें।
+            </p>
+          </div>
+
+          <div id="verificationStatusMsg" style="background: #f1f5f9; padding: 0.85rem; border-radius: 8px; font-size: 0.85rem; color: #334155;">
+            ⏳ स्टेटस की जांच की जा रही है... (ऑर्डर आईडी: <span id="statusOrderId">--</span>)
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- MODAL 2: Unlocked Official Property Card Certificate -->
+  <div id="certificateModal" class="modal-overlay">
+    <div class="modal-content" style="max-width: 680px;">
+      <div class="modal-header no-print">
+        <h3 class="modal-title" style="color:#15803d; display:flex; align-items:center; gap:0.5rem;">
+          <span>📋</span> संपत्ति विवरण प्रपत्र (Property Details Summary)
+        </h3>
+        <button class="modal-close-btn" onclick="closeModal('certificateModal')">&times;</button>
+      </div>
+
+      <div class="modal-body">
+        
+        <!-- Printable Property Summary Document -->
+        <div class="certificate-container">
+          <div class="cert-watermark">संपत्ति विवरण</div>
+
+          <div class="cert-header">
+            <div style="font-size: 1.8rem; margin-bottom: 0.25rem;">🏠</div>
+            <h2>ग्रामीण आवासीय संपत्ति विवरण प्रपत्र</h2>
+            <p>Rural Residential Property Information Summary</p>
+          </div>
+
+          <!-- Highlighted Property ID Box -->
+          <div class="cert-property-highlight">
+            <div class="cert-id-label">संपत्ति आईडी (Property ID)</div>
+            <div id="certPropertyId" class="cert-id-val">-----------------</div>
+            <span style="font-size: 0.75rem; color: #166534; background: #dcfce7; padding: 0.2rem 0.6rem; border-radius: 4px; font-weight: 600;">
+              ✓ भुगतान सत्यापित (Payment Verified - <span class="dynamic-fee">...</span> Paid)
+            </span>
+          </div>
+
+          <!-- Details Table -->
+          <table class="cert-table">
+            <tr>
+              <td class="label">भूस्वामी का नाम:</td>
+              <td id="certOwnerName" style="font-weight: 700;">--</td>
+            </tr>
+            <tr>
+              <td class="label">पिता / पति का नाम:</td>
+              <td id="certFatherName">--</td>
+            </tr>
+            <tr>
+              <td class="label">ग्राम एवं ग्राम कोड:</td>
+              <td id="certVillage">--</td>
+            </tr>
+            <tr>
+              <td class="label">तहसील व जनपद:</td>
+              <td><span id="certTehsil">--</span>, <span id="certDistrict">--</span></td>
+            </tr>
+            <tr>
+              <td class="label">कुल क्षेत्रफल (Total Area):</td>
+              <td id="certTotalArea">--</td>
+            </tr>
+            <tr>
+              <td class="label">निर्मित / खुला क्षेत्रफल:</td>
+              <td>निर्मित: <span id="certBuiltArea">--</span> | खुला: <span id="certOpenArea">--</span></td>
+            </tr>
+            <tr>
+              <td class="label">ऑर्डर आईडी व यूटीआर:</td>
+              <td><span id="certOrderId">--</span> (UTR: <span id="certUtr">--</span>)</td>
+            </tr>
+          </table>
+
+          <div class="cert-footer">
+            <div>
+              <small style="color: #64748b; display: block;">प्रपत्र जनरेट तिथि: <span id="certGeneratedDate">03-09-2026</span></small>
+              <small style="color: #94a3b8;">डिजिटल रूप से संकलित सूचनात्मक प्रति (Informational Copy)</small>
+            </div>
+            <div class="cert-seal">
+              <span>डिजिटल पोर्टल</span><br>
+              <strong>सत्यापित</strong><br>
+              <span>VERIFIED</span>
+            </div>
+          </div>
+
+          <!-- Explicit Private Disclaimer -->
+          <div style="margin-top: 1.25rem; font-size: 0.72rem; color: #64748b; background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 6px; padding: 0.5rem 0.75rem; text-align: left; line-height: 1.4;">
+            ⚠️ <strong>अस्वीकरण (Disclaimer):</strong> यह दस्तावेज एक निजी सूचना सेवा पोर्टल द्वारा संकलित किया गया सूचनात्मक प्रपत्र है। यह कोई सरकारी या विधिक प्रमाण-पत्र नहीं है।
+          </div>
+
+          <!-- DigiLocker Official Property Card Download Guide -->
+          <div class="digilocker-guide-box no-print">
+            <div class="digilocker-header">
+              <div class="digilocker-badge-icon">🏛️</div>
+              <div>
+                <div class="digilocker-title">डिजीलॉकर (DigiLocker) से मूल सरकारी प्रॉपर्टी कार्ड (घरौनी) डाउनलोड करें</div>
+                <div class="digilocker-subtitle">अपनी 17-अंकों की संपत्ति आईडी का उपयोग कर मूल डिजिटल हस्ताक्षरित प्रमाण पत्र प्राप्त करें:</div>
+              </div>
+            </div>
+
+            <div class="digilocker-steps-list">
+              <div class="digilocker-step-item">
+                <span class="digilocker-step-num">1</span>
+                <div><strong>DigiLocker खोलें:</strong> अपने फोन में DigiLocker App खोलें या वेबसाइट <a href="https://www.digilocker.gov.in" target="_blank" style="color:#4f46e5; font-weight:700;">digilocker.gov.in</a> पर लॉगिन करें।</div>
+              </div>
+              <div class="digilocker-step-item">
+                <span class="digilocker-step-num">2</span>
+                <div><strong>राज्य व सेवा चुनें:</strong> Search Documents में जाकर अपना राज्य (जैसे: <strong>Uttar Pradesh</strong>) चुनें और <strong>"Property Card / Gharouni"</strong> पर क्लिक करें।</div>
+              </div>
+              <div class="digilocker-step-item">
+                <span class="digilocker-step-num">3</span>
+                <div><strong>संपत्ति आईडी दर्ज करें:</strong> ऊपर दी गई अपनी अधिकृत <strong>Property ID</strong> दर्ज करें।</div>
+              </div>
+              <div class="digilocker-step-item">
+                <span class="digilocker-step-num">4</span>
+                <div><strong>कार्ड डाउनलोड करें:</strong> 'Get Document' पर क्लिक करें और मूल सरकारी प्रॉपर्टी कार्ड PDF डाउनलोड करें।</div>
+              </div>
+            </div>
+
+            <!-- Crucial Aadhaar Owner Registration Warning -->
+            <div class="digilocker-aadhaar-alert">
+              <div style="font-size: 1.25rem;">⚠️</div>
+              <div>
+                <strong>अति आवश्यक निर्देश (Aadhaar Mandatory Rule):</strong><br>
+                डिजीलॉकर खाता <strong>उसी पंजीकृत भूस्वामी (Registered Owner)</strong> के आधार कार्ड से लिंक होना अनिवार्य है जिनका नाम इस संपत्ति रिकॉर्ड में दर्ज है। यदि आधार का नाम और भूस्वामी का नाम मेल नहीं खाएगा, तो डिजीलॉकर सुरक्षा कारणों से रिकॉर्ड जारी नहीं करेगा।
+              </div>
+            </div>
+
+            <div class="digilocker-btn-row">
+              <a href="https://www.digilocker.gov.in" target="_blank" class="btn btn-primary btn-sm" style="background:#4f46e5; border-color:#4338ca;">
+                🔗 DigiLocker पोर्टल पर जाएं (Go to DigiLocker)
+              </a>
+              <button type="button" class="btn btn-secondary btn-sm" onclick="copyPropertyIdForDigilocker()">
+                📋 Property ID कॉपी करें
+              </button>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="modal-footer no-print">
+        <button class="btn btn-secondary" onclick="closeModal('certificateModal')">बंद करें (Close)</button>
+        <button class="btn btn-primary" onclick="printCertificateDocument()">
+          🖨️ विवरण प्रपत्र प्रिंट / डाउनलोड करें (Print PDF)
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- MODAL 3: Track Existing Order & Find Order ID by Mobile / UTR -->
+  <div id="trackModal" class="modal-overlay">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h3 class="modal-title">🔍 ऑर्डर खोजें एवं स्थिति जांचें (Find Order & Status)</h3>
+        <button class="modal-close-btn" onclick="closeModal('trackModal')">&times;</button>
+      </div>
+
+      <div class="modal-body">
+        <p style="font-size: 0.84rem; color: #64748b; margin-bottom: 1.15rem; line-height: 1.45;">
+          यदि आप अपनी <strong>ऑर्डर आईडी</strong> भूल गए हैं, तो अपना <strong>मोबाइल नंबर</strong> अथवा <strong>UPI UTR नंबर</strong> दर्ज करके विवरण खोजें।
+        </p>
+
+        <div class="form-group" style="margin-bottom: 0.85rem;">
+          <label for="trackMobileInput">📱 पंजीकृत मोबाइल नंबर (Mobile Number)</label>
+          <input type="tel" id="trackMobileInput" class="form-control" placeholder="उदा. 9876543210" maxlength="10">
+        </div>
+
+        <div class="form-group" style="margin-bottom: 0.85rem;">
+          <label for="trackUtrInput">💳 12-अंकीय UPI UTR / संदर्भ संख्या (UPI Ref / UTR No.)</label>
+          <input type="text" id="trackUtrInput" class="form-control" placeholder="उदा. 978894654546" style="font-family: monospace;">
+        </div>
+
+        <div class="form-group" style="margin-bottom: 1.25rem;">
+          <label for="trackOrderIdInput">📋 ऑर्डर आईडी (Order ID - यदि उपलब्ध हो)</label>
+          <input type="text" id="trackOrderIdInput" class="form-control" placeholder="उदा. PROP-MTOU..." style="font-family: monospace;">
+        </div>
+
+        <button class="btn btn-primary" style="width: 100%; padding: 0.75rem; font-weight: 700;" onclick="searchTrackOrder()">
+          🔍 ऑर्डर खोजें एवं आईडी देखें (Find Order & Get ID)
+        </button>
+
+        <div id="trackResultBox" style="margin-top: 1.25rem;"></div>
+
+        <div style="margin-top: 1.15rem; text-align: center; font-size: 0.82rem; color: #64748b; border-top: 1px dashed #cbd5e1; padding-top: 0.75rem;">
+          📧 तकनीकी सहायता (Support): <a href="mailto:ayts7667@gmail.com" style="color: #2563eb; font-weight: 700; text-decoration: underline;">ayts7667@gmail.com</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- MODAL 4: Request Missing Village / District -->
+  <div id="missingDataModal" class="modal-overlay">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h3 class="modal-title">अनुपलब्ध ग्राम / जनपद डेटा का अनुरोध करें</h3>
+        <button class="modal-close-btn" onclick="closeModal('missingDataModal')">&times;</button>
+      </div>
+
+      <form id="missingDataForm" onsubmit="submitMissingDataRequest(event)" novalidate>
+        <div class="modal-body">
+          <p style="font-size:0.85rem; color:#64748b; margin-bottom:1rem;">
+            यदि आपका राज्य, जनपद या ग्राम पोर्टल पर उपलब्ध नहीं है, तो कृपया नीचे विवरण दर्ज करें। हमारी तकनीकी टीम इसे शीघ्र सत्यापित कर डेटा अपलोड करेगी।
+          </p>
+
+          <div class="form-group" style="margin-bottom: 0.85rem;">
+            <label>राज्य का नाम (State Name) <span class="req-star">*</span></label>
+            <select name="stateName" class="form-control" required>
+              <option value="Uttar Pradesh" selected>Uttar Pradesh (उत्तर प्रदेश)</option>
+              <option value="Andaman and Nicobar Islands">Andaman and Nicobar Islands</option>
+              <option value="Andhra Pradesh">Andhra Pradesh</option>
+              <option value="Arunachal Pradesh">Arunachal Pradesh</option>
+              <option value="Assam">Assam</option>
+              <option value="Bihar">Bihar (बिहार)</option>
+              <option value="Chandigarh">Chandigarh</option>
+              <option value="Chhattisgarh">Chhattisgarh</option>
+              <option value="Dadra and Nagar Haveli and Daman and Diu">Dadra and Nagar Haveli and Daman and Diu</option>
+              <option value="Delhi">Delhi (दिल्ली)</option>
+              <option value="Goa">Goa</option>
+              <option value="Gujarat">Gujarat (गुजरात)</option>
+              <option value="Haryana">Haryana (हरियाणा)</option>
+              <option value="Himachal Pradesh">Himachal Pradesh (हिमाचल प्रदेश)</option>
+              <option value="Jammu & Kashmir">Jammu & Kashmir</option>
+              <option value="Jharkhand">Jharkhand (झारखंड)</option>
+              <option value="Karnataka">Karnataka</option>
+              <option value="Kerala">Kerala</option>
+              <option value="Ladakh">Ladakh</option>
+              <option value="Lakshadweep">Lakshadweep</option>
+              <option value="Madhya Pradesh">Madhya Pradesh (मध्य प्रदेश)</option>
+              <option value="Maharashtra">Maharashtra (महाराष्ट्र)</option>
+              <option value="Manipur">Manipur</option>
+              <option value="Meghalaya">Meghalaya</option>
+              <option value="Mizoram">Mizoram</option>
+              <option value="Nagaland">Nagaland</option>
+              <option value="Odisha">Odisha (ओडिशा)</option>
+              <option value="Puducherry">Puducherry</option>
+              <option value="Punjab">Punjab (पंजाब)</option>
+              <option value="Rajasthan">Rajasthan (राजस्थान)</option>
+              <option value="Sikkim">Sikkim</option>
+              <option value="Tamil Nadu">Tamil Nadu</option>
+              <option value="Telangana">Telangana</option>
+              <option value="Tripura">Tripura</option>
+              <option value="Uttarakhand">Uttarakhand (उत्तराखंड)</option>
+              <option value="West Bengal">West Bengal (पश्चिम बंगाल)</option>
+            </select>
+          </div>
+
+          <div class="form-group" style="margin-bottom: 0.85rem;">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.25rem;">
+              <label style="margin-bottom: 0;">जनपद / जिला (District Name) <span class="req-star">*</span></label>
+              <span style="font-size: 0.75rem; color: #64748b;">(2 - 50 अक्षर)</span>
+            </div>
+            <input type="text" id="reqDistrict" name="districtName" class="form-control" placeholder="उदा. Varanasi, Jaunpur" minlength="2" maxlength="50" required oninput="clearFieldError(this)">
+            <div class="invalid-feedback" id="errDistrict"></div>
+          </div>
+
+          <div class="form-group" style="margin-bottom: 0.85rem;">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.25rem;">
+              <label style="margin-bottom: 0;">तहसील (Tehsil) <span class="req-star">*</span></label>
+              <span style="font-size: 0.75rem; color: #64748b;">(2 - 50 अक्षर)</span>
+            </div>
+            <input type="text" id="reqTehsil" name="tehsilName" class="form-control" placeholder="उदा. सदर, बदलापुर" minlength="2" maxlength="50" required oninput="clearFieldError(this)">
+            <div class="invalid-feedback" id="errTehsil"></div>
+          </div>
+
+          <div class="form-group" style="margin-bottom: 0.85rem;">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.25rem;">
+              <label style="margin-bottom: 0;">ग्राम का नाम (Village Name) <span class="req-star">*</span></label>
+              <span style="font-size: 0.75rem; color: #64748b;">(2 - 60 अक्षर)</span>
+            </div>
+            <input type="text" id="reqVillage" name="villageName" class="form-control" placeholder="उदा. रायपुर, रामपुर, चक्र" minlength="2" maxlength="60" required oninput="clearFieldError(this)">
+            <div class="invalid-feedback" id="errVillage"></div>
+          </div>
+
+          <div class="form-group" style="margin-bottom: 0.85rem;">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.25rem;">
+              <label style="margin-bottom: 0;">ग्राम कोड (Village Code) <span class="req-star">*</span></label>
+              <span style="font-size: 0.75rem; color: #64748b;">(4 - 15 अंक/वर्ण)</span>
+            </div>
+            <input type="text" id="reqVillageCode" name="villageCode" class="form-control" placeholder="उदा. 203339, 184161" minlength="4" maxlength="15" pattern="[A-Za-z0-9\-_]{4,15}" required oninput="clearFieldError(this)">
+            <div class="invalid-feedback" id="errVillageCode"></div>
+          </div>
+
+          <div class="form-group" style="margin-bottom: 0.85rem;">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.25rem;">
+              <label style="margin-bottom: 0;">आपका नाम (Your Name)</label>
+              <span style="font-size: 0.75rem; color: #64748b;">(वैकल्पिक, 2 - 50 अक्षर)</span>
+            </div>
+            <input type="text" name="userName" class="form-control" placeholder="आपका नाम" minlength="2" maxlength="50">
+          </div>
+
+          <div class="form-group" style="margin-bottom: 0.85rem;">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.25rem;">
+              <label style="margin-bottom: 0;">मोबाइल नंबर (Mobile Number) <span class="req-star">*</span></label>
+              <span id="reqMobileCounter" style="font-size: 0.75rem; color: #1e40af; font-weight: 700; background: #dbeafe; padding: 0.1rem 0.45rem; border-radius: 4px;">10 अंक आवश्यक</span>
+            </div>
+            <input type="tel" id="reqUserMobile" name="userMobile" class="form-control" placeholder="10 अंकों का मोबाइल नंबर (उदा. 9876543210)" minlength="10" maxlength="10" pattern="[6-9][0-9]{9}" required oninput="validateReqMobileInput(this)">
+            <div class="invalid-feedback" id="errMobile"></div>
+          </div>
+
+          <div style="background: #eff6ff; border: 1px solid #93c5fd; border-radius: 8px; padding: 0.75rem 1rem; margin-top: 1rem; font-size: 0.85rem; color: #1e3a8a; line-height: 1.5;">
+            <div style="font-weight: 700; display: flex; align-items: center; gap: 0.4rem; margin-bottom: 0.25rem;">
+              <span>⏱️</span>
+              <span>अनुमानित डेटा जांच एवं अपलोड समय: अधिकतम 6 घंटे</span>
+            </div>
+            <p style="margin: 0; font-size: 0.8rem; color: #3b82f6;">
+              अनुरोध जमा करने के बाद हमारी टीम रिकॉर्ड की जांच करेगी। कृपया <strong>6 घंटे बाद</strong> पोर्टल पर पुनः आकर ग्राम डेटा की जांच करें।
+            </p>
+          </div>
+
+          <div style="margin-top: 0.75rem; text-align: center; font-size: 0.82rem; color: #64748b;">
+            📧 सीधे ईमेल द्वारा सहायता प्राप्त करें: <a href="mailto:ayts7667@gmail.com" style="color: #2563eb; font-weight: 700; text-decoration: underline;">ayts7667@gmail.com</a>
+          </div>
+        </div>
+
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" onclick="closeModal('missingDataModal')">रद्द करें</button>
+          <button type="submit" class="btn btn-primary">अनुरोध जमा करें (Submit Request)</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="footer" style="background: #0f172a; color: #cbd5e1; padding: 2rem 1.5rem; margin-top: auto; border-top: 1px solid #1e293b;">
+    <div class="footer-container" style="max-width: 1280px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1.5rem;">
+      <div style="max-width: 650px;">
+        <strong style="color: #ffffff; font-size: 1rem;">🏠 ग्रामीण आवासीय संपत्ति डिजिटल खोज एवं सूचना पोर्टल (Private Portal)</strong>
+        <p style="font-size: 0.78rem; color: #94a3b8; margin-top: 0.35rem; line-height: 1.5;">
+          अस्वीकरण: यह पोर्टल एक स्वतंत्र निजी सेवा है और किसी भी सरकारी विभाग से संबद्ध नहीं है। यह सार्वजनिक भूलेख डेटा की त्वरित खोज व सूचनात्मक सहायता प्रदान करता है।
+        </p>
+      </div>
+      <div style="display: flex; flex-direction: column; gap: 0.5rem; align-items: flex-start;">
+        <div style="background: #1e293b; padding: 0.55rem 0.95rem; border-radius: 8px; border: 1px solid #334155; font-size: 0.88rem;">
+          <span style="color: #94a3b8;">📩 ग्राहक सहायता (Support Email):</span>
+          <a href="mailto:ayts7667@gmail.com" style="color: #38bdf8; font-weight: 700; text-decoration: none; margin-left: 0.35rem;">ayts7667@gmail.com</a>
+        </div>
+        <div style="font-size: 0.8rem; color: #94a3b8;">
+          सेवा शुल्क: <strong class="dynamic-fee-exact" style="color: #10b981;">...</strong> प्रति संपत्ति आईडी
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Mobile / Android Quick Bottom Navigation Bar -->
+  <nav class="mobile-bottom-nav">
+    <a href="#stepLocationCard" class="mobile-nav-item active" onclick="document.getElementById('stepLocationCard').scrollIntoView({behavior: 'smooth'})">
+      <div class="nav-icon">🔍</div>
+      <span>ग्राम खोजें</span>
+    </a>
+    <a href="javascript:void(0)" class="mobile-nav-item" onclick="scrollToCoverageDirectory()">
+      <div class="nav-icon">🗺️</div>
+      <span>ग्राम सूची</span>
+    </a>
+    <a href="javascript:void(0)" class="mobile-nav-item" onclick="openTrackModal()">
+      <div class="nav-icon">📦</div>
+      <span>ऑर्डर ट्रैक</span>
+    </a>
+    <a href="mailto:ayts7667@gmail.com" class="mobile-nav-item">
+      <div class="nav-icon">💬</div>
+      <span>सहायता</span>
+    </a>
+  </nav>
+
+  <!-- Scripts -->
+  <script src="js/qrcode.min.js"></script>
+  <script src="js/app.js?v=4.0"></script>
+</body>
+</html>

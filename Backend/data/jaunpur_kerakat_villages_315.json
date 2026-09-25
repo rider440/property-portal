@@ -1,0 +1,2522 @@
+[
+  {
+    "S.No": 1,
+    "State": "Uttar Pradesh",
+    "District": "Jaunpur",
+    "Tehsil": "Kerakat",
+    "Village Name": "Abahadpur",
+    "Village Code": "203320"
+  },
+  {
+    "S.No": 2,
+    "State": "Uttar Pradesh",
+    "District": "Jaunpur",
+    "Tehsil": "Kerakat",
+    "Village Name": "Ahan",
+    "Village Code": "203063"
+  },
+  {
+    "S.No": 3,
+    "State": "Uttar Pradesh",
+    "District": "Jaunpur",
+    "Tehsil": "Kerakat",
+    "Village Name": "Ajorpur",
+    "Village Code": "203189"
+  },
+  {
+    "S.No": 4,
+    "State": "Uttar Pradesh",
+    "District": "Jaunpur",
+    "Tehsil": "Kerakat",
+    "Village Name": "Akbarpur",
+    "Village Code": "203216"
+  },
+  {
+    "S.No": 5,
+    "State": "Uttar Pradesh",
+    "District": "Jaunpur",
+    "Tehsil": "Kerakat",
+    "Village Name": "Akhaipur",
+    "Village Code": "203338"
+  },
+  {
+    "S.No": 6,
+    "State": "Uttar Pradesh",
+    "District": "Jaunpur",
+    "Tehsil": "Kerakat",
+    "Village Name": "Amara",
+    "Village Code": "203011"
+  },
+  {
+    "S.No": 7,
+    "State": "Uttar Pradesh",
+    "District": "Jaunpur",
+    "Tehsil": "Kerakat",
+    "Village Name": "Amhit",
+    "Village Code": "203220"
+  },
+  {
+    "S.No": 8,
+    "State": "Uttar Pradesh",
+    "District": "Jaunpur",
+    "Tehsil": "Kerakat",
+    "Village Name": "Amilia Sani",
+    "Village Code": "203414"
+  },
+  {
+    "S.No": 9,
+    "State": "Uttar Pradesh",
+    "District": "Jaunpur",
+    "Tehsil": "Kerakat",
+    "Village Name": "Amiliya",
+    "Village Code": "203317"
+  },
+  {
+    "S.No": 10,
+    "State": "Uttar Pradesh",
+    "District": "Jaunpur",
+    "Tehsil": "Kerakat",
+    "Village Name": "Ammarpur",
+    "Village Code": "203118"
+  },
+  {
+    "S.No": 11,
+    "State": "Uttar Pradesh",
+    "District": "Jaunpur",
+    "Tehsil": "Kerakat",
+    "Village Name": "Amuwar",
+    "Village Code": "203329"
+  },
+  {
+    "S.No": 12,
+    "State": "Uttar Pradesh",
+    "District": "Jaunpur",
+    "Tehsil": "Kerakat",
+    "Village Name": "Anegpur",
+    "Village Code": "203347"
+  },
+  {
+    "S.No": 13,
+    "State": "Uttar Pradesh",
+    "District": "Jaunpur",
+    "Tehsil": "Kerakat",
+    "Village Name": "Arazi Ailia",
+    "Village Code": "203334"
+  },
+  {
+    "S.No": 14,
+    "State": "Uttar Pradesh",
+    "District": "Jaunpur",
+    "Tehsil": "Kerakat",
+    "Village Name": "Arazi Chhati Dih",
+    "Village Code": "203161"
+  },
+  {
+    "S.No": 15,
+    "State": "Uttar Pradesh",
+    "District": "Jaunpur",
+    "Tehsil": "Kerakat",
+    "Village Name": "Arazi Hariharpur",
+    "Village Code": "203356"
+  },
+  {
+    "S.No": 16,
+    "State": "Uttar Pradesh",
+    "District": "Jaunpur",
+    "Tehsil": "Kerakat",
+    "Village Name": "Arazi Koilari",
+    "Village Code": "203324"
+  },
+  {
+    "S.No": 17,
+    "State": "Uttar Pradesh",
+    "District": "Jaunpur",
+    "Tehsil": "Kerakat",
+    "Village Name": "Asbaranpur",
+    "Village Code": "203177"
+  },
+  {
+    "S.No": 18,
+    "State": "Uttar Pradesh",
+    "District": "Jaunpur",
+    "Tehsil": "Kerakat",
+    "Village Name": "Asmanpatti",
+    "Village Code": "203274"
+  },
+  {
+    "S.No": 19,
+    "State": "Uttar Pradesh",
+    "District": "Jaunpur",
+    "Tehsil": "Kerakat",
+    "Village Name": "Ataharpar",
+    "Village Code": "203411"
+  },
+  {
+    "S.No": 20,
+    "State": "Uttar Pradesh",
+    "District": "Jaunpur",
+    "Tehsil": "Kerakat",
+    "Village Name": "Atraura",
+    "Village Code": "203246"
+  },
+  {
+    "S.No": 21,
+    "State": "Uttar Pradesh",
+    "District": "Jaunpur",
+    "Tehsil": "Kerakat",
+    "Village Name": "Badwa",
+    "Village Code": "203423"
+  },
+  {
+    "S.No": 22,
+    "State": "Uttar Pradesh",
+    "District": "Jaunpur",
+    "Tehsil": "Kerakat",
+    "Village Name": "Badwar",
+    "Village Code": "203061"
+  },
+  {
+    "S.No": 23,
+    "State": "Uttar Pradesh",
+    "District": "Jaunpur",
+    "Tehsil": "Kerakat",
+    "Village Name": "Bagahi",
+    "Village Code": "203211"
+  },
+  {
+    "S.No": 24,
+    "State": "Uttar Pradesh",
+    "District": "Jaunpur",
+    "Tehsil": "Kerakat",
+    "Village Name": "Bagerwan",
+    "Village Code": "203379"
+  },
+  {
+    "S.No": 25,
+    "State": "Uttar Pradesh",
+    "District": "Jaunpur",
+    "Tehsil": "Kerakat",
+    "Village Name": "Bagi",
+    "Village Code": "203301"
+  },
+  {
+    "S.No": 26,
+    "State": "Uttar Pradesh",
+    "District": "Jaunpur",
+    "Tehsil": "Kerakat",
+    "Village Name": "Bahuri",
+    "Village Code": "203165"
+  },
+  {
+    "S.No": 27,
+    "State": "Uttar Pradesh",
+    "District": "Jaunpur",
+    "Tehsil": "Kerakat",
+    "Village Name": "Bairagiya",
+    "Village Code": "203083"
+  },
+  {
+    "S.No": 28,
+    "State": "Uttar Pradesh",
+    "District": "Jaunpur",
+    "Tehsil": "Kerakat",
+    "Village Name": "Baktahi",
+    "Village Code": "203374"
+  },
+  {
+    "S.No": 29,
+    "State": "Uttar Pradesh",
+    "District": "Jaunpur",
+    "Tehsil": "Kerakat",
+    "Village Name": "Balaipur",
+    "Village Code": "203082"
+  },
+  {
+    "S.No": 30,
+    "State": "Uttar Pradesh",
+    "District": "Jaunpur",
+    "Tehsil": "Kerakat",
+    "Village Name": "Balua",
+    "Village Code": "203294"
+  },
+  {
+    "S.No": 31,
+    "State": "Uttar Pradesh",
+    "District": "Jaunpur",
+    "Tehsil": "Kerakat",
+    "Village Name": "Balua Bijaipur",
+    "Village Code": "203350"
+  },
+  {
+    "S.No": 32,
+    "State": "Uttar Pradesh",
+    "District": "Jaunpur",
+    "Tehsil": "Kerakat",
+    "Village Name": "Baluhi",
+    "Village Code": "203062"
+  },
+  {
+    "S.No": 33,
+    "State": "Uttar Pradesh",
+    "District": "Jaunpur",
+    "Tehsil": "Kerakat",
+    "Village Name": "Bantari",
+    "Village Code": "203297"
+  },
+  {
+    "S.No": 34,
+    "State": "Uttar Pradesh",
+    "District": "Jaunpur",
+    "Tehsil": "Kerakat",
+    "Village Name": "Barahimpur",
+    "Village Code": "203290"
+  },
+  {
+    "S.No": 35,
+    "State": "Uttar Pradesh",
+    "District": "Jaunpur",
+    "Tehsil": "Kerakat",
+    "Village Name": "Barahpur",
+    "Village Code": "203426"
+  },
+  {
+    "S.No": 36,
+    "State": "Uttar Pradesh",
+    "District": "Jaunpur",
+    "Tehsil": "Kerakat",
+    "Village Name": "Barai",
+    "Village Code": "203103"
+  },
+  {
+    "S.No": 37,
+    "State": "Uttar Pradesh",
+    "District": "Jaunpur",
+    "Tehsil": "Kerakat",
+    "Village Name": "Barai",
+    "Village Code": "203278"
+  },
+  {
+    "S.No": 38,
+    "State": "Uttar Pradesh",
+    "District": "Jaunpur",
+    "Tehsil": "Kerakat",
+    "Village Name": "Baraichha",
+    "Village Code": "203295"
+  },
+  {
+    "S.No": 39,
+    "State": "Uttar Pradesh",
+    "District": "Jaunpur",
+    "Tehsil": "Kerakat",
+    "Village Name": "Barauti",
+    "Village Code": "203398"
+  },
+  {
+    "S.No": 40,
+    "State": "Uttar Pradesh",
+    "District": "Jaunpur",
+    "Tehsil": "Kerakat",
+    "Village Name": "Bardiha",
+    "Village Code": "203305"
+  },
+  {
+    "S.No": 41,
+    "State": "Uttar Pradesh",
+    "District": "Jaunpur",
+    "Tehsil": "Kerakat",
+    "Village Name": "Barmalpur",
+    "Village Code": "203384"
+  },
+  {
+    "S.No": 42,
+    "State": "Uttar Pradesh",
+    "District": "Jaunpur",
+    "Tehsil": "Kerakat",
+    "Village Name": "Basgit",
+    "Village Code": "203221"
+  },
+  {
+    "S.No": 43,
+    "State": "Uttar Pradesh",
+    "District": "Jaunpur",
+    "Tehsil": "Kerakat",
+    "Village Name": "Basupatti",
+    "Village Code": "203095"
+  },
+  {
+    "S.No": 44,
+    "State": "Uttar Pradesh",
+    "District": "Jaunpur",
+    "Tehsil": "Kerakat",
+    "Village Name": "Behara",
+    "Village Code": "203273"
+  },
+  {
+    "S.No": 45,
+    "State": "Uttar Pradesh",
+    "District": "Jaunpur",
+    "Tehsil": "Kerakat",
+    "Village Name": "Bela",
+    "Village Code": "203182"
+  },
+  {
+    "S.No": 46,
+    "State": "Uttar Pradesh",
+    "District": "Jaunpur",
+    "Tehsil": "Kerakat",
+    "Village Name": "Bhadehari",
+    "Village Code": "203130"
+  },
+  {
+    "S.No": 47,
+    "State": "Uttar Pradesh",
+    "District": "Jaunpur",
+    "Tehsil": "Kerakat",
+    "Village Name": "Bhadeora",
+    "Village Code": "203005"
+  },
+  {
+    "S.No": 48,
+    "State": "Uttar Pradesh",
+    "District": "Jaunpur",
+    "Tehsil": "Kerakat",
+    "Village Name": "Bhagtauli",
+    "Village Code": "203422"
+  },
+  {
+    "S.No": 49,
+    "State": "Uttar Pradesh",
+    "District": "Jaunpur",
+    "Tehsil": "Kerakat",
+    "Village Name": "Bhainsa",
+    "Village Code": "203292"
+  },
+  {
+    "S.No": 50,
+    "State": "Uttar Pradesh",
+    "District": "Jaunpur",
+    "Tehsil": "Kerakat",
+    "Village Name": "Bhairo Bhanpur",
+    "Village Code": "203196"
+  },
+  {
+    "S.No": 51,
+    "State": "Uttar Pradesh",
+    "District": "Jaunpur",
+    "Tehsil": "Kerakat",
+    "Village Name": "Bhaupur",
+    "Village Code": "203186"
+  },
+  {
+    "S.No": 52,
+    "State": "Uttar Pradesh",
+    "District": "Jaunpur",
+    "Tehsil": "Kerakat",
+    "Village Name": "Bhaura",
+    "Village Code": "203231"
+  },
+  {
+    "S.No": 53,
+    "State": "Uttar Pradesh",
+    "District": "Jaunpur",
+    "Tehsil": "Kerakat",
+    "Village Name": "Bhawnathpur",
+    "Village Code": "203170"
+  },
+  {
+    "S.No": 54,
+    "State": "Uttar Pradesh",
+    "District": "Jaunpur",
+    "Tehsil": "Kerakat",
+    "Village Name": "Bhawsinghpur",
+    "Village Code": "203033"
+  },
+  {
+    "S.No": 55,
+    "State": "Uttar Pradesh",
+    "District": "Jaunpur",
+    "Tehsil": "Kerakat",
+    "Village Name": "Bhimpur",
+    "Village Code": "203312"
+  },
+  {
+    "S.No": 56,
+    "State": "Uttar Pradesh",
+    "District": "Jaunpur",
+    "Tehsil": "Kerakat",
+    "Village Name": "Bhitari",
+    "Village Code": "203244"
+  },
+  {
+    "S.No": 57,
+    "State": "Uttar Pradesh",
+    "District": "Jaunpur",
+    "Tehsil": "Kerakat",
+    "Village Name": "Bhulandih",
+    "Village Code": "203363"
+  },
+  {
+    "S.No": 58,
+    "State": "Uttar Pradesh",
+    "District": "Jaunpur",
+    "Tehsil": "Kerakat",
+    "Village Name": "Biban Mau",
+    "Village Code": "203126"
+  },
+  {
+    "S.No": 59,
+    "State": "Uttar Pradesh",
+    "District": "Jaunpur",
+    "Tehsil": "Kerakat",
+    "Village Name": "Bihardai",
+    "Village Code": "203345"
+  },
+  {
+    "S.No": 60,
+    "State": "Uttar Pradesh",
+    "District": "Jaunpur",
+    "Tehsil": "Kerakat",
+    "Village Name": "Bijhwar Sagar",
+    "Village Code": "203094"
+  },
+  {
+    "S.No": 61,
+    "State": "Uttar Pradesh",
+    "District": "Jaunpur",
+    "Tehsil": "Kerakat",
+    "Village Name": "Bijhwar Sarang",
+    "Village Code": "203093"
+  },
+  {
+    "S.No": 62,
+    "State": "Uttar Pradesh",
+    "District": "Jaunpur",
+    "Tehsil": "Kerakat",
+    "Village Name": "Binde",
+    "Village Code": "203188"
+  },
+  {
+    "S.No": 63,
+    "State": "Uttar Pradesh",
+    "District": "Jaunpur",
+    "Tehsil": "Kerakat",
+    "Village Name": "Birbhanpur",
+    "Village Code": "203298"
+  },
+  {
+    "S.No": 64,
+    "State": "Uttar Pradesh",
+    "District": "Jaunpur",
+    "Tehsil": "Kerakat",
+    "Village Name": "Biri-Bari",
+    "Village Code": "203402"
+  },
+  {
+    "S.No": 65,
+    "State": "Uttar Pradesh",
+    "District": "Jaunpur",
+    "Tehsil": "Kerakat",
+    "Village Name": "Bisapur",
+    "Village Code": "203333"
+  },
+  {
+    "S.No": 66,
+    "State": "Uttar Pradesh",
+    "District": "Jaunpur",
+    "Tehsil": "Kerakat",
+    "Village Name": "Bisauri",
+    "Village Code": "203409"
+  },
+  {
+    "S.No": 67,
+    "State": "Uttar Pradesh",
+    "District": "Jaunpur",
+    "Tehsil": "Kerakat",
+    "Village Name": "Bisenpur",
+    "Village Code": "203147"
+  },
+  {
+    "S.No": 68,
+    "State": "Uttar Pradesh",
+    "District": "Jaunpur",
+    "Tehsil": "Kerakat",
+    "Village Name": "Bishunpur",
+    "Village Code": "203282"
+  },
+  {
+    "S.No": 69,
+    "State": "Uttar Pradesh",
+    "District": "Jaunpur",
+    "Tehsil": "Kerakat",
+    "Village Name": "Bishun Pur Lebrua",
+    "Village Code": "203336"
+  },
+  {
+    "S.No": 70,
+    "State": "Uttar Pradesh",
+    "District": "Jaunpur",
+    "Tehsil": "Kerakat",
+    "Village Name": "Bishunpurwa",
+    "Village Code": "203401"
+  },
+  {
+    "S.No": 71,
+    "State": "Uttar Pradesh",
+    "District": "Jaunpur",
+    "Tehsil": "Kerakat",
+    "Village Name": "Bodasar Khurd",
+    "Village Code": "203366"
+  },
+  {
+    "S.No": 72,
+    "State": "Uttar Pradesh",
+    "District": "Jaunpur",
+    "Tehsil": "Kerakat",
+    "Village Name": "Bodsarkalan",
+    "Village Code": "203368"
+  },
+  {
+    "S.No": 73,
+    "State": "Uttar Pradesh",
+    "District": "Jaunpur",
+    "Tehsil": "Kerakat",
+    "Village Name": "Braamanpur",
+    "Village Code": "203316"
+  },
+  {
+    "S.No": 74,
+    "State": "Uttar Pradesh",
+    "District": "Jaunpur",
+    "Tehsil": "Kerakat",
+    "Village Name": "Brahamanpur",
+    "Village Code": "203287"
+  },
+  {
+    "S.No": 75,
+    "State": "Uttar Pradesh",
+    "District": "Jaunpur",
+    "Tehsil": "Kerakat",
+    "Village Name": "Brahmanpur",
+    "Village Code": "203209"
+  },
+  {
+    "S.No": 76,
+    "State": "Uttar Pradesh",
+    "District": "Jaunpur",
+    "Tehsil": "Kerakat",
+    "Village Name": "Chak Bhupal",
+    "Village Code": "203354"
+  },
+  {
+    "S.No": 77,
+    "State": "Uttar Pradesh",
+    "District": "Jaunpur",
+    "Tehsil": "Kerakat",
+    "Village Name": "Chak Bisanw",
+    "Village Code": "203174"
+  },
+  {
+    "S.No": 78,
+    "State": "Uttar Pradesh",
+    "District": "Jaunpur",
+    "Tehsil": "Kerakat",
+    "Village Name": "Chak Govindpur",
+    "Village Code": "203199"
+  },
+  {
+    "S.No": 79,
+    "State": "Uttar Pradesh",
+    "District": "Jaunpur",
+    "Tehsil": "Kerakat",
+    "Village Name": "Chak Jamin",
+    "Village Code": "203229"
+  },
+  {
+    "S.No": 80,
+    "State": "Uttar Pradesh",
+    "District": "Jaunpur",
+    "Tehsil": "Kerakat",
+    "Village Name": "Chakmadhoram",
+    "Village Code": "203400"
+  },
+  {
+    "S.No": 81,
+    "State": "Uttar Pradesh",
+    "District": "Jaunpur",
+    "Tehsil": "Kerakat",
+    "Village Name": "Chakpandepur",
+    "Village Code": "203314"
+  },
+  {
+    "S.No": 82,
+    "State": "Uttar Pradesh",
+    "District": "Jaunpur",
+    "Tehsil": "Kerakat",
+    "Village Name": "Chakra",
+    "Village Code": "203339"
+  },
+  {
+    "S.No": 83,
+    "State": "Uttar Pradesh",
+    "District": "Jaunpur",
+    "Tehsil": "Kerakat",
+    "Village Name": "Chak Ram Nagar",
+    "Village Code": "203144"
+  },
+  {
+    "S.No": 84,
+    "State": "Uttar Pradesh",
+    "District": "Jaunpur",
+    "Tehsil": "Kerakat",
+    "Village Name": "Chaksudi",
+    "Village Code": "203267"
+  },
+  {
+    "S.No": 85,
+    "State": "Uttar Pradesh",
+    "District": "Jaunpur",
+    "Tehsil": "Kerakat",
+    "Village Name": "Chak Sudisukul",
+    "Village Code": "203146"
+  },
+  {
+    "S.No": 86,
+    "State": "Uttar Pradesh",
+    "District": "Jaunpur",
+    "Tehsil": "Kerakat",
+    "Village Name": "Chaktari",
+    "Village Code": "203139"
+  },
+  {
+    "S.No": 87,
+    "State": "Uttar Pradesh",
+    "District": "Jaunpur",
+    "Tehsil": "Kerakat",
+    "Village Name": "Chandwak",
+    "Village Code": "203380"
+  },
+  {
+    "S.No": 88,
+    "State": "Uttar Pradesh",
+    "District": "Jaunpur",
+    "Tehsil": "Kerakat",
+    "Village Name": "Charanadih",
+    "Village Code": "203228"
+  },
+  {
+    "S.No": 89,
+    "State": "Uttar Pradesh",
+    "District": "Jaunpur",
+    "Tehsil": "Kerakat",
+    "Village Name": "Chaubepur",
+    "Village Code": "203386"
+  },
+  {
+    "S.No": 90,
+    "State": "Uttar Pradesh",
+    "District": "Jaunpur",
+    "Tehsil": "Kerakat",
+    "Village Name": "Chaukian",
+    "Village Code": "203251"
+  },
+  {
+    "S.No": 91,
+    "State": "Uttar Pradesh",
+    "District": "Jaunpur",
+    "Tehsil": "Kerakat",
+    "Village Name": "Chaura",
+    "Village Code": "203239"
+  },
+  {
+    "S.No": 92,
+    "State": "Uttar Pradesh",
+    "District": "Jaunpur",
+    "Tehsil": "Kerakat",
+    "Village Name": "Chauri",
+    "Village Code": "203164"
+  },
+  {
+    "S.No": 93,
+    "State": "Uttar Pradesh",
+    "District": "Jaunpur",
+    "Tehsil": "Kerakat",
+    "Village Name": "Chawarwar",
+    "Village Code": "203396"
+  },
+  {
+    "S.No": 94,
+    "State": "Uttar Pradesh",
+    "District": "Jaunpur",
+    "Tehsil": "Kerakat",
+    "Village Name": "Chhatari",
+    "Village Code": "203169"
+  },
+  {
+    "S.No": 95,
+    "State": "Uttar Pradesh",
+    "District": "Jaunpur",
+    "Tehsil": "Kerakat",
+    "Village Name": "Chhati Dih",
+    "Village Code": "203162"
+  },
+  {
+    "S.No": 96,
+    "State": "Uttar Pradesh",
+    "District": "Jaunpur",
+    "Tehsil": "Kerakat",
+    "Village Name": "Chhitauna",
+    "Village Code": "203111"
+  },
+  {
+    "S.No": 97,
+    "State": "Uttar Pradesh",
+    "District": "Jaunpur",
+    "Tehsil": "Kerakat",
+    "Village Name": "Chhunapur",
+    "Village Code": "203387"
+  },
+  {
+    "S.No": 98,
+    "State": "Uttar Pradesh",
+    "District": "Jaunpur",
+    "Tehsil": "Kerakat",
+    "Village Name": "Chitaipur",
+    "Village Code": "203173"
+  },
+  {
+    "S.No": 99,
+    "State": "Uttar Pradesh",
+    "District": "Jaunpur",
+    "Tehsil": "Kerakat",
+    "Village Name": "Chitkon",
+    "Village Code": "203407"
+  },
+  {
+    "S.No": 100,
+    "State": "Uttar Pradesh",
+    "District": "Jaunpur",
+    "Tehsil": "Kerakat",
+    "Village Name": "Daudpur",
+    "Village Code": "203236"
+  },
+  {
+    "S.No": 101,
+    "State": "Uttar Pradesh",
+    "District": "Jaunpur",
+    "Tehsil": "Kerakat",
+    "Village Name": "Dehari",
+    "Village Code": "203208"
+  },
+  {
+    "S.No": 102,
+    "State": "Uttar Pradesh",
+    "District": "Jaunpur",
+    "Tehsil": "Kerakat",
+    "Village Name": "Deokali",
+    "Village Code": "203066"
+  },
+  {
+    "S.No": 103,
+    "State": "Uttar Pradesh",
+    "District": "Jaunpur",
+    "Tehsil": "Kerakat",
+    "Village Name": "Deoli Adai",
+    "Village Code": "203009"
+  },
+  {
+    "S.No": 104,
+    "State": "Uttar Pradesh",
+    "District": "Jaunpur",
+    "Tehsil": "Kerakat",
+    "Village Name": "Deorai",
+    "Village Code": "203302"
+  },
+  {
+    "S.No": 105,
+    "State": "Uttar Pradesh",
+    "District": "Jaunpur",
+    "Tehsil": "Kerakat",
+    "Village Name": "Devakalpur",
+    "Village Code": "203018"
+  },
+  {
+    "S.No": 106,
+    "State": "Uttar Pradesh",
+    "District": "Jaunpur",
+    "Tehsil": "Kerakat",
+    "Village Name": "Devlaspur",
+    "Village Code": "203349"
+  },
+  {
+    "S.No": 107,
+    "State": "Uttar Pradesh",
+    "District": "Jaunpur",
+    "Tehsil": "Kerakat",
+    "Village Name": "Devnath Pur",
+    "Village Code": "203262"
+  },
+  {
+    "S.No": 108,
+    "State": "Uttar Pradesh",
+    "District": "Jaunpur",
+    "Tehsil": "Kerakat",
+    "Village Name": "Dewar",
+    "Village Code": "203311"
+  },
+  {
+    "S.No": 109,
+    "State": "Uttar Pradesh",
+    "District": "Jaunpur",
+    "Tehsil": "Kerakat",
+    "Village Name": "Dhanapur",
+    "Village Code": "203026"
+  },
+  {
+    "S.No": 110,
+    "State": "Uttar Pradesh",
+    "District": "Jaunpur",
+    "Tehsil": "Kerakat",
+    "Village Name": "Dhanarkha",
+    "Village Code": "203373"
+  },
+  {
+    "S.No": 111,
+    "State": "Uttar Pradesh",
+    "District": "Jaunpur",
+    "Tehsil": "Kerakat",
+    "Village Name": "Dharaura",
+    "Village Code": "203248"
+  },
+  {
+    "S.No": 112,
+    "State": "Uttar Pradesh",
+    "District": "Jaunpur",
+    "Tehsil": "Kerakat",
+    "Village Name": "Diha",
+    "Village Code": "203310"
+  },
+  {
+    "S.No": 113,
+    "State": "Uttar Pradesh",
+    "District": "Jaunpur",
+    "Tehsil": "Kerakat",
+    "Village Name": "Dihakot",
+    "Village Code": "203309"
+  },
+  {
+    "S.No": 114,
+    "State": "Uttar Pradesh",
+    "District": "Jaunpur",
+    "Tehsil": "Kerakat",
+    "Village Name": "Dingurpur",
+    "Village Code": "203180"
+  },
+  {
+    "S.No": 115,
+    "State": "Uttar Pradesh",
+    "District": "Jaunpur",
+    "Tehsil": "Kerakat",
+    "Village Name": "Dobhi Khas",
+    "Village Code": "203353"
+  },
+  {
+    "S.No": 116,
+    "State": "Uttar Pradesh",
+    "District": "Jaunpur",
+    "Tehsil": "Kerakat",
+    "Village Name": "Dudhaura",
+    "Village Code": "203417"
+  },
+  {
+    "S.No": 117,
+    "State": "Uttar Pradesh",
+    "District": "Jaunpur",
+    "Tehsil": "Kerakat",
+    "Village Name": "Dugauli",
+    "Village Code": "203089"
+  },
+  {
+    "S.No": 118,
+    "State": "Uttar Pradesh",
+    "District": "Jaunpur",
+    "Tehsil": "Kerakat",
+    "Village Name": "Ekauni",
+    "Village Code": "203039"
+  },
+  {
+    "S.No": 119,
+    "State": "Uttar Pradesh",
+    "District": "Jaunpur",
+    "Tehsil": "Kerakat",
+    "Village Name": "Ek Lakhi Mandupur",
+    "Village Code": "203306"
+  },
+  {
+    "S.No": 120,
+    "State": "Uttar Pradesh",
+    "District": "Jaunpur",
+    "Tehsil": "Kerakat",
+    "Village Name": "Faridpur",
+    "Village Code": "203385"
+  },
+  {
+    "S.No": 121,
+    "State": "Uttar Pradesh",
+    "District": "Jaunpur",
+    "Tehsil": "Kerakat",
+    "Village Name": "Gaddipur",
+    "Village Code": "203077"
+  },
+  {
+    "S.No": 122,
+    "State": "Uttar Pradesh",
+    "District": "Jaunpur",
+    "Tehsil": "Kerakat",
+    "Village Name": "Gangauli",
+    "Village Code": "203247"
+  },
+  {
+    "S.No": 123,
+    "State": "Uttar Pradesh",
+    "District": "Jaunpur",
+    "Tehsil": "Kerakat",
+    "Village Name": "Gauspur",
+    "Village Code": "203201"
+  },
+  {
+    "S.No": 124,
+    "State": "Uttar Pradesh",
+    "District": "Jaunpur",
+    "Tehsil": "Kerakat",
+    "Village Name": "Ghordaur",
+    "Village Code": "203300"
+  },
+  {
+    "S.No": 125,
+    "State": "Uttar Pradesh",
+    "District": "Jaunpur",
+    "Tehsil": "Kerakat",
+    "Village Name": "Ghurahupur",
+    "Village Code": "203072"
+  },
+  {
+    "S.No": 126,
+    "State": "Uttar Pradesh",
+    "District": "Jaunpur",
+    "Tehsil": "Kerakat",
+    "Village Name": "Ghusanw",
+    "Village Code": "203116"
+  },
+  {
+    "S.No": 127,
+    "State": "Uttar Pradesh",
+    "District": "Jaunpur",
+    "Tehsil": "Kerakat",
+    "Village Name": "Ghuttha",
+    "Village Code": "203413"
+  },
+  {
+    "S.No": 128,
+    "State": "Uttar Pradesh",
+    "District": "Jaunpur",
+    "Tehsil": "Kerakat",
+    "Village Name": "Gobra",
+    "Village Code": "203283"
+  },
+  {
+    "S.No": 129,
+    "State": "Uttar Pradesh",
+    "District": "Jaunpur",
+    "Tehsil": "Kerakat",
+    "Village Name": "Gopalpur",
+    "Village Code": "203015"
+  },
+  {
+    "S.No": 130,
+    "State": "Uttar Pradesh",
+    "District": "Jaunpur",
+    "Tehsil": "Kerakat",
+    "Village Name": "Gopalpur",
+    "Village Code": "203113"
+  },
+  {
+    "S.No": 131,
+    "State": "Uttar Pradesh",
+    "District": "Jaunpur",
+    "Tehsil": "Kerakat",
+    "Village Name": "Gopipur",
+    "Village Code": "203166"
+  },
+  {
+    "S.No": 132,
+    "State": "Uttar Pradesh",
+    "District": "Jaunpur",
+    "Tehsil": "Kerakat",
+    "Village Name": "Gothauli",
+    "Village Code": "203344"
+  },
+  {
+    "S.No": 133,
+    "State": "Uttar Pradesh",
+    "District": "Jaunpur",
+    "Tehsil": "Kerakat",
+    "Village Name": "Govindpur",
+    "Village Code": "203198"
+  },
+  {
+    "S.No": 134,
+    "State": "Uttar Pradesh",
+    "District": "Jaunpur",
+    "Tehsil": "Kerakat",
+    "Village Name": "Habusahi",
+    "Village Code": "203364"
+  },
+  {
+    "S.No": 135,
+    "State": "Uttar Pradesh",
+    "District": "Jaunpur",
+    "Tehsil": "Kerakat",
+    "Village Name": "Hanuadih",
+    "Village Code": "203087"
+  },
+  {
+    "S.No": 136,
+    "State": "Uttar Pradesh",
+    "District": "Jaunpur",
+    "Tehsil": "Kerakat",
+    "Village Name": "Hardasipur",
+    "Village Code": "203381"
+  },
+  {
+    "S.No": 137,
+    "State": "Uttar Pradesh",
+    "District": "Jaunpur",
+    "Tehsil": "Kerakat",
+    "Village Name": "Hardhan",
+    "Village Code": "203370"
+  },
+  {
+    "S.No": 138,
+    "State": "Uttar Pradesh",
+    "District": "Jaunpur",
+    "Tehsil": "Kerakat",
+    "Village Name": "Hariharpur",
+    "Village Code": "203360"
+  },
+  {
+    "S.No": 139,
+    "State": "Uttar Pradesh",
+    "District": "Jaunpur",
+    "Tehsil": "Kerakat",
+    "Village Name": "Hari Karan Patti",
+    "Village Code": "203058"
+  },
+  {
+    "S.No": 140,
+    "State": "Uttar Pradesh",
+    "District": "Jaunpur",
+    "Tehsil": "Kerakat",
+    "Village Name": "Hasanpur",
+    "Village Code": "203020"
+  },
+  {
+    "S.No": 141,
+    "State": "Uttar Pradesh",
+    "District": "Jaunpur",
+    "Tehsil": "Kerakat",
+    "Village Name": "Hatwa",
+    "Village Code": "203383"
+  },
+  {
+    "S.No": 142,
+    "State": "Uttar Pradesh",
+    "District": "Jaunpur",
+    "Tehsil": "Kerakat",
+    "Village Name": "Hisampur",
+    "Village Code": "203406"
+  },
+  {
+    "S.No": 143,
+    "State": "Uttar Pradesh",
+    "District": "Jaunpur",
+    "Tehsil": "Kerakat",
+    "Village Name": "Inruwa",
+    "Village Code": "203420"
+  },
+  {
+    "S.No": 144,
+    "State": "Uttar Pradesh",
+    "District": "Jaunpur",
+    "Tehsil": "Kerakat",
+    "Village Name": "Ismaila Bhairodayal",
+    "Village Code": "203136"
+  },
+  {
+    "S.No": 145,
+    "State": "Uttar Pradesh",
+    "District": "Jaunpur",
+    "Tehsil": "Kerakat",
+    "Village Name": "Ismaila Durga Prasad",
+    "Village Code": "203132"
+  },
+  {
+    "S.No": 146,
+    "State": "Uttar Pradesh",
+    "District": "Jaunpur",
+    "Tehsil": "Kerakat",
+    "Village Name": "Ismaila Sitala Prasad",
+    "Village Code": "203133"
+  },
+  {
+    "S.No": 147,
+    "State": "Uttar Pradesh",
+    "District": "Jaunpur",
+    "Tehsil": "Kerakat",
+    "Village Name": "Itahara",
+    "Village Code": "203308"
+  },
+  {
+    "S.No": 148,
+    "State": "Uttar Pradesh",
+    "District": "Jaunpur",
+    "Tehsil": "Kerakat",
+    "Village Name": "Itaili",
+    "Village Code": "203092"
+  },
+  {
+    "S.No": 149,
+    "State": "Uttar Pradesh",
+    "District": "Jaunpur",
+    "Tehsil": "Kerakat",
+    "Village Name": "Jagapur",
+    "Village Code": "203184"
+  },
+  {
+    "S.No": 150,
+    "State": "Uttar Pradesh",
+    "District": "Jaunpur",
+    "Tehsil": "Kerakat",
+    "Village Name": "Jagdishpur Amra",
+    "Village Code": "203008"
+  },
+  {
+    "S.No": 151,
+    "State": "Uttar Pradesh",
+    "District": "Jaunpur",
+    "Tehsil": "Kerakat",
+    "Village Name": "Jagdishpur Murtazabad",
+    "Village Code": "203059"
+  },
+  {
+    "S.No": 152,
+    "State": "Uttar Pradesh",
+    "District": "Jaunpur",
+    "Tehsil": "Kerakat",
+    "Village Name": "Jamsar",
+    "Village Code": "203291"
+  },
+  {
+    "S.No": 153,
+    "State": "Uttar Pradesh",
+    "District": "Jaunpur",
+    "Tehsil": "Kerakat",
+    "Village Name": "Jamua",
+    "Village Code": "203288"
+  },
+  {
+    "S.No": 154,
+    "State": "Uttar Pradesh",
+    "District": "Jaunpur",
+    "Tehsil": "Kerakat",
+    "Village Name": "Jamunibari",
+    "Village Code": "203394"
+  },
+  {
+    "S.No": 155,
+    "State": "Uttar Pradesh",
+    "District": "Jaunpur",
+    "Tehsil": "Kerakat",
+    "Village Name": "Jarahila Kalan",
+    "Village Code": "203156"
+  },
+  {
+    "S.No": 156,
+    "State": "Uttar Pradesh",
+    "District": "Jaunpur",
+    "Tehsil": "Kerakat",
+    "Village Name": "Jarahila Khurd",
+    "Village Code": "203157"
+  },
+  {
+    "S.No": 157,
+    "State": "Uttar Pradesh",
+    "District": "Jaunpur",
+    "Tehsil": "Kerakat",
+    "Village Name": "Jarasi",
+    "Village Code": "203328"
+  },
+  {
+    "S.No": 158,
+    "State": "Uttar Pradesh",
+    "District": "Jaunpur",
+    "Tehsil": "Kerakat",
+    "Village Name": "Jarayat Patti",
+    "Village Code": "203255"
+  },
+  {
+    "S.No": 159,
+    "State": "Uttar Pradesh",
+    "District": "Jaunpur",
+    "Tehsil": "Kerakat",
+    "Village Name": "Kachwan",
+    "Village Code": "203361"
+  },
+  {
+    "S.No": 160,
+    "State": "Uttar Pradesh",
+    "District": "Jaunpur",
+    "Tehsil": "Kerakat",
+    "Village Name": "Kadahara",
+    "Village Code": "203064"
+  },
+  {
+    "S.No": 161,
+    "State": "Uttar Pradesh",
+    "District": "Jaunpur",
+    "Tehsil": "Kerakat",
+    "Village Name": "Kaithauli",
+    "Village Code": "203388"
+  },
+  {
+    "S.No": 162,
+    "State": "Uttar Pradesh",
+    "District": "Jaunpur",
+    "Tehsil": "Kerakat",
+    "Village Name": "Kakori",
+    "Village Code": "203017"
+  },
+  {
+    "S.No": 163,
+    "State": "Uttar Pradesh",
+    "District": "Jaunpur",
+    "Tehsil": "Kerakat",
+    "Village Name": "Kakori",
+    "Village Code": "203172"
+  },
+  {
+    "S.No": 164,
+    "State": "Uttar Pradesh",
+    "District": "Jaunpur",
+    "Tehsil": "Kerakat",
+    "Village Name": "Kakrapar",
+    "Village Code": "203412"
+  },
+  {
+    "S.No": 165,
+    "State": "Uttar Pradesh",
+    "District": "Jaunpur",
+    "Tehsil": "Kerakat",
+    "Village Name": "Kalichabad",
+    "Village Code": "203006"
+  },
+  {
+    "S.No": 166,
+    "State": "Uttar Pradesh",
+    "District": "Jaunpur",
+    "Tehsil": "Kerakat",
+    "Village Name": "Kanaura",
+    "Village Code": "203330"
+  },
+  {
+    "S.No": 167,
+    "State": "Uttar Pradesh",
+    "District": "Jaunpur",
+    "Tehsil": "Kerakat",
+    "Village Name": "Kanhai Pur",
+    "Village Code": "203261"
+  },
+  {
+    "S.No": 168,
+    "State": "Uttar Pradesh",
+    "District": "Jaunpur",
+    "Tehsil": "Kerakat",
+    "Village Name": "Kanhauli",
+    "Village Code": "203075"
+  },
+  {
+    "S.No": 169,
+    "State": "Uttar Pradesh",
+    "District": "Jaunpur",
+    "Tehsil": "Kerakat",
+    "Village Name": "Kanuwani",
+    "Village Code": "203150"
+  },
+  {
+    "S.No": 170,
+    "State": "Uttar Pradesh",
+    "District": "Jaunpur",
+    "Tehsil": "Kerakat",
+    "Village Name": "Kardaha",
+    "Village Code": "203176"
+  },
+  {
+    "S.No": 171,
+    "State": "Uttar Pradesh",
+    "District": "Jaunpur",
+    "Tehsil": "Kerakat",
+    "Village Name": "Karmauna",
+    "Village Code": "203036"
+  },
+  {
+    "S.No": 172,
+    "State": "Uttar Pradesh",
+    "District": "Jaunpur",
+    "Tehsil": "Kerakat",
+    "Village Name": "Kashidaspur",
+    "Village Code": "203365"
+  },
+  {
+    "S.No": 173,
+    "State": "Uttar Pradesh",
+    "District": "Jaunpur",
+    "Tehsil": "Kerakat",
+    "Village Name": "Kasili",
+    "Village Code": "203362"
+  },
+  {
+    "S.No": 174,
+    "State": "Uttar Pradesh",
+    "District": "Jaunpur",
+    "Tehsil": "Kerakat",
+    "Village Name": "Katahari",
+    "Village Code": "203079"
+  },
+  {
+    "S.No": 175,
+    "State": "Uttar Pradesh",
+    "District": "Jaunpur",
+    "Tehsil": "Kerakat",
+    "Village Name": "Katka",
+    "Village Code": "203071"
+  },
+  {
+    "S.No": 176,
+    "State": "Uttar Pradesh",
+    "District": "Jaunpur",
+    "Tehsil": "Kerakat",
+    "Village Name": "Keraon",
+    "Village Code": "203100"
+  },
+  {
+    "S.No": 177,
+    "State": "Uttar Pradesh",
+    "District": "Jaunpur",
+    "Tehsil": "Kerakat",
+    "Village Name": "Kevati",
+    "Village Code": "203085"
+  },
+  {
+    "S.No": 178,
+    "State": "Uttar Pradesh",
+    "District": "Jaunpur",
+    "Tehsil": "Kerakat",
+    "Village Name": "Khaliakhas",
+    "Village Code": "203378"
+  },
+  {
+    "S.No": 179,
+    "State": "Uttar Pradesh",
+    "District": "Jaunpur",
+    "Tehsil": "Kerakat",
+    "Village Name": "Khalispur Kalan",
+    "Village Code": "203171"
+  },
+  {
+    "S.No": 180,
+    "State": "Uttar Pradesh",
+    "District": "Jaunpur",
+    "Tehsil": "Kerakat",
+    "Village Name": "Khalispur Khurd",
+    "Village Code": "203153"
+  },
+  {
+    "S.No": 181,
+    "State": "Uttar Pradesh",
+    "District": "Jaunpur",
+    "Tehsil": "Kerakat",
+    "Village Name": "Khaliyabankat",
+    "Village Code": "203399"
+  },
+  {
+    "S.No": 182,
+    "State": "Uttar Pradesh",
+    "District": "Jaunpur",
+    "Tehsil": "Kerakat",
+    "Village Name": "Kharagpur",
+    "Village Code": "203124"
+  },
+  {
+    "S.No": 183,
+    "State": "Uttar Pradesh",
+    "District": "Jaunpur",
+    "Tehsil": "Kerakat",
+    "Village Name": "Kharagsenpur",
+    "Village Code": "203265"
+  },
+  {
+    "S.No": 184,
+    "State": "Uttar Pradesh",
+    "District": "Jaunpur",
+    "Tehsil": "Kerakat",
+    "Village Name": "Khargasipur",
+    "Village Code": "203225"
+  },
+  {
+    "S.No": 185,
+    "State": "Uttar Pradesh",
+    "District": "Jaunpur",
+    "Tehsil": "Kerakat",
+    "Village Name": "Khatahara",
+    "Village Code": "203230"
+  },
+  {
+    "S.No": 186,
+    "State": "Uttar Pradesh",
+    "District": "Jaunpur",
+    "Tehsil": "Kerakat",
+    "Village Name": "Khepatpur",
+    "Village Code": "203205"
+  },
+  {
+    "S.No": 187,
+    "State": "Uttar Pradesh",
+    "District": "Jaunpur",
+    "Tehsil": "Kerakat",
+    "Village Name": "Khetarpal",
+    "Village Code": "203342"
+  },
+  {
+    "S.No": 188,
+    "State": "Uttar Pradesh",
+    "District": "Jaunpur",
+    "Tehsil": "Kerakat",
+    "Village Name": "Khewsipur",
+    "Village Code": "203187"
+  },
+  {
+    "S.No": 189,
+    "State": "Uttar Pradesh",
+    "District": "Jaunpur",
+    "Tehsil": "Kerakat",
+    "Village Name": "Khujjhi",
+    "Village Code": "203348"
+  },
+  {
+    "S.No": 190,
+    "State": "Uttar Pradesh",
+    "District": "Jaunpur",
+    "Tehsil": "Kerakat",
+    "Village Name": "Khutahna",
+    "Village Code": "203158"
+  },
+  {
+    "S.No": 191,
+    "State": "Uttar Pradesh",
+    "District": "Jaunpur",
+    "Tehsil": "Kerakat",
+    "Village Name": "Kirha Chhitauna",
+    "Village Code": "203359"
+  },
+  {
+    "S.No": 192,
+    "State": "Uttar Pradesh",
+    "District": "Jaunpur",
+    "Tehsil": "Kerakat",
+    "Village Name": "Koilari",
+    "Village Code": "203323"
+  },
+  {
+    "S.No": 193,
+    "State": "Uttar Pradesh",
+    "District": "Jaunpur",
+    "Tehsil": "Kerakat",
+    "Village Name": "Kopa",
+    "Village Code": "203416"
+  },
+  {
+    "S.No": 194,
+    "State": "Uttar Pradesh",
+    "District": "Jaunpur",
+    "Tehsil": "Kerakat",
+    "Village Name": "Kop Kalan",
+    "Village Code": "203358"
+  },
+  {
+    "S.No": 195,
+    "State": "Uttar Pradesh",
+    "District": "Jaunpur",
+    "Tehsil": "Kerakat",
+    "Village Name": "Kop Khurd",
+    "Village Code": "203357"
+  },
+  {
+    "S.No": 196,
+    "State": "Uttar Pradesh",
+    "District": "Jaunpur",
+    "Tehsil": "Kerakat",
+    "Village Name": "Korri",
+    "Village Code": "203098"
+  },
+  {
+    "S.No": 197,
+    "State": "Uttar Pradesh",
+    "District": "Jaunpur",
+    "Tehsil": "Kerakat",
+    "Village Name": "Kukraundha",
+    "Village Code": "203337"
+  },
+  {
+    "S.No": 198,
+    "State": "Uttar Pradesh",
+    "District": "Jaunpur",
+    "Tehsil": "Kerakat",
+    "Village Name": "Kukuripur",
+    "Village Code": "203127"
+  },
+  {
+    "S.No": 199,
+    "State": "Uttar Pradesh",
+    "District": "Jaunpur",
+    "Tehsil": "Kerakat",
+    "Village Name": "Kusaila",
+    "Village Code": "203233"
+  },
+  {
+    "S.No": 200,
+    "State": "Uttar Pradesh",
+    "District": "Jaunpur",
+    "Tehsil": "Kerakat",
+    "Village Name": "Kusanw",
+    "Village Code": "203185"
+  },
+  {
+    "S.No": 201,
+    "State": "Uttar Pradesh",
+    "District": "Jaunpur",
+    "Tehsil": "Kerakat",
+    "Village Name": "Kusumahi",
+    "Village Code": "203318"
+  },
+  {
+    "S.No": 202,
+    "State": "Uttar Pradesh",
+    "District": "Jaunpur",
+    "Tehsil": "Kerakat",
+    "Village Name": "Lahangpur",
+    "Village Code": "203179"
+  },
+  {
+    "S.No": 203,
+    "State": "Uttar Pradesh",
+    "District": "Jaunpur",
+    "Tehsil": "Kerakat",
+    "Village Name": "Laharchak",
+    "Village Code": "203425"
+  },
+  {
+    "S.No": 204,
+    "State": "Uttar Pradesh",
+    "District": "Jaunpur",
+    "Tehsil": "Kerakat",
+    "Village Name": "Lakathepur",
+    "Village Code": "203068"
+  },
+  {
+    "S.No": 205,
+    "State": "Uttar Pradesh",
+    "District": "Jaunpur",
+    "Tehsil": "Kerakat",
+    "Village Name": "Lebrua",
+    "Village Code": "203340"
+  },
+  {
+    "S.No": 206,
+    "State": "Uttar Pradesh",
+    "District": "Jaunpur",
+    "Tehsil": "Kerakat",
+    "Village Name": "Lokapatti",
+    "Village Code": "203389"
+  },
+  {
+    "S.No": 207,
+    "State": "Uttar Pradesh",
+    "District": "Jaunpur",
+    "Tehsil": "Kerakat",
+    "Village Name": "Lurkhuri",
+    "Village Code": "203048"
+  },
+  {
+    "S.No": 208,
+    "State": "Uttar Pradesh",
+    "District": "Jaunpur",
+    "Tehsil": "Kerakat",
+    "Village Name": "Madar",
+    "Village Code": "203393"
+  },
+  {
+    "S.No": 209,
+    "State": "Uttar Pradesh",
+    "District": "Jaunpur",
+    "Tehsil": "Kerakat",
+    "Village Name": "Madhopur",
+    "Village Code": "203037"
+  },
+  {
+    "S.No": 210,
+    "State": "Uttar Pradesh",
+    "District": "Jaunpur",
+    "Tehsil": "Kerakat",
+    "Village Name": "Mahmadpur",
+    "Village Code": "203050"
+  },
+  {
+    "S.No": 211,
+    "State": "Uttar Pradesh",
+    "District": "Jaunpur",
+    "Tehsil": "Kerakat",
+    "Village Name": "Mahrenw",
+    "Village Code": "203102"
+  },
+  {
+    "S.No": 212,
+    "State": "Uttar Pradesh",
+    "District": "Jaunpur",
+    "Tehsil": "Kerakat",
+    "Village Name": "Mahuli",
+    "Village Code": "203275"
+  },
+  {
+    "S.No": 213,
+    "State": "Uttar Pradesh",
+    "District": "Jaunpur",
+    "Tehsil": "Kerakat",
+    "Village Name": "Mahuwari",
+    "Village Code": "203149"
+  },
+  {
+    "S.No": 214,
+    "State": "Uttar Pradesh",
+    "District": "Jaunpur",
+    "Tehsil": "Kerakat",
+    "Village Name": "Mai",
+    "Village Code": "203141"
+  },
+  {
+    "S.No": 215,
+    "State": "Uttar Pradesh",
+    "District": "Jaunpur",
+    "Tehsil": "Kerakat",
+    "Village Name": "Majhgawan Kalan",
+    "Village Code": "203159"
+  },
+  {
+    "S.No": 216,
+    "State": "Uttar Pradesh",
+    "District": "Jaunpur",
+    "Tehsil": "Kerakat",
+    "Village Name": "Majhgawan Khurd",
+    "Village Code": "203138"
+  },
+  {
+    "S.No": 217,
+    "State": "Uttar Pradesh",
+    "District": "Jaunpur",
+    "Tehsil": "Kerakat",
+    "Village Name": "Majhili",
+    "Village Code": "203369"
+  },
+  {
+    "S.No": 218,
+    "State": "Uttar Pradesh",
+    "District": "Jaunpur",
+    "Tehsil": "Kerakat",
+    "Village Name": "Mallupur",
+    "Village Code": "203046"
+  },
+  {
+    "S.No": 219,
+    "State": "Uttar Pradesh",
+    "District": "Jaunpur",
+    "Tehsil": "Kerakat",
+    "Village Name": "Mampur",
+    "Village Code": "203069"
+  },
+  {
+    "S.No": 220,
+    "State": "Uttar Pradesh",
+    "District": "Jaunpur",
+    "Tehsil": "Kerakat",
+    "Village Name": "Mandupur",
+    "Village Code": "203346"
+  },
+  {
+    "S.No": 221,
+    "State": "Uttar Pradesh",
+    "District": "Jaunpur",
+    "Tehsil": "Kerakat",
+    "Village Name": "Maniyara",
+    "Village Code": "203203"
+  },
+  {
+    "S.No": 222,
+    "State": "Uttar Pradesh",
+    "District": "Jaunpur",
+    "Tehsil": "Kerakat",
+    "Village Name": "Maniyarepur",
+    "Village Code": "203377"
+  },
+  {
+    "S.No": 223,
+    "State": "Uttar Pradesh",
+    "District": "Jaunpur",
+    "Tehsil": "Kerakat",
+    "Village Name": "Marahi",
+    "Village Code": "203151"
+  },
+  {
+    "S.No": 224,
+    "State": "Uttar Pradesh",
+    "District": "Jaunpur",
+    "Tehsil": "Kerakat",
+    "Village Name": "Marhi",
+    "Village Code": "203408"
+  },
+  {
+    "S.No": 225,
+    "State": "Uttar Pradesh",
+    "District": "Jaunpur",
+    "Tehsil": "Kerakat",
+    "Village Name": "Marikpur",
+    "Village Code": "203371"
+  },
+  {
+    "S.No": 226,
+    "State": "Uttar Pradesh",
+    "District": "Jaunpur",
+    "Tehsil": "Kerakat",
+    "Village Name": "Mathurapur Urf Kotwa",
+    "Village Code": "203160"
+  },
+  {
+    "S.No": 227,
+    "State": "Uttar Pradesh",
+    "District": "Jaunpur",
+    "Tehsil": "Kerakat",
+    "Village Name": "Matiyari",
+    "Village Code": "203070"
+  },
+  {
+    "S.No": 228,
+    "State": "Uttar Pradesh",
+    "District": "Jaunpur",
+    "Tehsil": "Kerakat",
+    "Village Name": "Meerpur",
+    "Village Code": "203067"
+  },
+  {
+    "S.No": 229,
+    "State": "Uttar Pradesh",
+    "District": "Jaunpur",
+    "Tehsil": "Kerakat",
+    "Village Name": "Meghpur",
+    "Village Code": "203105"
+  },
+  {
+    "S.No": 230,
+    "State": "Uttar Pradesh",
+    "District": "Jaunpur",
+    "Tehsil": "Kerakat",
+    "Village Name": "Mehaura",
+    "Village Code": "203014"
+  },
+  {
+    "S.No": 231,
+    "State": "Uttar Pradesh",
+    "District": "Jaunpur",
+    "Tehsil": "Kerakat",
+    "Village Name": "Mojra",
+    "Village Code": "203114"
+  },
+  {
+    "S.No": 232,
+    "State": "Uttar Pradesh",
+    "District": "Jaunpur",
+    "Tehsil": "Kerakat",
+    "Village Name": "Mukuripur",
+    "Village Code": "203355"
+  },
+  {
+    "S.No": 233,
+    "State": "Uttar Pradesh",
+    "District": "Jaunpur",
+    "Tehsil": "Kerakat",
+    "Village Name": "Murara",
+    "Village Code": "203057"
+  },
+  {
+    "S.No": 234,
+    "State": "Uttar Pradesh",
+    "District": "Jaunpur",
+    "Tehsil": "Kerakat",
+    "Village Name": "Murlipur",
+    "Village Code": "203200"
+  },
+  {
+    "S.No": 235,
+    "State": "Uttar Pradesh",
+    "District": "Jaunpur",
+    "Tehsil": "Kerakat",
+    "Village Name": "Murtazabad",
+    "Village Code": "203056"
+  },
+  {
+    "S.No": 236,
+    "State": "Uttar Pradesh",
+    "District": "Jaunpur",
+    "Tehsil": "Kerakat",
+    "Village Name": "Nahar Patti",
+    "Village Code": "203117"
+  },
+  {
+    "S.No": 237,
+    "State": "Uttar Pradesh",
+    "District": "Jaunpur",
+    "Tehsil": "Kerakat",
+    "Village Name": "Nainpur",
+    "Village Code": "203419"
+  },
+  {
+    "S.No": 238,
+    "State": "Uttar Pradesh",
+    "District": "Jaunpur",
+    "Tehsil": "Kerakat",
+    "Village Name": "Narainpur",
+    "Village Code": "203074"
+  },
+  {
+    "S.No": 239,
+    "State": "Uttar Pradesh",
+    "District": "Jaunpur",
+    "Tehsil": "Kerakat",
+    "Village Name": "Narainpur",
+    "Village Code": "203110"
+  },
+  {
+    "S.No": 240,
+    "State": "Uttar Pradesh",
+    "District": "Jaunpur",
+    "Tehsil": "Kerakat",
+    "Village Name": "Narainpur",
+    "Village Code": "203343"
+  },
+  {
+    "S.No": 241,
+    "State": "Uttar Pradesh",
+    "District": "Jaunpur",
+    "Tehsil": "Kerakat",
+    "Village Name": "Narhan",
+    "Village Code": "203241"
+  },
+  {
+    "S.No": 242,
+    "State": "Uttar Pradesh",
+    "District": "Jaunpur",
+    "Tehsil": "Kerakat",
+    "Village Name": "Narkata Phonk",
+    "Village Code": "203404"
+  },
+  {
+    "S.No": 243,
+    "State": "Uttar Pradesh",
+    "District": "Jaunpur",
+    "Tehsil": "Kerakat",
+    "Village Name": "Nihalapur",
+    "Village Code": "203266"
+  },
+  {
+    "S.No": 244,
+    "State": "Uttar Pradesh",
+    "District": "Jaunpur",
+    "Tehsil": "Kerakat",
+    "Village Name": "Nishan",
+    "Village Code": "203047"
+  },
+  {
+    "S.No": 245,
+    "State": "Uttar Pradesh",
+    "District": "Jaunpur",
+    "Tehsil": "Kerakat",
+    "Village Name": "Nunaw",
+    "Village Code": "203279"
+  },
+  {
+    "S.No": 246,
+    "State": "Uttar Pradesh",
+    "District": "Jaunpur",
+    "Tehsil": "Kerakat",
+    "Village Name": "Oina",
+    "Village Code": "203181"
+  },
+  {
+    "S.No": 247,
+    "State": "Uttar Pradesh",
+    "District": "Jaunpur",
+    "Tehsil": "Kerakat",
+    "Village Name": "Pandepur",
+    "Village Code": "203022"
+  },
+  {
+    "S.No": 248,
+    "State": "Uttar Pradesh",
+    "District": "Jaunpur",
+    "Tehsil": "Kerakat",
+    "Village Name": "Panihar",
+    "Village Code": "203332"
+  },
+  {
+    "S.No": 249,
+    "State": "Uttar Pradesh",
+    "District": "Jaunpur",
+    "Tehsil": "Kerakat",
+    "Village Name": "Parapati",
+    "Village Code": "203303"
+  },
+  {
+    "S.No": 250,
+    "State": "Uttar Pradesh",
+    "District": "Jaunpur",
+    "Tehsil": "Kerakat",
+    "Village Name": "Parbatpur",
+    "Village Code": "203167"
+  },
+  {
+    "S.No": 251,
+    "State": "Uttar Pradesh",
+    "District": "Jaunpur",
+    "Tehsil": "Kerakat",
+    "Village Name": "Parrakchhkot",
+    "Village Code": "203421"
+  },
+  {
+    "S.No": 252,
+    "State": "Uttar Pradesh",
+    "District": "Jaunpur",
+    "Tehsil": "Kerakat",
+    "Village Name": "Parsauri",
+    "Village Code": "203296"
+  },
+  {
+    "S.No": 253,
+    "State": "Uttar Pradesh",
+    "District": "Jaunpur",
+    "Tehsil": "Kerakat",
+    "Village Name": "Parsupur",
+    "Village Code": "203382"
+  },
+  {
+    "S.No": 254,
+    "State": "Uttar Pradesh",
+    "District": "Jaunpur",
+    "Tehsil": "Kerakat",
+    "Village Name": "Paruwa",
+    "Village Code": "203007"
+  },
+  {
+    "S.No": 255,
+    "State": "Uttar Pradesh",
+    "District": "Jaunpur",
+    "Tehsil": "Kerakat",
+    "Village Name": "Pasewan",
+    "Village Code": "203073"
+  },
+  {
+    "S.No": 256,
+    "State": "Uttar Pradesh",
+    "District": "Jaunpur",
+    "Tehsil": "Kerakat",
+    "Village Name": "Patail",
+    "Village Code": "203286"
+  },
+  {
+    "S.No": 257,
+    "State": "Uttar Pradesh",
+    "District": "Jaunpur",
+    "Tehsil": "Kerakat",
+    "Village Name": "Patkhauli",
+    "Village Code": "203080"
+  },
+  {
+    "S.No": 258,
+    "State": "Uttar Pradesh",
+    "District": "Jaunpur",
+    "Tehsil": "Kerakat",
+    "Village Name": "Patkhauli",
+    "Village Code": "203299"
+  },
+  {
+    "S.No": 259,
+    "State": "Uttar Pradesh",
+    "District": "Jaunpur",
+    "Tehsil": "Kerakat",
+    "Village Name": "Patrahi",
+    "Village Code": "203415"
+  },
+  {
+    "S.No": 260,
+    "State": "Uttar Pradesh",
+    "District": "Jaunpur",
+    "Tehsil": "Kerakat",
+    "Village Name": "Pauni",
+    "Village Code": "203021"
+  },
+  {
+    "S.No": 261,
+    "State": "Uttar Pradesh",
+    "District": "Jaunpur",
+    "Tehsil": "Kerakat",
+    "Village Name": "Pauni",
+    "Village Code": "203270"
+  },
+  {
+    "S.No": 262,
+    "State": "Uttar Pradesh",
+    "District": "Jaunpur",
+    "Tehsil": "Kerakat",
+    "Village Name": "Pipari",
+    "Village Code": "203035"
+  },
+  {
+    "S.No": 263,
+    "State": "Uttar Pradesh",
+    "District": "Jaunpur",
+    "Tehsil": "Kerakat",
+    "Village Name": "Pithapur",
+    "Village Code": "203222"
+  },
+  {
+    "S.No": 264,
+    "State": "Uttar Pradesh",
+    "District": "Jaunpur",
+    "Tehsil": "Kerakat",
+    "Village Name": "Pittupur",
+    "Village Code": "203088"
+  },
+  {
+    "S.No": 265,
+    "State": "Uttar Pradesh",
+    "District": "Jaunpur",
+    "Tehsil": "Kerakat",
+    "Village Name": "Pokhara",
+    "Village Code": "203367"
+  },
+  {
+    "S.No": 266,
+    "State": "Uttar Pradesh",
+    "District": "Jaunpur",
+    "Tehsil": "Kerakat",
+    "Village Name": "Puranpur",
+    "Village Code": "203227"
+  },
+  {
+    "S.No": 267,
+    "State": "Uttar Pradesh",
+    "District": "Jaunpur",
+    "Tehsil": "Kerakat",
+    "Village Name": "Rajpur",
+    "Village Code": "203195"
+  },
+  {
+    "S.No": 268,
+    "State": "Uttar Pradesh",
+    "District": "Jaunpur",
+    "Tehsil": "Kerakat",
+    "Village Name": "Raksama Dambarjati",
+    "Village Code": "203135"
+  },
+  {
+    "S.No": 269,
+    "State": "Uttar Pradesh",
+    "District": "Jaunpur",
+    "Tehsil": "Kerakat",
+    "Village Name": "Raksama Takiyaram",
+    "Village Code": "203134"
+  },
+  {
+    "S.No": 270,
+    "State": "Uttar Pradesh",
+    "District": "Jaunpur",
+    "Tehsil": "Kerakat",
+    "Village Name": "Ramdatt Pur",
+    "Village Code": "203315"
+  },
+  {
+    "S.No": 271,
+    "State": "Uttar Pradesh",
+    "District": "Jaunpur",
+    "Tehsil": "Kerakat",
+    "Village Name": "Ramdevpur",
+    "Village Code": "203375"
+  },
+  {
+    "S.No": 272,
+    "State": "Uttar Pradesh",
+    "District": "Jaunpur",
+    "Tehsil": "Kerakat",
+    "Village Name": "Ramgarh",
+    "Village Code": "203293"
+  },
+  {
+    "S.No": 273,
+    "State": "Uttar Pradesh",
+    "District": "Jaunpur",
+    "Tehsil": "Kerakat",
+    "Village Name": "Rampur",
+    "Village Code": "203152"
+  },
+  {
+    "S.No": 274,
+    "State": "Uttar Pradesh",
+    "District": "Jaunpur",
+    "Tehsil": "Kerakat",
+    "Village Name": "Rampur Bhaura",
+    "Village Code": "203232"
+  },
+  {
+    "S.No": 275,
+    "State": "Uttar Pradesh",
+    "District": "Jaunpur",
+    "Tehsil": "Kerakat",
+    "Village Name": "Rampur Hurhuri",
+    "Village Code": "203249"
+  },
+  {
+    "S.No": 276,
+    "State": "Uttar Pradesh",
+    "District": "Jaunpur",
+    "Tehsil": "Kerakat",
+    "Village Name": "Rampur Sakara",
+    "Village Code": "203032"
+  },
+  {
+    "S.No": 277,
+    "State": "Uttar Pradesh",
+    "District": "Jaunpur",
+    "Tehsil": "Kerakat",
+    "Village Name": "Rampur Soiri",
+    "Village Code": "203175"
+  },
+  {
+    "S.No": 278,
+    "State": "Uttar Pradesh",
+    "District": "Jaunpur",
+    "Tehsil": "Kerakat",
+    "Village Name": "Rasra",
+    "Village Code": "203395"
+  },
+  {
+    "S.No": 279,
+    "State": "Uttar Pradesh",
+    "District": "Jaunpur",
+    "Tehsil": "Kerakat",
+    "Village Name": "Rasulpur Ojhaniya",
+    "Village Code": "203086"
+  },
+  {
+    "S.No": 280,
+    "State": "Uttar Pradesh",
+    "District": "Jaunpur",
+    "Tehsil": "Kerakat",
+    "Village Name": "Rehari",
+    "Village Code": "203183"
+  },
+  {
+    "S.No": 281,
+    "State": "Uttar Pradesh",
+    "District": "Jaunpur",
+    "Tehsil": "Kerakat",
+    "Village Name": "Rehari",
+    "Village Code": "203418"
+  },
+  {
+    "S.No": 282,
+    "State": "Uttar Pradesh",
+    "District": "Jaunpur",
+    "Tehsil": "Kerakat",
+    "Village Name": "Rudrpaur",
+    "Village Code": "203280"
+  },
+  {
+    "S.No": 283,
+    "State": "Uttar Pradesh",
+    "District": "Jaunpur",
+    "Tehsil": "Kerakat",
+    "Village Name": "Sadaha",
+    "Village Code": "203217"
+  },
+  {
+    "S.No": 284,
+    "State": "Uttar Pradesh",
+    "District": "Jaunpur",
+    "Tehsil": "Kerakat",
+    "Village Name": "Sahabuddinpur",
+    "Village Code": "203097"
+  },
+  {
+    "S.No": 285,
+    "State": "Uttar Pradesh",
+    "District": "Jaunpur",
+    "Tehsil": "Kerakat",
+    "Village Name": "Sahabuddinpur",
+    "Village Code": "203204"
+  },
+  {
+    "S.No": 286,
+    "State": "Uttar Pradesh",
+    "District": "Jaunpur",
+    "Tehsil": "Kerakat",
+    "Village Name": "Sahura",
+    "Village Code": "203192"
+  },
+  {
+    "S.No": 287,
+    "State": "Uttar Pradesh",
+    "District": "Jaunpur",
+    "Tehsil": "Kerakat",
+    "Village Name": "Saidkhanpur",
+    "Village Code": "203242"
+  },
+  {
+    "S.No": 288,
+    "State": "Uttar Pradesh",
+    "District": "Jaunpur",
+    "Tehsil": "Kerakat",
+    "Village Name": "Sakara",
+    "Village Code": "203031"
+  },
+  {
+    "S.No": 289,
+    "State": "Uttar Pradesh",
+    "District": "Jaunpur",
+    "Tehsil": "Kerakat",
+    "Village Name": "Salempur",
+    "Village Code": "203023"
+  },
+  {
+    "S.No": 290,
+    "State": "Uttar Pradesh",
+    "District": "Jaunpur",
+    "Tehsil": "Kerakat",
+    "Village Name": "Sarai",
+    "Village Code": "203028"
+  },
+  {
+    "S.No": 291,
+    "State": "Uttar Pradesh",
+    "District": "Jaunpur",
+    "Tehsil": "Kerakat",
+    "Village Name": "Saraiya",
+    "Village Code": "203155"
+  },
+  {
+    "S.No": 292,
+    "State": "Uttar Pradesh",
+    "District": "Jaunpur",
+    "Tehsil": "Kerakat",
+    "Village Name": "Saranwa",
+    "Village Code": "203210"
+  },
+  {
+    "S.No": 293,
+    "State": "Uttar Pradesh",
+    "District": "Jaunpur",
+    "Tehsil": "Kerakat",
+    "Village Name": "Sarauni Paschhim Patti",
+    "Village Code": "203252"
+  },
+  {
+    "S.No": 294,
+    "State": "Uttar Pradesh",
+    "District": "Jaunpur",
+    "Tehsil": "Kerakat",
+    "Village Name": "Saroj Barewar",
+    "Village Code": "203243"
+  },
+  {
+    "S.No": 295,
+    "State": "Uttar Pradesh",
+    "District": "Jaunpur",
+    "Tehsil": "Kerakat",
+    "Village Name": "Satmesara",
+    "Village Code": "203319"
+  },
+  {
+    "S.No": 296,
+    "State": "Uttar Pradesh",
+    "District": "Jaunpur",
+    "Tehsil": "Kerakat",
+    "Village Name": "Shivram Pur Kalan",
+    "Village Code": "203277"
+  },
+  {
+    "S.No": 297,
+    "State": "Uttar Pradesh",
+    "District": "Jaunpur",
+    "Tehsil": "Kerakat",
+    "Village Name": "Sijhwara",
+    "Village Code": "203194"
+  },
+  {
+    "S.No": 298,
+    "State": "Uttar Pradesh",
+    "District": "Jaunpur",
+    "Tehsil": "Kerakat",
+    "Village Name": "Sohani",
+    "Village Code": "203269"
+  },
+  {
+    "S.No": 299,
+    "State": "Uttar Pradesh",
+    "District": "Jaunpur",
+    "Tehsil": "Kerakat",
+    "Village Name": "Sonbarsa",
+    "Village Code": "203397"
+  },
+  {
+    "S.No": 300,
+    "State": "Uttar Pradesh",
+    "District": "Jaunpur",
+    "Tehsil": "Kerakat",
+    "Village Name": "Sosapatti",
+    "Village Code": "203091"
+  },
+  {
+    "S.No": 301,
+    "State": "Uttar Pradesh",
+    "District": "Jaunpur",
+    "Tehsil": "Kerakat",
+    "Village Name": "Sultanpur",
+    "Village Code": "203112"
+  },
+  {
+    "S.No": 302,
+    "State": "Uttar Pradesh",
+    "District": "Jaunpur",
+    "Tehsil": "Kerakat",
+    "Village Name": "Suraila",
+    "Village Code": "203025"
+  },
+  {
+    "S.No": 303,
+    "State": "Uttar Pradesh",
+    "District": "Jaunpur",
+    "Tehsil": "Kerakat",
+    "Village Name": "Surhurpur",
+    "Village Code": "203197"
+  },
+  {
+    "S.No": 304,
+    "State": "Uttar Pradesh",
+    "District": "Jaunpur",
+    "Tehsil": "Kerakat",
+    "Village Name": "Tara",
+    "Village Code": "203019"
+  },
+  {
+    "S.No": 305,
+    "State": "Uttar Pradesh",
+    "District": "Jaunpur",
+    "Tehsil": "Kerakat",
+    "Village Name": "Tariyari",
+    "Village Code": "203190"
+  },
+  {
+    "S.No": 306,
+    "State": "Uttar Pradesh",
+    "District": "Jaunpur",
+    "Tehsil": "Kerakat",
+    "Village Name": "Tejpur",
+    "Village Code": "203237"
+  },
+  {
+    "S.No": 307,
+    "State": "Uttar Pradesh",
+    "District": "Jaunpur",
+    "Tehsil": "Kerakat",
+    "Village Name": "Than",
+    "Village Code": "203106"
+  },
+  {
+    "S.No": 308,
+    "State": "Uttar Pradesh",
+    "District": "Jaunpur",
+    "Tehsil": "Kerakat",
+    "Village Name": "Thana Gaddi",
+    "Village Code": "203264"
+  },
+  {
+    "S.No": 309,
+    "State": "Uttar Pradesh",
+    "District": "Jaunpur",
+    "Tehsil": "Kerakat",
+    "Village Name": "Thunhi",
+    "Village Code": "203376"
+  },
+  {
+    "S.No": 310,
+    "State": "Uttar Pradesh",
+    "District": "Jaunpur",
+    "Tehsil": "Kerakat",
+    "Village Name": "Tiwaripur",
+    "Village Code": "203410"
+  },
+  {
+    "S.No": 311,
+    "State": "Uttar Pradesh",
+    "District": "Jaunpur",
+    "Tehsil": "Kerakat",
+    "Village Name": "Tusauri",
+    "Village Code": "203140"
+  },
+  {
+    "S.No": 312,
+    "State": "Uttar Pradesh",
+    "District": "Jaunpur",
+    "Tehsil": "Kerakat",
+    "Village Name": "Udaichandpur",
+    "Village Code": "203258"
+  },
+  {
+    "S.No": 313,
+    "State": "Uttar Pradesh",
+    "District": "Jaunpur",
+    "Tehsil": "Kerakat",
+    "Village Name": "Umari",
+    "Village Code": "203024"
+  },
+  {
+    "S.No": 314,
+    "State": "Uttar Pradesh",
+    "District": "Jaunpur",
+    "Tehsil": "Kerakat",
+    "Village Name": "Usarpur",
+    "Village Code": "203213"
+  },
+  {
+    "S.No": 315,
+    "State": "Uttar Pradesh",
+    "District": "Jaunpur",
+    "Tehsil": "Kerakat",
+    "Village Name": "Vikrampur",
+    "Village Code": "203065"
+  }
+]

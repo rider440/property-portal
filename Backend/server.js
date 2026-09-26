@@ -226,18 +226,34 @@ app.get('/api/villages', async (req, res) => {
 app.get('/api/properties', propertySearchLimiter, async (req, res) => {
   try {
     const { district, villageCode, village_code, search = '', page = 1, limit = 50 } = req.query;
-    const vCode = villageCode || village_code;
-    const safeSearch = String(search).trim().slice(0, 100);
+    let vCode = String(villageCode || village_code || '').trim();
+    let safeDistrict = String(district || '').trim();
+    const safeSearch = String(search || '').trim().slice(0, 100);
     const safePage = Math.max(1, parseInt(page, 10) || 1);
     const safeLimit = Math.min(100, Math.max(1, parseInt(limit, 10) || 50));
 
-    if (district && vCode && vCode !== 'all') {
-      const safeDistrict = String(district).trim();
-      const safeVillageCode = String(vCode).trim();
+    // If villageCode is provided without district, auto-detect district from village database
+    if (!safeDistrict && vCode && vCode !== 'all') {
+      const vObj = await db.findVillageByCode(vCode);
+      if (vObj && vObj.district_name) {
+        safeDistrict = vObj.district_name;
+      }
+    }
+
+    // If search term is a village code number, auto-detect village & district
+    if (!safeDistrict && !vCode && /^\d{4,8}$/.test(safeSearch)) {
+      const vObj = await db.findVillageByCode(safeSearch);
+      if (vObj && vObj.district_name) {
+        safeDistrict = vObj.district_name;
+        vCode = safeSearch;
+      }
+    }
+
+    if (safeDistrict && vCode && vCode !== 'all') {
       const result = await db.getVillageProperties(
         safeDistrict,
-        safeVillageCode,
-        safeSearch,
+        vCode,
+        vCode === safeSearch ? '' : safeSearch,
         safePage,
         safeLimit
       );
@@ -255,6 +271,7 @@ app.get('/api/properties', propertySearchLimiter, async (req, res) => {
 
     return res.status(400).json({ success: false, error: 'कृपया जिला व ग्राम चुनें अथवा नाम से खोजें।' });
   } catch (err) {
+    console.error('Error in /api/properties:', err);
     res.status(500).json({ success: false, error: 'संपत्ति डेटा लोड करने में त्रुटि।' });
   }
 });

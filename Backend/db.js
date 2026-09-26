@@ -706,6 +706,17 @@ const db = {
     return list;
   },
 
+  async findVillageByCode(villageCode) {
+    if (!villageCode) return null;
+    const clean = String(villageCode).trim();
+    if (usePostgres) {
+      const res = await pool.query('SELECT * FROM villages WHERE village_code = $1 LIMIT 1', [clean]);
+      return res.rows[0] || null;
+    }
+    loadLocalDbFromDisk();
+    return (localDb.villages || []).find(v => String(v.village_code || v.code).trim() === clean) || null;
+  },
+
   async getAvailableCoverage() {
     if (usePostgres) {
       const res = await pool.query(`

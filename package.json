@@ -4,8 +4,9 @@
   "description": "Gram Panchayat Property Portal",
   "main": "Backend/server.js",
   "scripts": {
-    "build": "node Backend/build_sqlite.js",
-    "start": "node --max-old-space-size=400 Backend/server.js",
+    "postinstall": "node --expose-gc --max-old-space-size=400 Backend/build_sqlite.js",
+    "build": "node --expose-gc --max-old-space-size=400 Backend/build_sqlite.js",
+    "start": "node --expose-gc --max-old-space-size=400 Backend/server.js",
     "dev": "node Backend/server.js"
   },
   "dependencies": {

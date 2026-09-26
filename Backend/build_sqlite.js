@@ -15,32 +15,44 @@ if (!fs.existsSync(srcDir)) {
   process.exit(0);
 }
 
-const files = fs.readdirSync(srcDir).filter(f => f.endsWith('.json.gz') || f.endsWith('.json'));
-console.log(`[Build SQLite] Converting ${files.length} districts to high-speed SQLite indexes...`);
+// Only take unique district names (avoid processing both .json and .json.gz)
+const rawFiles = fs.readdirSync(srcDir);
+const districtMap = new Map();
+
+for (const f of rawFiles) {
+  if (f.endsWith('.json.gz')) {
+    const clean = f.replace('.json.gz', '');
+    districtMap.set(clean, f);
+  } else if (f.endsWith('.json')) {
+    const clean = f.replace('.json', '');
+    if (!districtMap.has(clean)) {
+      districtMap.set(clean, f);
+    }
+  }
+}
+
+const entries = Array.from(districtMap.entries());
+console.log(`[Build SQLite] Processing ${entries.length} districts for SQLite indexing...`);
 
 let done = 0;
-for (const file of files) {
-  const isGz = file.endsWith('.json.gz');
-  const cleanName = file.replace(/\.json\.gz$/, '').replace(/\.json$/, '');
+for (const [cleanName, file] of entries) {
   const outPath = path.join(outDir, `${cleanName}.sqlite`);
 
-  if (fs.existsSync(outPath)) {
+  if (fs.existsSync(outPath) && fs.statSync(outPath).size > 1024) {
     done++;
     continue;
   }
 
   const srcPath = path.join(srcDir, file);
-  try {
-    let raw = '';
-    if (isGz) {
-      raw = zlib.gunzipSync(fs.readFileSync(srcPath)).toString('utf8');
-    } else {
-      raw = fs.readFileSync(srcPath, 'utf8');
-    }
+  const isGz = file.endsWith('.json.gz');
 
-    const arr = JSON.parse(raw);
+  try {
+    let raw = isGz ? zlib.gunzipSync(fs.readFileSync(srcPath)).toString('utf8') : fs.readFileSync(srcPath, 'utf8');
+    let arr = JSON.parse(raw);
+    raw = null; // Free string memory immediately
+
     const db = new Database(outPath);
-    db.exec('PRAGMA synchronous = OFF; PRAGMA journal_mode = OFF; PRAGMA cache_size = 2000;');
+    db.exec('PRAGMA synchronous = OFF; PRAGMA journal_mode = OFF; PRAGMA cache_size = 1000;');
     db.exec(`
       CREATE TABLE IF NOT EXISTS properties (
         id TEXT,
@@ -80,14 +92,20 @@ for (const file of files) {
     });
 
     insertMany(arr);
+    arr = null; // Free array memory immediately
     db.close();
+
+    if (global.gc) {
+      global.gc();
+    }
+
     done++;
-    if (done % 10 === 0 || done === files.length) {
-      console.log(`[Build SQLite] Processed ${done}/${files.length} districts.`);
+    if (done % 10 === 0 || done === entries.length) {
+      console.log(`[Build SQLite] Processed ${done}/${entries.length} districts.`);
     }
   } catch (err) {
     console.error(`[Build SQLite] Error building ${cleanName}:`, err);
   }
 }
 
-console.log('[Build SQLite] All district databases built successfully!');
+console.log('[Build SQLite] All district databases ready!');

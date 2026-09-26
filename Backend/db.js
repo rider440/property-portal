@@ -205,6 +205,7 @@ function rebuildMemoryIndexes() {
   }
 }
 
+const zlib = require('zlib');
 const districtPropertiesCache = new Map();
 
 function ensureDistrictPropertiesLoaded(districtName) {
@@ -213,10 +214,28 @@ function ensureDistrictPropertiesLoaded(districtName) {
   if (districtPropertiesCache.has(dKey)) {
     return districtPropertiesCache.get(dKey);
   }
-  const distFile = path.join(dataDir, 'districts', `${dKey.replace(/\s+/g, '_')}.json`);
-  if (fs.existsSync(distFile)) {
+  const cleanName = dKey.replace(/\s+/g, '_');
+  const distFileGz = path.join(dataDir, 'districts', `${cleanName}.json.gz`);
+  const distFileJson = path.join(dataDir, 'districts', `${cleanName}.json`);
+
+  let raw = null;
+  if (fs.existsSync(distFileGz)) {
     try {
-      const raw = fs.readFileSync(distFile, 'utf8');
+      const buffer = fs.readFileSync(distFileGz);
+      raw = zlib.gunzipSync(buffer).toString('utf8');
+    } catch (e) {
+      console.error('[DB] Error loading gzip district properties for', districtName, e);
+    }
+  } else if (fs.existsSync(distFileJson)) {
+    try {
+      raw = fs.readFileSync(distFileJson, 'utf8');
+    } catch (e) {
+      console.error('[DB] Error loading json district properties for', districtName, e);
+    }
+  }
+
+  if (raw) {
+    try {
       const props = JSON.parse(raw);
       for (let i = 0; i < props.length; i++) {
         const p = props[i];
@@ -231,7 +250,7 @@ function ensureDistrictPropertiesLoaded(districtName) {
       districtPropertiesCache.set(dKey, props);
       return props;
     } catch (e) {
-      console.error('[DB] Error loading district properties for', districtName, e);
+      console.error('[DB] Error parsing district properties for', districtName, e);
     }
   }
   return [];

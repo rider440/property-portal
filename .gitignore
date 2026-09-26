@@ -3,5 +3,6 @@ node_modules/
 .DS_Store
 *.log
 .vercel
-Backend/data/districts/
+Backend/data/districts/*.json
+!Backend/data/districts/*.json.gz
 Backend/data/backups/

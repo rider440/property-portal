@@ -5,4 +5,5 @@ node_modules/
 .vercel
 Backend/data/districts/*.json
 !Backend/data/districts/*.json.gz
+Backend/data/sqlite/
 Backend/data/backups/

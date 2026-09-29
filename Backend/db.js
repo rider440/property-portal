@@ -98,18 +98,24 @@ function toPhoneticKey(str) {
   }
 
   return lat
+    .replace(/singh/g, 'sinh')
+    .replace(/ngh/g, 'nh')
     .replace(/ph/g, 'p')
-    .replace(/bh/g, 'b')
-    .replace(/dh/g, 'd')
-    .replace(/th/g, 't')
+    .replace(/f/g, 'p')
     .replace(/kh/g, 'k')
     .replace(/gh/g, 'g')
     .replace(/jh/g, 'j')
     .replace(/ch/g, 'c')
     .replace(/sh/g, 's')
+    .replace(/bh/g, 'b')
+    .replace(/dh/g, 'd')
+    .replace(/th/g, 't')
     .replace(/w/g, 'v')
+    .replace(/b/g, 'v')
+    .replace(/z/g, 'j')
     .replace(/ee/g, 'i')
     .replace(/oo/g, 'u')
+    .replace(/ou/g, 'au')
     .replace(/([aeiou])\1+/g, '$1')
     .replace(/[^a-z0-9\s]/g, '')
     .trim();
@@ -127,17 +133,20 @@ function matchSearchQuery(record, query) {
   const rawOwner = (record.owner_name || '').toLowerCase();
   const rawFather = (record.father_name || '').toLowerCase();
   const rawVar = String(record.variable_id || '').toLowerCase();
+  const rawPropId = String(record.property_card_id || '').toLowerCase();
+  const rawMobile = String(record.mobile_no || '').toLowerCase();
+  const rawRec = String(record.record_id || '').toLowerCase();
   const rawVill = (record.village_name || '').toLowerCase();
   const rawDist = (record.district_name || '').toLowerCase();
-  const rawFull = `${rawOwner} ${rawFather} ${rawVar} ${rawVill} ${rawDist}`;
+  const rawFull = `${rawOwner} ${rawFather} ${rawVar} ${rawPropId} ${rawMobile} ${rawRec} ${rawVill} ${rawDist}`;
 
-  // 1. Direct match (Hindi or Latin)
+  // 1. Direct match (Hindi, Latin, numbers)
   if (rawFull.includes(q)) return true;
 
   // 2. Phonetic match
   const qPhon = toPhoneticKey(q);
   const targetPhon = toPhoneticKey(rawFull);
-  if (targetPhon.includes(qPhon)) return true;
+  if (qPhon && targetPhon.includes(qPhon)) return true;
 
   // 3. Consonant skeleton match
   const qSkel = getConsonantSkeleton(qPhon);
@@ -156,6 +165,22 @@ function matchSearchQuery(record, query) {
   }
 
   return false;
+}
+
+function registerSqliteFunctions(dbInst) {
+  if (!dbInst) return;
+  try {
+    dbInst.function('match_search', (owner, father, varId, propId, mobile, recId, query) => {
+      return matchSearchQuery({
+        owner_name: owner,
+        father_name: father,
+        variable_id: varId,
+        property_card_id: propId,
+        mobile_no: mobile,
+        record_id: recId
+      }, query) ? 1 : 0;
+    });
+  } catch (_) {}
 }
 
 function rebuildMemoryIndexes() {
@@ -270,6 +295,7 @@ function getDistrictSqlite(districtName) {
     }
     try {
       const dbInst = new Database(sqlitePath, { readonly: true, fileMustExist: true });
+      registerSqliteFunctions(dbInst);
       sqliteHandles.set(dKey, dbInst);
       return dbInst;
     } catch (e) {
@@ -827,9 +853,9 @@ const db = {
       const params = [vCode];
 
       if (search && search.trim() !== '') {
-        const s = `%${search.trim().toLowerCase()}%`;
-        query += ` AND (LOWER(owner_name) LIKE ? OR LOWER(father_name) LIKE ? OR LOWER(variable_id) LIKE ?)`;
-        params.push(s, s, s);
+        const s = search.trim();
+        query += ` AND match_search(owner_name, father_name, variable_id, property_card_id, mobile_no, record_id, ?) = 1`;
+        params.push(s);
       }
 
       try {
@@ -919,41 +945,101 @@ const db = {
 
   async searchGlobalProperties(search = '', page = 1, limit = 50) {
     const offset = (page - 1) * limit;
-    let list = (localDb.properties || []).filter(p => !isPublicOrNonCitizenRecord(p.owner_name, p.father_name));
-    
-    if (search && search.trim()) {
-      list = list.filter(p => matchSearchQuery(p, search));
+    const cleanSearch = String(search || '').trim();
+    if (!cleanSearch) {
+      return { total: 0, page, limit, totalPages: 0, records: [] };
     }
 
-    const total = list.length;
-    const paginated = list.slice(offset, offset + limit).map(p => {
-      const pid = String(p.property_card_id || '');
+    // 1. If Postgres is used
+    if (usePostgres) {
+      let query = `
+        SELECT id, record_id, variable_id, property_card_id, owner_name, father_name, mobile_no, total_area, built_area, open_area, 
+               village_code, village_name, district_name, tehsil, distribution_date, remarks,
+               property_card_id AS masked_property_card_id
+        FROM properties
+        WHERE (LOWER(owner_name) LIKE $1 OR LOWER(father_name) LIKE $1 OR variable_id LIKE $1 OR property_card_id LIKE $1 OR mobile_no LIKE $1 OR record_id LIKE $1)
+          AND owner_name NOT ILIKE '%रास्ता%' AND owner_name NOT ILIKE '%रास्‍ता%' AND owner_name NOT ILIKE '%रिक्त%'
+        ORDER BY id ASC LIMIT $2 OFFSET $3
+      `;
+      const res = await pool.query(query, [`%${cleanSearch.toLowerCase()}%`, limit, offset]);
       return {
-        id: p.id,
-        record_id: p.record_id,
-        variable_id: p.variable_id,
-        property_card_id: pid,
-        owner_name: p.owner_name,
-        father_name: p.father_name,
-        mobile_no: p.mobile_no,
-        total_area: p.total_area,
-        built_area: p.built_area,
-        open_area: p.open_area,
-        village_code: p.village_code,
-        village_name: p.village_name,
-        district_name: p.district_name,
-        tehsil: p.tehsil,
-        distribution_date: p.distribution_date,
-        remarks: p.remarks,
-        masked_property_card_id: pid
+        total: res.rows.length,
+        page,
+        limit,
+        totalPages: Math.ceil(res.rows.length / limit),
+        records: res.rows
       };
-    });
+    }
 
+    loadLocalDbFromDisk();
+    
+    // 2. If localDb.properties has elements
+    if (Array.isArray(localDb.properties) && localDb.properties.length > 0) {
+      let list = localDb.properties.filter(p => !isPublicOrNonCitizenRecord(p.owner_name, p.father_name) && matchSearchQuery(p, cleanSearch));
+      const total = list.length;
+      const paginated = list.slice(offset, offset + limit).map(p => {
+        const pid = String(p.property_card_id || '');
+        return {
+          id: p.id,
+          record_id: p.record_id,
+          variable_id: p.variable_id,
+          property_card_id: pid,
+          owner_name: p.owner_name,
+          father_name: p.father_name,
+          mobile_no: p.mobile_no,
+          total_area: p.total_area,
+          built_area: p.built_area,
+          open_area: p.open_area,
+          village_code: p.village_code,
+          village_name: p.village_name,
+          district_name: p.district_name,
+          tehsil: p.tehsil,
+          distribution_date: p.distribution_date,
+          remarks: p.remarks,
+          masked_property_card_id: pid
+        };
+      });
+      return {
+        total,
+        page,
+        limit,
+        totalPages: Math.ceil(total / limit),
+        records: paginated
+      };
+    }
+
+    // 3. Search across available SQLite databases
+    const matched = [];
+    const distFiles = fs.existsSync(sqliteCacheDir) ? fs.readdirSync(sqliteCacheDir).filter(f => f.endsWith('.sqlite')) : [];
+    
+    for (const file of distFiles) {
+      if (matched.length >= (offset + limit) * 2) break;
+      const distName = file.replace(/\.sqlite$/, '').replace(/_/g, ' ');
+      const sdb = getDistrictSqlite(distName);
+      if (!sdb) continue;
+      try {
+        const rows = sdb.prepare(`
+          SELECT id, record_id, variable_id, property_card_id, owner_name, father_name, mobile_no, total_area, built_area, open_area, 
+                 village_code, village_name, district_name, tehsil, distribution_date, remarks
+          FROM properties
+          WHERE owner_name NOT LIKE '%रास्ता%' AND owner_name NOT LIKE '%रास्‍ता%' AND owner_name NOT LIKE '%रिक्त%' AND owner_name NOT LIKE '%सार्वजनिक%' AND owner_name NOT LIKE '%ग्राम सभा%'
+            AND match_search(owner_name, father_name, variable_id, property_card_id, mobile_no, record_id, ?) = 1
+          LIMIT ?
+        `).all(cleanSearch, limit);
+        for (const r of rows) {
+          r.masked_property_card_id = String(r.property_card_id || '');
+          matched.push(r);
+        }
+      } catch (_) {}
+    }
+
+    const total = matched.length;
+    const paginated = matched.slice(offset, offset + limit);
     return {
       total,
       page,
       limit,
-      totalPages: Math.ceil(total / limit),
+      totalPages: Math.ceil(total / limit) || 1,
       records: paginated
     };
   },

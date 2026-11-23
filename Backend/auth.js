@@ -277,6 +277,47 @@ function requireAdminAuth(req, res, next) {
 }
 
 /**
+ * Express Middleware: Require Valid Portal Authentication (Admin or Authorized User)
+ */
+function requirePortalAuth(req, res, next) {
+  const isAuthRequired = process.env.REQUIRE_PORTAL_AUTH !== 'false';
+  if (!isAuthRequired) {
+    return next();
+  }
+
+  const authHeader = req.headers['authorization'] || req.headers['x-auth-token'];
+  let token = null;
+
+  if (authHeader) {
+    if (authHeader.startsWith('Bearer ')) {
+      token = authHeader.substring(7).trim();
+    } else {
+      token = authHeader.trim();
+    }
+  }
+
+  if (!token) {
+    return res.status(401).json({
+      success: false,
+      error: 'पोर्टल का उपयोग करने के लिए अधिकृत लॉगिन आवश्यक है (Authentication required). कृपया पहले लॉगिन करें।',
+      code: 'AUTH_REQUIRED'
+    });
+  }
+
+  const payload = verifyToken(token);
+  if (!payload || (payload.role !== 'admin' && payload.role !== 'user')) {
+    return res.status(401).json({
+      success: false,
+      error: 'सत्र समाप्त या अमान्य टोकन (Session expired or invalid token). कृपया पुनः लॉगिन करें।',
+      code: 'INVALID_TOKEN'
+    });
+  }
+
+  req.user = payload;
+  next();
+}
+
+/**
  * HTML Sanitization Helper to prevent Cross-Site Scripting (XSS)
  * @param {string} str 
  * @returns {string}
@@ -301,5 +342,6 @@ module.exports = {
   resetLoginAttempts,
   createRateLimiter,
   requireAdminAuth,
+  requirePortalAuth,
   escapeHtml
 };

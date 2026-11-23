@@ -6,7 +6,135 @@ let currentSearch = '';
 let currentPage = 1;
 let currentOrder = null;
 let pollInterval = null;
-let activeSettings = { price: 0, upi_id: '', merchant_name: '' };
+let activeSettings = { price: 0, upi_id: '', merchant_name: '', require_portal_auth: true };
+
+// Portal Authentication Token & State
+let portalToken = localStorage.getItem('portal_auth_token') || '';
+let portalUser = null;
+try {
+  portalUser = JSON.parse(localStorage.getItem('portal_auth_user') || 'null');
+} catch (_) {}
+
+function openPortalAuthModal(errMsg = '') {
+  const modal = document.getElementById('portalAuthModal');
+  if (modal) modal.style.display = 'flex';
+  const errEl = document.getElementById('portalLoginError');
+  if (errEl) {
+    if (errMsg) {
+      errEl.textContent = errMsg;
+      errEl.style.display = 'block';
+    } else {
+      errEl.style.display = 'none';
+    }
+  }
+}
+
+function closePortalAuthModal() {
+  const modal = document.getElementById('portalAuthModal');
+  if (modal) modal.style.display = 'none';
+}
+
+function togglePortalPasswordVisibility() {
+  const input = document.getElementById('portalPasswordInput');
+  if (input) {
+    input.type = input.type === 'password' ? 'text' : 'password';
+  }
+}
+
+function updatePortalUserUI() {
+  const navBtn = document.getElementById('portalLoginNavBtn');
+  const badgeWrap = document.getElementById('portalUserBadgeWrap');
+  const badgeName = document.getElementById('portalUserBadgeName');
+  if (portalToken && portalUser) {
+    if (navBtn) navBtn.style.display = 'none';
+    if (badgeWrap) badgeWrap.style.display = 'inline-flex';
+    if (badgeName) badgeName.textContent = portalUser.username || (portalUser.role === 'admin' ? 'व्यवस्थापक' : 'अधिकृत');
+  } else {
+    if (navBtn) navBtn.style.display = 'inline-flex';
+    if (badgeWrap) badgeWrap.style.display = 'none';
+  }
+}
+
+async function handlePortalLogin(e) {
+  if (e) e.preventDefault();
+  const username = (document.getElementById('portalUsernameInput')?.value || '').trim();
+  const password = (document.getElementById('portalPasswordInput')?.value || '').trim();
+  const errEl = document.getElementById('portalLoginError');
+  const submitBtn = document.getElementById('portalLoginBtn');
+
+  if (!username || !password) {
+    if (errEl) {
+      errEl.textContent = 'कृपया उपयोगकर्ता नाम एवं पासवर्ड दर्ज करें।';
+      errEl.style.display = 'block';
+    }
+    return;
+  }
+
+  if (submitBtn) {
+    submitBtn.disabled = true;
+    submitBtn.textContent = 'सत्यापित किया जा रहा है...';
+  }
+
+  try {
+    const res = await fetch('/api/auth/login', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ username, password })
+    });
+    const data = await res.json();
+    if (data.success && data.token) {
+      portalToken = data.token;
+      portalUser = data;
+      localStorage.setItem('portal_auth_token', data.token);
+      localStorage.setItem('portal_auth_user', JSON.stringify(data));
+      closePortalAuthModal();
+      updatePortalUserUI();
+      // Load app data now that user is authenticated
+      await loadDistricts();
+      await loadAvailableCoverage();
+    } else {
+      if (errEl) {
+        errEl.textContent = data.error || 'अमान्य क्रेडेंशियल। कृपया सही विवरण दर्ज करें।';
+        errEl.style.display = 'block';
+      }
+    }
+  } catch (err) {
+    if (errEl) {
+      errEl.textContent = 'सर्वर से कनेक्ट करने में त्रुटि। कृपया पुनः प्रयास करें।';
+      errEl.style.display = 'block';
+    }
+  } finally {
+    if (submitBtn) {
+      submitBtn.disabled = false;
+      submitBtn.textContent = 'सुरक्षित प्रवेश करें (Enter Portal)';
+    }
+  }
+}
+
+function portalLogout() {
+  portalToken = '';
+  portalUser = null;
+  localStorage.removeItem('portal_auth_token');
+  localStorage.removeItem('portal_auth_user');
+  updatePortalUserUI();
+  openPortalAuthModal('आप सुरक्षित रूप से लॉगआउट हो चुके हैं। कृपया पुनः लॉगिन करें।');
+}
+
+// Authenticated fetch wrapper for portal
+async function portalFetch(url, options = {}) {
+  const headers = options.headers ? { ...options.headers } : {};
+  if (portalToken) {
+    headers['Authorization'] = `Bearer ${portalToken}`;
+  }
+  const merged = { ...options, headers };
+  const res = await fetch(url, merged);
+  if (res.status === 401 || res.status === 403) {
+    console.warn('[Portal] Auth required or expired (401).');
+    openPortalAuthModal('प्रमाणीकरण आवश्यक है या सत्र समाप्त हो गया है। कृपया लॉगिन करें।');
+    throw new Error('AUTH_REQUIRED');
+  }
+  return res;
+}
 
 // DOM Elements
 document.addEventListener('DOMContentLoaded', () => {
@@ -15,8 +143,34 @@ document.addEventListener('DOMContentLoaded', () => {
 
 async function initApp() {
   await loadSettings();
-  await loadDistricts();
-  await loadAvailableCoverage();
+  const requiresAuth = activeSettings.require_portal_auth !== false;
+  if (requiresAuth) {
+    if (portalToken) {
+      try {
+        const res = await fetch('/api/auth/verify', {
+          headers: { 'Authorization': `Bearer ${portalToken}` }
+        });
+        const data = await res.json();
+        if (data.success && data.valid) {
+          portalUser = data.user;
+          updatePortalUserUI();
+          await loadDistricts();
+          await loadAvailableCoverage();
+        } else {
+          portalLogout();
+        }
+      } catch (err) {
+        portalLogout();
+      }
+    } else {
+      updatePortalUserUI();
+      openPortalAuthModal();
+    }
+  } else {
+    updatePortalUserUI();
+    await loadDistricts();
+    await loadAvailableCoverage();
+  }
   setupEventListeners();
   checkSavedOrder();
 }
@@ -91,7 +245,7 @@ async function loadDistricts() {
   districtSelect.innerHTML = '<option value="">-- जिला चुनें (Select District) --</option>';
 
   try {
-    const res = await fetch(`/api/districts?_t=${Date.now()}`, { cache: 'no-store' });
+    const res = await portalFetch(`/api/districts?_t=${Date.now()}`, { cache: 'no-store' });
     const data = await res.json();
     if (data.success && data.districts) {
       data.districts.forEach(dist => {
@@ -138,7 +292,7 @@ async function loadTehsilsForDistrict(district) {
   tehsilSelect.innerHTML = '<option value="">-- All Tehsils (सभी तहसीलें) --</option>';
 
   try {
-    const res = await fetch(`/api/tehsils?district=${encodeURIComponent(district)}&_t=${Date.now()}`, { cache: 'no-store' });
+    const res = await portalFetch(`/api/tehsils?district=${encodeURIComponent(district)}&_t=${Date.now()}`, { cache: 'no-store' });
     const data = await res.json();
     if (data.success && data.tehsils) {
       data.tehsils.forEach(t => {
@@ -176,7 +330,7 @@ async function loadVillagesForDistrict(district, tehsil = '') {
 
   try {
     const url = `/api/villages?district=${encodeURIComponent(district)}&tehsil=${encodeURIComponent(tehsil)}&_t=${Date.now()}`;
-    const res = await fetch(url, { cache: 'no-store' });
+    const res = await portalFetch(url, { cache: 'no-store' });
     const data = await res.json();
 
     if (data.success && data.villages && data.villages.length > 0) {
@@ -444,7 +598,7 @@ async function loadVillagers() {
     const searchVal = document.getElementById('villagerSearchInput').value.trim();
     const url = `/api/properties?district=${encodeURIComponent(currentDistrict)}&villageCode=${encodeURIComponent(currentVillageCode)}&search=${encodeURIComponent(searchVal)}&page=${currentPage}&limit=25&_t=${Date.now()}`;
     
-    const res = await fetch(url, { cache: 'no-store' });
+    const res = await portalFetch(url, { cache: 'no-store' });
     const data = await res.json();
 
     if (!data.success || !data.records || data.records.length === 0) {
@@ -573,7 +727,7 @@ async function openPaymentModal(propId, ownerName, fatherName) {
 
   // Request order from backend (reuses existing active or verified order)
   try {
-    const res = await fetch('/api/orders/create', {
+    const res = await portalFetch('/api/orders/create', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ 
@@ -1246,7 +1400,7 @@ async function submitMissingDataRequest(e) {
   }
 
   try {
-    const res = await fetch('/api/data-request', {
+    const res = await portalFetch('/api/data-request', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(payload)
@@ -1353,7 +1507,7 @@ let activeCoverageDistrict = 'ALL';
 
 async function loadAvailableCoverage() {
   try {
-    const res = await fetch(`/api/coverage?_t=${Date.now()}`, { cache: 'no-store' });
+    const res = await portalFetch(`/api/coverage?_t=${Date.now()}`, { cache: 'no-store' });
     const data = await res.json();
     if (data.success) {
       allCoverageList = data.coverage || [];

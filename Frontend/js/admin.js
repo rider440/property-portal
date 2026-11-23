@@ -869,6 +869,7 @@ async function loadSettingsAdmin() {
       if (document.getElementById('setSmtpUser')) document.getElementById('setSmtpUser').value = s.smtp_user || '';
       if (document.getElementById('setNotifyEmail')) document.getElementById('setNotifyEmail').value = s.notify_email || '';
       if (document.getElementById('setAutoVerify')) document.getElementById('setAutoVerify').checked = Boolean(s.auto_verify_demo);
+      if (document.getElementById('setRequirePortalAuth')) document.getElementById('setRequirePortalAuth').checked = s.require_portal_auth !== false;
     }
   } catch (err) {
     console.error('Error loading admin settings:', err);
@@ -894,6 +895,7 @@ async function saveAdminSettings(e) {
     merchant_name: merchantName,
     price: price,
     auto_verify_demo: autoVerify,
+    require_portal_auth: document.getElementById('setRequirePortalAuth') ? document.getElementById('setRequirePortalAuth').checked : true,
     smtp_host: smtpHost,
     smtp_port: smtpPort,
     smtp_user: smtpUser,

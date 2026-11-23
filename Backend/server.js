@@ -16,6 +16,7 @@ const {
   resetLoginAttempts,
   createRateLimiter,
   requireAdminAuth,
+  requirePortalAuth,
   escapeHtml
 } = require('./auth');
 const { securityHeaders } = require('./security_headers');
@@ -146,7 +147,93 @@ app.use('/api', (req, res, next) => {
 app.use('/api/', publicLimiter);
 
 // ==========================================
-// PUBLIC API ROUTES (HIGH CONCURRENCY)
+// PORTAL & USER AUTHENTICATION
+// ==========================================
+
+// Portal Login (Brute-Force Protected & Salted Verification)
+app.post('/api/auth/login', loginLimiter, async (req, res) => {
+  const ip = req.ip || req.connection.remoteAddress || 'unknown';
+  try {
+    const { username, password, pin } = req.body;
+    const loginUser = (username || '').trim();
+    const loginPass = (password !== undefined ? password : pin);
+
+    if (!loginUser || !loginPass) {
+      return res.status(400).json({
+        success: false,
+        error: 'उपयोगकर्ता नाम एवं पासवर्ड आवश्यक है (Username and Password/PIN are required)'
+      });
+    }
+
+    // Check brute-force lockout status
+    const bruteCheck = checkLoginAttempt(ip, 5, 15);
+    if (!bruteCheck.allowed) {
+      await db.logSecurityEvent('portal_login_locked', ip, { username: loginUser, reason: 'rate_limited' }, 'blocked');
+      return res.status(429).json({
+        success: false,
+        error: `अत्यधिक असफल प्रयास। खाता ${Math.ceil(bruteCheck.lockoutSeconds / 60)} मिनट के लिए लॉक है।`,
+        lockoutSeconds: bruteCheck.lockoutSeconds
+      });
+    }
+
+    // Verify credentials
+    const authResult = await db.verifyPortalUserCredentials(loginUser, loginPass);
+
+    if (!authResult || !authResult.verified) {
+      const failStatus = recordFailedLogin(ip, 5, 15);
+      await db.logSecurityEvent('portal_login_failed', ip, { username: loginUser, remaining: failStatus.remainingAttempts }, 'failed');
+
+      if (!failStatus.allowed) {
+        return res.status(429).json({
+          success: false,
+          error: 'अमान्य क्रेडेंशियल। 5 असफल प्रयासों के कारण लॉगिन 15 मिनट के लिए लॉक कर दिया गया है।',
+          lockoutSeconds: failStatus.lockoutSeconds
+        });
+      }
+
+      return res.status(401).json({
+        success: false,
+        error: `अमान्य उपयोगकर्ता नाम या पासवर्ड (Invalid credentials). शेष प्रयास: ${failStatus.remainingAttempts}`,
+        remainingAttempts: failStatus.remainingAttempts
+      });
+    }
+
+    // Successful login -> Reset failed attempts
+    resetLoginAttempts(ip);
+
+    // Issue signed cryptographic Token (24 hours)
+    const token = generateToken({
+      role: authResult.role,
+      username: authResult.username
+    }, 24);
+
+    await db.logSecurityEvent('portal_login_success', ip, { username: authResult.username, role: authResult.role }, 'success');
+
+    res.json({
+      success: true,
+      token: token,
+      username: authResult.username,
+      role: authResult.role,
+      expiresIn: '24h',
+      message: 'पोर्टल प्रमाणीकरण सफल (Authentication successful)'
+    });
+  } catch (err) {
+    console.error('Portal Login error:', err);
+    res.status(500).json({ success: false, error: 'सर्वर प्रमाणीकरण त्रुटि।' });
+  }
+});
+
+// Portal Token Verification & Current Session Info
+app.get('/api/auth/verify', requirePortalAuth, async (req, res) => {
+  res.json({
+    success: true,
+    valid: true,
+    user: req.user
+  });
+});
+
+// ==========================================
+// PUBLIC & PROTECTED API ROUTES (HIGH CONCURRENCY)
 // ==========================================
 
 // 1. Get Settings (Cached 60s)
@@ -168,8 +255,8 @@ app.get('/api/settings', async (req, res) => {
   }
 });
 
-// 2. Get Districts (Cached 10 min)
-app.get('/api/districts', async (req, res) => {
+// 2. Get Districts (Protected, Cached 10 min)
+app.get('/api/districts', requirePortalAuth, async (req, res) => {
   try {
     const cached = getCached('districts:all', 600);
     if (cached) {
@@ -184,8 +271,8 @@ app.get('/api/districts', async (req, res) => {
   }
 });
 
-// 2.1 Get Full Available States, Districts and Villages Coverage
-app.get('/api/coverage', async (req, res) => {
+// 2.1 Get Full Available States, Districts and Villages Coverage (Protected)
+app.get('/api/coverage', requirePortalAuth, async (req, res) => {
   try {
     const coverageData = await db.getAvailableCoverage();
     res.json({ success: true, ...coverageData });
@@ -194,8 +281,8 @@ app.get('/api/coverage', async (req, res) => {
   }
 });
 
-// 2.2 Get Tehsils by District
-app.get('/api/tehsils', async (req, res) => {
+// 2.2 Get Tehsils by District (Protected)
+app.get('/api/tehsils', requirePortalAuth, async (req, res) => {
   try {
     const { district } = req.query;
     if (!district || typeof district !== 'string') {
@@ -208,8 +295,8 @@ app.get('/api/tehsils', async (req, res) => {
   }
 });
 
-// 3. Get Villages by District & Tehsil (Real-Time Sub-millisecond)
-app.get('/api/villages', async (req, res) => {
+// 3. Get Villages by District & Tehsil (Protected, Real-Time Sub-millisecond)
+app.get('/api/villages', requirePortalAuth, async (req, res) => {
   try {
     const { district, tehsil = '' } = req.query;
     if (!district || typeof district !== 'string') {
@@ -222,8 +309,8 @@ app.get('/api/villages', async (req, res) => {
   }
 });
 
-// 4. List Villagers and Properties (Sub-millisecond indexed search by Name / Code / Global)
-app.get('/api/properties', propertySearchLimiter, async (req, res) => {
+// 4. List Villagers and Properties (Protected, Sub-millisecond indexed search)
+app.get('/api/properties', requirePortalAuth, propertySearchLimiter, async (req, res) => {
   try {
     const { district, villageCode, village_code, search = '', page = 1, limit = 50 } = req.query;
     let vCode = String(villageCode || village_code || '').trim();
@@ -276,8 +363,8 @@ app.get('/api/properties', propertySearchLimiter, async (req, res) => {
   }
 });
 
-// 5. Create Payment Order (Rate-Limited by IP and Mobile)
-app.post('/api/orders/create', propertyUnlockIpLimiter, propertyUnlockMobileLimiter, async (req, res) => {
+// 5. Create Payment Order (Rate-Limited by IP and Mobile, Protected)
+app.post('/api/orders/create', requirePortalAuth, propertyUnlockIpLimiter, propertyUnlockMobileLimiter, async (req, res) => {
   try {
     const { propertyId, userMobile, existingOrderId, existingOrderToken } = req.body;
     if (!propertyId) {
@@ -401,8 +488,8 @@ app.get(['/api/orders/status', '/api/orders/track'], orderStatusLimiter, async (
   }
 });
 
-// 8. Request Missing Village Data (Rate-Limited by IP and Mobile with Min/Max Validation)
-app.post('/api/data-request', villageRequestIpLimiter, villageRequestMobileLimiter, async (req, res) => {
+// 8. Request Missing Village Data (Rate-Limited by IP and Mobile with Min/Max Validation, Protected)
+app.post('/api/data-request', requirePortalAuth, villageRequestIpLimiter, villageRequestMobileLimiter, async (req, res) => {
   try {
     const { stateName, districtName, tehsilName, villageName, villageCode, userName, userMobile, notes } = req.body;
     

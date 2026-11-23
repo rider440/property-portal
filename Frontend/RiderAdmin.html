@@ -148,7 +148,7 @@
       <form onsubmit="handleAdminLogin(event)">
         <div class="form-group" style="margin-bottom: 1.15rem;">
           <label for="adminUsernameInput" style="font-weight: 700; font-size: 0.85rem; color: #334155;">उपयोगकर्ता नाम (Username)</label>
-          <input type="text" id="adminUsernameInput" class="form-control" value="admin" required autocomplete="username" style="font-size: 0.95rem; padding: 0.7rem 0.85rem;">
+          <input type="text" id="adminUsernameInput" class="form-control" value="Ankur@8984" placeholder="Ankur@8984 या admin" required autocomplete="username" style="font-size: 0.95rem; padding: 0.7rem 0.85rem;">
         </div>
 
         <div class="form-group" style="margin-bottom: 1.25rem;">
@@ -686,6 +686,16 @@
                   <input type="checkbox" id="setAutoVerify">
                   <span style="font-size: 0.9rem; font-weight: 600;">ऑटो-वेरिफाई डेमो मोड सक्रिय करें</span>
                 </label>
+              </div>
+
+              <div class="form-group" style="margin-top: 1rem; background: #f8fafc; padding: 0.85rem; border-radius: 8px; border: 1px solid #e2e8f0;">
+                <label style="display: flex; align-items: center; gap: 0.5rem; cursor: pointer;">
+                  <input type="checkbox" id="setRequirePortalAuth" checked>
+                  <span style="font-size: 0.9rem; font-weight: 700; color: #1e40af;">🔐 मुख्य पोर्टल प्रमाणीकरण अनिवार्य करें (Require Authorization to Search)</span>
+                </label>
+                <p style="font-size: 0.78rem; color: #64748b; margin: 0.25rem 0 0 1.6rem;">
+                  सक्रिय रहने पर केवल अधिकृत उपयोगकर्ता (लॉगिन क्रेडेंशियल्स धारक) ही ग्राम व प्रॉपर्टी डेटा खोज सकेंगे।
+                </p>
               </div>
 
               <button type="submit" class="btn btn-primary" style="margin-top: 1rem;">

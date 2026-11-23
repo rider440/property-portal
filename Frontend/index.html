@@ -43,6 +43,20 @@
         <a href="mailto:ayts7667@gmail.com" class="btn btn-gold-pill btn-sm">
           📧 सहायता (Support)
         </a>
+        <div id="portalUserHeaderWrap" style="display: inline-flex; align-items: center; gap: 0.5rem; margin-left: 0.25rem;">
+          <button id="portalLoginNavBtn" class="btn btn-primary-pill btn-sm" onclick="openPortalAuthModal()" style="font-weight: 700; background: #2563eb; color: #ffffff;">
+            🔐 अधिकृत लॉगिन
+          </button>
+          <div id="portalUserBadgeWrap" style="display: none; align-items: center; gap: 0.5rem;">
+            <span class="user-status-pill" style="background: rgba(16, 185, 129, 0.15); color: #059669; border: 1px solid rgba(16, 185, 129, 0.3); padding: 0.3rem 0.75rem; border-radius: 9999px; font-size: 0.8rem; font-weight: 700; display: inline-flex; align-items: center; gap: 0.35rem;">
+              <span style="width: 7px; height: 7px; background: #10b981; border-radius: 50%;"></span>
+              <span id="portalUserBadgeName">अधिकृत</span>
+            </span>
+            <button class="btn btn-sm" onclick="portalLogout()" title="लॉगआउट करें" style="padding: 0.3rem 0.65rem; font-size: 0.8rem; background: #f1f5f9; color: #475569; border: 1px solid #cbd5e1; border-radius: 6px; font-weight: 600;">
+              🚪 लॉगआउट
+            </button>
+          </div>
+        </div>
       </div>
     </div>
   </header>
@@ -979,6 +993,56 @@
       <span>सहायता</span>
     </a>
   </nav>
+
+  <!-- Portal Authorized Access Modal / Gate -->
+  <div class="modal-backdrop" id="portalAuthModal" style="display: none; z-index: 99999; backdrop-filter: blur(8px); background: rgba(15, 23, 42, 0.85);">
+    <div class="modal" style="max-width: 440px; border-radius: 16px; border: 1px solid rgba(255, 255, 255, 0.15); box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5); overflow: hidden; background: #ffffff;">
+      <div style="background: linear-gradient(135deg, #1e3a8a 0%, #0f172a 100%); color: #ffffff; padding: 1.75rem 1.5rem 1.5rem; text-align: center; position: relative;">
+        <div style="width: 64px; height: 64px; background: rgba(255, 255, 255, 0.1); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 0.75rem; font-size: 2rem; border: 2px solid rgba(255, 255, 255, 0.2); box-shadow: 0 4px 15px rgba(0,0,0,0.2);">
+          🔐
+        </div>
+        <h2 style="font-size: 1.35rem; font-weight: 800; margin: 0 0 0.35rem; color: #ffffff; letter-spacing: -0.01em;">
+          अधिकृत उपयोगकर्ता प्रवेश
+        </h2>
+        <p style="font-size: 0.82rem; color: #94a3b8; margin: 0; line-height: 1.4;">
+          यह पोर्टल केवल अधिकृत व्यक्तियों के उपयोग के लिए सुरक्षित है (Authorized Access Only)
+        </p>
+      </div>
+
+      <div style="padding: 1.75rem 1.5rem;">
+        <form id="portalLoginForm" onsubmit="handlePortalLogin(event)">
+          <div class="form-group" style="margin-bottom: 1.25rem;">
+            <label for="portalUsernameInput" style="display: block; font-weight: 700; font-size: 0.85rem; color: #334155; margin-bottom: 0.35rem;">
+              उपयोगकर्ता नाम (Username)
+            </label>
+            <input type="text" id="portalUsernameInput" class="form-control" placeholder="उदा. Ankur@8984 या user" required autocomplete="username" style="font-size: 0.95rem; padding: 0.75rem 0.85rem; border-radius: 8px;">
+          </div>
+
+          <div class="form-group" style="margin-bottom: 1.25rem;">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.35rem;">
+              <label for="portalPasswordInput" style="font-weight: 700; font-size: 0.85rem; color: #334155; margin: 0;">
+                पासवर्ड या सुरक्षा पिन (Password / PIN)
+              </label>
+            </div>
+            <div style="position: relative; display: flex; align-items: center;">
+              <input type="password" id="portalPasswordInput" class="form-control" placeholder="••••••••" required autocomplete="current-password" style="font-size: 1rem; padding: 0.75rem 2.5rem 0.75rem 0.85rem; border-radius: 8px; width: 100%;">
+              <button type="button" onclick="togglePortalPasswordVisibility()" style="position: absolute; right: 10px; background: none; border: none; cursor: pointer; font-size: 1.1rem; color: #64748b; padding: 4px;" title="पासवर्ड दिखाएं / छुपाएं">👁️</button>
+            </div>
+          </div>
+
+          <div id="portalLoginError" style="display: none; background: #fef2f2; border: 1px solid #fecaca; color: #b91c1c; padding: 0.65rem 0.85rem; border-radius: 8px; font-size: 0.82rem; margin-bottom: 1.25rem; text-align: center; font-weight: 600;"></div>
+
+          <button type="submit" id="portalLoginBtn" class="btn btn-primary" style="width: 100%; padding: 0.85rem; font-weight: 700; font-size: 1rem; border-radius: 8px; background: linear-gradient(135deg, #2563eb 0%, #1d4ed8 100%); box-shadow: 0 4px 14px rgba(37, 99, 235, 0.4);">
+            सुरक्षित प्रवेश करें (Enter Portal)
+          </button>
+
+          <div style="text-align: center; margin-top: 1.25rem; font-size: 0.78rem; color: #64748b; line-height: 1.4;">
+            🛡️ 256-बिट सुरक्षित एन्क्रिप्टेड प्रमाणीकरण
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
 
   <!-- Scripts -->
   <script src="js/qrcode.min.js"></script>
